@@ -1,4 +1,4 @@
 # TensorFlow
 
-## Deep MNIST for Experts
-### Train the Model (todo)
+## MNIST For ML Beginners (review)
+## Deep MNIST for Experts (review)
