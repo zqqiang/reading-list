@@ -11,6 +11,7 @@ Docs for Web reading
 
 ## Content
 1. [async-await](https://ponyfoo.com/articles/understanding-javascript-async-await) - [Understanding JavaScript’s async await]
+2. [2016 Web Summary](http://mp.weixin.qq.com/s/eJuNKJA45rJRUlk-DQeJrw) - [2016 Web Summary]
 
 
 # ai-reading-list
