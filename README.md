@@ -14,6 +14,13 @@ Docs for Web reading
 2. [2016 Web Summary](http://mp.weixin.qq.com/s/eJuNKJA45rJRUlk-DQeJrw) - [2016 Web Summary]
 
 
+# java-reading-list
+Docs for Java development
+
+## Content
+1. [spring.io](https://spring.io/guides) - [spring-boot]
+
+
 # ai-reading-list
 Docs for AI reading
 
