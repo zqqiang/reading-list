@@ -26,3 +26,10 @@ Docs for AI reading
 
 ## Content
 1. [tensorflow](https://www.tensorflow.org) - [TensorFlow](tensorflow.md)
+
+
+# code-reading-list
+Notes for Source Code reading
+
+## Content
+1. [nginx](https://nginx.org) - [Nginx Source Code Reading Notes](nginx.md)
