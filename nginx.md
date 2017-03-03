@@ -25,3 +25,5 @@ main(int argc, char *const *argv)
 ~~~~
 
 * ngx_array_t - dynamic array  
+
+* ngx_log
