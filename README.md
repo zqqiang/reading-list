@@ -1,5 +1,6 @@
 # rfc-reading-list
-Docs for RFC reading
+Docs for RFC reading  
+[reading & development schedule](schedule.md)  
 
 ## Content
 1. [rfc5246](https://tools.ietf.org/html/rfc5246) - [The Transport Layer Security (TLS) Protocol Version 1.2](rfc5246.md)
