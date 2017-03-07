@@ -26,8 +26,5 @@ main(int argc, char *const *argv)
 
 * ngx_array_t - dynamic array  
 
-* ngx_log
-<<<<<<< HEAD
-=======
+* ngx_log  
 a. log list -> insert log by level (good design)
->>>>>>> 9d6d051054a14aff6762385b3abaf15e1b961dd2
