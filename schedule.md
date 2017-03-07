@@ -3,7 +3,7 @@
 ## Reading Schedule
 
 ### 2017-03
-1. [High Performance Browser Networking](https://hpbn.co/)
+1. [High Performance Browser Networking](https://hpbn.co/) - [Notes](hpbnetwork.md)
 2. [Nginx Source Code](https://github.com/nginx/nginx)
 
 ## Development Schedule
