@@ -4,7 +4,7 @@
 
 ### 2017-03
 1. [High Performance Browser Networking](https://hpbn.co/) - [Notes](hpbnetwork.md)
-2. [Nginx Source Code](https://github.com/nginx/nginx)
+2. [Nginx Source Code](https://github.com/nginx/nginx) - [Notes](nginx.md)
 
 ## Development Schedule
 
