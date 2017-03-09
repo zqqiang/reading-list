@@ -1,6 +1,6 @@
 # High Performance Browser Networking Reading Notes
 
-## Transport Layer Security (TLS)
+## 4. Transport Layer Security (TLS)
 
 ### TLS Handshake
 
@@ -32,7 +32,27 @@
 * server that periodically retrieves the signed and timestamped OCSP response from the CA  
 * The server then appends (i.e. "staples") the signed OCSP response as part of the TLS handshake  
 
-### TLS Record Protocol (todo)
+### TLS Record Protocol
+* receive application data => divided into blocks => MAC or HMAC added => encrypted using cipher  
 
 ### Optimizing for TLS
+
+#### Reduce Computational Costs
+#### Enable 1-RTT TLS Handshakes
+#### Optimize Connection Reuse
+#### Leverage Early Termination
+#### Configure Session Caching and Stateless Resumption
+#### Enable TLS False Start
+* an optional protocol extension that allows the sender to send application data (Figure 4-10) when the handshake is only partially complete.  
+
+#### Optimize TLS Record Size
+#### Optimize the Certificate Chain
+#### Configure OCSP Stapling
+#### Enable HTTP Strict Transport Security (HSTS)
+#### Enable HTTP Public Key Pinning (HPKP)
+#### Update Site Content to HTTPS
+#### Performance Checklist
+
 ### Testing and Verification
+
+## 5. Introduction to Wireless Networks
