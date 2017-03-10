@@ -56,3 +56,13 @@
 ### Testing and Verification
 
 ## 5. Introduction to Wireless Networks
+
+### Ubiquitous Connectivity
+
+### Types of Wireless Networks
+
+### Performance Fundamentals of Wireless Networks
+
+### Measuring Real-World Wireless Performance
+
+## 6. WiFi (todo)
