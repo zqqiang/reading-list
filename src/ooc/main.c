@@ -7,5 +7,6 @@
 int main()
 {
     void * s = new(Set);
+    delete(s);
     return 0;
 }
