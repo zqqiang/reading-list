@@ -1,9 +1,21 @@
 #include <stdlib.h>
 #include "new.h"
+#include "class.h"
 
-void * new(const void * type, ...)
+void * new(const void * _class, ...)
 {
-    return NULL;
+	const struct Class * class = _class;
+	void * p = calloc(1, class->size);
+	* (const struct Class **)p = _class;
+
+	if (class->ctor) {
+		va_list ap;
+		va_start(ap, _class);
+		p = class->ctor(p, &ap);
+		va_end(ap);
+	}
+
+    return p;
 }
 
 void delete(void * item)
