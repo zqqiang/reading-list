@@ -2,11 +2,11 @@
 
 #include "new.h"
 #include "set.h"
-#include "object.h"
+#include "string.h"
 
 int main()
 {
-    void * s = new(Set);
-    delete(s);
+    void * str = new(String, "Hello String");
+    delete(str);
     return 0;
 }
