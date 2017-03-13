@@ -62,6 +62,7 @@ $(MAIN): $(OBJS)
 # the rule(a .c file) and $@: the name of the target of the rule (a .o file) 
 # (see the gnu make manual section about automatic variables)
 $(ODIR)/%.o: %.c
+		@mkdir -p $(@D)
 		$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
 
 clean:
