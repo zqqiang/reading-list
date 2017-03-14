@@ -1,7 +1,12 @@
 #ifndef OBJECT_T
 #define OBJECT_T
 
-extern const void * Object; /* new(Object) */
+struct Class;
 
+struct Object {
+    const struct Class * class;
+};
+
+extern const void * Object;
 
 #endif
