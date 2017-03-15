@@ -26,7 +26,7 @@ CFLAGS = -Wall -g
 LIBS = -lm
 
 # define the C source files
-SRCS = main.c new.c set.c string.c class.c point.c circle.c object.c
+SRCS = main.c new.c set.c string.c class.c point.c circle.c object.c any.c
 
 # define the C object files 
 #
