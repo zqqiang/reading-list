@@ -9,6 +9,6 @@ const void *classOf(const void *_self) {
 }
 
 static int Object_put(const void *_self, FILE *fp) {
-    const struct Class * class = classOf(_self);
+    const struct OClassBase * class = classOf(_self);
     return fprintf(fp, "%s at %p\n", class->name, _self);
 }
