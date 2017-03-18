@@ -28,3 +28,5 @@ void * Class_ctor (void * _self, va_list * app)
     va_end(ap);
 }
 ~~~~
+
+## 7. The ooc Preprocessor Enforcing a Coding Standard
