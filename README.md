@@ -36,3 +36,8 @@ Notes for Source Code reading
 
 ## Content
 1. [nginx](https://nginx.org) - [Nginx Source Code Reading Notes](nginx.md)
+
+# blog-reading-list
+
+## Content
+1. [Paul Graham](http://paulgraham.com/index.html)

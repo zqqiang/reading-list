@@ -8,6 +8,9 @@
 3. [Object Oriented Programming in C](http://www.planetpdf.com/codecuts/pdfs/ooc.pdf) - [Notes](ooc.md)  
 4. [Hackers & Painters: Big Ideas from the Computer Age](https://books.google.ca/books/about/Hackers_Painters.html?id=shycAgAAQBAJ&redir_esc=y)  
 
+### 2017-04
+1. [Lisp](https://7chan.org/pr/src/ANSI_Common_Lisp_-_Paul_Graham.pdf) - [Notes](lisp.md)  
+
 ## Development Schedule
 
 ### 2017-03
