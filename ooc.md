@@ -32,3 +32,4 @@ void * Class_ctor (void * _self, va_list * app)
 ## 7. The ooc Preprocessor Enforcing a Coding Standard
 ## 8. Dynamic Type Checking Defensive Programming
 ## 9. Static Construction Self-Organization
+## 10. Delegates Callback Functions
