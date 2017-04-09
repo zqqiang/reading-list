@@ -10,7 +10,7 @@
 ### 2017-04
 1. [Lisp](https://7chan.org/pr/src/ANSI_Common_Lisp_-_Paul_Graham.pdf) - [Notes](lisp.md)  
 2. [High Performance Browser Networking](https://hpbn.co/) - [Notes](hpbnetwork.md)  
-3. 
+3. [git](https://github.com/git/git) - [Motes](git.md)
 
 ## Development Schedule
 
