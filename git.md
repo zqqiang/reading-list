@@ -69,3 +69,18 @@ static inline size_t st_mult(size_t a, size_t b)
 #define ALLOC_ARRAY(x, alloc) (x) = xmalloc(st_mult(sizeof(*(x)), (alloc)))
 #define REALLOC_ARRAY(x, alloc) (x) = xrealloc((x), st_mult(sizeof(*(x)), (alloc)))
 ~~~
+
+## commit.c
+~~~
+#define OPT_COUNTUP(s, l, v, h)     { OPTION_COUNTUP, (s), (l), (v), NULL, \
+                      (h), PARSE_OPT_NOARG }
+
+#define OPT__VERBOSE(var, h)  OPT_COUNTUP('v', "verbose", (var), (h))
+#define OPT__QUIET(var, h)    OPT_COUNTUP('q', "quiet",   (var), (h))
+
+static struct option builtin_commit_options[] = {
+    OPT__QUIET(&quiet, N_("suppress summary after successful commit")),
+    OPT__VERBOSE(&verbose, N_("show diff in commit message template")),
+}
+~~~
+using several macro defination to reduce complicated struct option define.  
