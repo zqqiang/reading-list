@@ -11,3 +11,4 @@ A function that calls itself is recurisive.
 Function 'member' tests whether something is in an element of list.  
 ### 2.8 Reading Lisp
 ### 2.12 Functional Programming
+### 2.15 Types
