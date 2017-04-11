@@ -84,3 +84,89 @@ static struct option builtin_commit_options[] = {
 }
 ~~~
 using several macro defination to reduce complicated struct option define.  
+
+## alloc.c
+~~~
+#define BLOCKING 1024
+
+struct alloc_state {
+    int count; /* total number of nodes allocated */
+    int nr;    /* number of nodes left in current allocation */
+    void *p;   /* first free node in current allocation */
+};
+
+static inline void *alloc_node(struct alloc_state *s, size_t node_size)
+{
+    void *ret;
+
+    // if first time alloc, create a big blob memory
+    if (!s->nr) {
+        s->nr = BLOCKING; // 1024
+        s->p = xmalloc(BLOCKING * node_size); //s->p point to new alloc memory
+    }
+    s->nr--; // reduce avaliable count
+    s->count++; // increase already used count
+    ret = s->p; // save current pos
+    s->p = (char *)s->p + node_size; //move to remain memory
+    memset(ret, 0, node_size); // calloc
+    return ret; // return alloc memory
+}
+~~~
+
+## apply.c
+~~~
+/*
+ * Compare lines s1 of length n1 and s2 of length n2, ignoring
+ * whitespace difference. Returns 1 if they match, 0 otherwise
+ */
+static int fuzzy_matchlines(const char *s1, size_t n1,
+                const char *s2, size_t n2)
+{
+    const char *last1 = s1 + n1 - 1;
+    const char *last2 = s2 + n2 - 1;
+    int result = 0;
+
+    /* ignore line endings */
+    while ((*last1 == '\r') || (*last1 == '\n'))
+        last1--;
+    while ((*last2 == '\r') || (*last2 == '\n'))
+        last2--;
+
+    /* skip leading whitespaces, if both begin with whitespace */
+    if (s1 <= last1 && s2 <= last2 && isspace(*s1) && isspace(*s2)) {
+        while (isspace(*s1) && (s1 <= last1))
+            s1++;
+        while (isspace(*s2) && (s2 <= last2))
+            s2++;
+    }
+    /* early return if both lines are empty */
+    if ((s1 > last1) && (s2 > last2))
+        return 1;
+    while (!result) {
+        result = *s1++ - *s2++;
+        /*
+         * Skip whitespace inside. We check for whitespace on
+         * both buffers because we don't want "a b" to match
+         * "ab"
+         */
+        if (isspace(*s1) && isspace(*s2)) {
+            while (isspace(*s1) && s1 <= last1)
+                s1++;
+            while (isspace(*s2) && s2 <= last2)
+                s2++;
+        }
+        /*
+         * If we reached the end on one side only,
+         * lines don't match
+         */
+        if (
+            ((s2 > last2) && (s1 <= last1)) ||
+            ((s1 > last1) && (s2 <= last2)))
+            return 0;
+        if ((s1 > last1) && (s2 > last2))
+            break;
+    }
+
+    return !result;
+}
+~~~
