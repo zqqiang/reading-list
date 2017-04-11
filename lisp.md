@@ -12,3 +12,7 @@ Function 'member' tests whether something is in an element of list.
 ### 2.8 Reading Lisp
 ### 2.12 Functional Programming
 ### 2.15 Types
+
+## 3. Lists
+
+### 3.9 Understanding Recursion
