@@ -36,9 +36,10 @@ Notes for Source Code reading
 
 ## Content
 1. [nginx](https://nginx.org) - [Nginx Source Code Reading Notes](nginx.md)
-1. [git](https://github.com/git/git) - [Git Source Code Reading Notes](git.md)
+2. [git](https://github.com/git/git) - [Git Source Code Reading Notes](git.md)
 
 # blog-reading-list
 
 ## Content
 1. [Paul Graham](http://paulgraham.com/index.html)
+2. [c-language-2016](http://www.infoq.com/cn/articles/c-language-2016)
