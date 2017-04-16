@@ -10,8 +10,9 @@
 ### 2017-04
 1. [Lisp](https://7chan.org/pr/src/ANSI_Common_Lisp_-_Paul_Graham.pdf) - [Notes](lisp.md)  
 2. [High Performance Browser Networking](https://hpbn.co/) - [Notes](hpbnetwork.md)  
-3. [git](https://github.com/git/git) - [Notes](git.md)
-4. [libphenom](https://github.com/facebook/libphenom.git) - [Notes](libphenom.md)
+3. [git](https://github.com/git/git) - [Notes](git.md)  
+4. [libphenom](https://github.com/facebook/libphenom.git) - [Notes](libphenom.md)  
+5. [Modern C](http://icube-icps.unistra.fr/img_auth.php/d/db/ModernC.pdf) - [Notes](modernc.md)  
 
 ## Development Schedule
 
