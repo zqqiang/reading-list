@@ -86,6 +86,46 @@ void case7() {
   printf("}\n");
 }
 
+void case8() {
+  printf("bind type modifier and qualifiers to the left\n");
+
+  char* name = "char*";
+  char const* const path_name = "char const* const";
+
+  printf("}\n");
+}
+
+// The ﬁrst stresses the fact that strlen must receive a valid (non-null) pointer
+size_t string_len(char const string[static 1]) {
+  return 0;
+}
+
+// one null pointer terminates the array
+int test_main(int argc, char* argv[argc + 1]) {
+  return 0;
+}
+
+void test_void(void) {};
+void test_aexit(void test_func(void)) {
+  return;
+}
+
+void case9() {
+  printf("array or function notation for pointer parameters to functions\n");
+
+  string_len("string");
+  
+  // warning: null passed to a callee that requires a non-null argument
+  // string_len(NULL);
+
+  char* test_string[] = {"one", NULL};
+  test_main(1, test_string);
+
+  test_aexit(test_void);
+
+  printf("}\n");
+}
+
 int main(int argc, char const *argv[]) {
   printf("how-to-c starting\n\n");
 
@@ -96,6 +136,8 @@ int main(int argc, char const *argv[]) {
   case5();
   case6();
   case7();
+  case8();
+  case9();
 
   printf("\nhow-to-c end\n");
   return 0;
