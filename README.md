@@ -42,4 +42,4 @@ Notes for Source Code reading
 
 ## Content
 1. [Paul Graham](http://paulgraham.com/index.html)
-2. [c-language-2016](https://matt.sh/howto-c)
+2. [c-language-2016](https://matt.sh/howto-c) - [Howto-c Notes](howtoc.md)
