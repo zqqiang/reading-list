@@ -126,6 +126,20 @@ void case9() {
   printf("}\n");
 }
 
+void case10() {
+  printf("all variables should be initialized\n");
+
+  double A[] = {7.8,};
+  double B[3] = {2 * a[0], 7, 33, };
+  double C[] = {[0] = 7.8, [7] = 0, };
+
+  printf("sizeof double A[] = {7.8,}; is %lld\n", sizeof(A)/sizeof(double));
+  printf("sizeof double B[3] = {2 * a[0], 7, 33, }; is %lld\n", sizeof(B)/sizeof(double));
+  printf("sizeof double C[] = {[0] = 7.8, [7] = 0, }; is %lld\n", sizeof(C)/sizeof(double));
+
+  printf("}\n");
+}
+
 int main(int argc, char const *argv[]) {
   printf("how-to-c starting\n\n");
 
@@ -138,6 +152,7 @@ int main(int argc, char const *argv[]) {
   case7();
   case8();
   case9();
+  case10();
 
   printf("\nhow-to-c end\n");
   return 0;
