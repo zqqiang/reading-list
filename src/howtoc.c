@@ -143,14 +143,14 @@ void case10() {
 void case11() {
   printf("enumeration constants {\n");
 
-  enum corvid {magpie, raven};
-  char const* const animal[2] = {
+  enum corvid {magpie, raven, corvid_max};
+  char const* const animal[corvid_max] = {
     [magpie] = "magpie",
     [raven] = "raven",
   };
 
-  printf("%s\n", animal[magpie]);
-  printf("%s\n", animal[raven]);
+  printf("  %s\n", animal[magpie]);
+  printf("  %s\n", animal[raven]);
 
   printf("}\n");
 }
