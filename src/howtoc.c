@@ -176,6 +176,24 @@ void case12() {
     printf("}\n");
 }
 
+inline
+char const* string_literal(char const str[static 1]) {
+    return str;
+}
+// compile success
+// #define string_literal(S) string_literal(S)
+#define string_literal(S) string_literal("" S "")
+
+void case13() {
+    printf("macro replacement {\n");
+
+    string_literal("test string");
+    // error: called object type 'char [1]' is not a function or function pointer
+    // string_literal(NULL);
+
+    printf("}\n");
+}
+
 int main(int argc, char const *argv[]) {
     printf("how-to-c starting\n\n");
 
@@ -191,6 +209,7 @@ int main(int argc, char const *argv[]) {
     case10();
     case11();
     case12();
+    case13();
 
     printf("\nhow-to-c end\n");
     return 0;
