@@ -110,13 +110,19 @@ void test_aexit(void test_func(void)) {
   return;
 }
 
+void* case9_helper(){
+  static char string;
+  return &string;
+}
+
 void case9() {
   printf("array or function notation for pointer parameters to functions\n");
 
   string_len("string");
   
+  char* ptr = case9_helper();
   // warning: null passed to a callee that requires a non-null argument
-  // string_len(NULL);
+  string_len(ptr);
 
   char* test_string[] = {"one", NULL};
   test_main(1, test_string);
