@@ -17,6 +17,8 @@
 ### 2017-05
 1. [libphenom](https://github.com/facebook/libphenom.git) - [Notes](libphenom.md)  
 2. [Modern C](http://icube-icps.unistra.fr/img_auth.php/d/db/ModernC.pdf) - [Notes](modernc.md)  
+3. [React.js](https://facebook.github.io/react/docs/hello-world.html) - Review  
+4. [Mobx.js](https://mobx.js.org/faq/blogs.html) - Review  
 
 ### 2017-06
 1. [CERT C Coding Standard, 2016 Edition](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf) - [Notes](sei.md)  
@@ -30,5 +32,6 @@
 1. [node-capwap cfgserver](https://github.com/zqqiang/node-capwap)
 
 ### 2017-05
-1. [node-capwap cfgserver](https://github.com/zqqiang/node-capwap)
+1. [node-capwap cfgserver](https://github.com/zqqiang/node-capwap)  
+2. [cloud-manager](https://github.com/zqqiang/cloud-manager)  
 
