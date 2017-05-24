@@ -194,6 +194,31 @@ void case13() {
     printf("}\n");
 }
 
+void typeofInt(int X) {
+    printf("type int => %d\n", X);
+}
+
+void typeofFloat(float X) {
+    printf("type float => %f\n", X);
+}
+
+void case14() {
+    printf("_Generic {\n");
+
+#define typeof(X) \
+_Generic((X), \
+    int: typeofInt, \
+    float: typeofFloat)(X)
+
+    int a = 100;
+    typeof(a);
+
+    float b = 100.0;
+    typeof(b);
+
+    printf("}\n");
+}
+
 int main(int argc, char const *argv[]) {
     printf("how-to-c starting\n\n");
 
@@ -210,6 +235,7 @@ int main(int argc, char const *argv[]) {
     case11();
     case12();
     case13();
+    case14();
 
     printf("\nhow-to-c end\n");
     return 0;
