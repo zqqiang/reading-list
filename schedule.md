@@ -21,7 +21,7 @@
 4. [Mobx.js](https://mobx.js.org/faq/blogs.html) - Review  
 
 ### 2017-06
-1. [CERT C Coding Standard, 2016 Edition](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf) - [Notes](sei.md)  
+1. [Kotlin](https://kotlinlang.org/docs/tutorials/) - [Notes]()  
 
 ## Development Schedule
 
