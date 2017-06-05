@@ -1,0 +1,21 @@
+plugins {
+    id 'base'
+}
+
+description = 'A trivial Gradle build'
+version = '1.0'
+
+task zip(type: Zip) {
+    from 'src'
+}
+
+task copy(type: Copy) {
+    from 'src'
+    into 'dest'
+}
+
+task hello {
+    doLast {
+        println 'Hello, World!'
+    }
+}
