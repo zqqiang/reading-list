@@ -27,13 +27,25 @@ when (obj) {
     else -> "Unknown"
 }
 
-fun main(args: Array<String>) {
-    println(getGreeting())
-
-    loop();
+fun testWhen() {
     println(describe(1));
     println(describe("Hello"));
     println(describe(100));
     println(describe(true));
-    
+}
+
+fun testRange() {
+    val x = 10
+    val y = 9
+    if (x in 1..y+1) {
+        println("fit in range")
+    }
+}
+
+fun main(args: Array<String>) {
+    println(getGreeting())
+
+    loop();
+    testWhen();
+    testRange();
 }
