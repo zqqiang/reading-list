@@ -23,6 +23,7 @@
 ### 2017-06
 1. [Kotlin](https://kotlinlang.org/docs/tutorials/) - [Notes]()  
 2. [libphenom](https://github.com/facebook/libphenom.git) - [Notes](libphenom.md)  
+3. [node.js V8+](https://nodejs.org/dist/latest-v8.x/docs/api/) - [Notes]()  
 
 ## Development Schedule
 
