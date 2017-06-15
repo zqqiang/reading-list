@@ -23,7 +23,7 @@
 ### 2017-06
 1. [Kotlin](https://kotlinlang.org/docs/tutorials/) - [Notes]()  
 2. [libphenom](https://github.com/facebook/libphenom.git) - [Notes](libphenom.md)  
-3. [node.js V8+](https://nodejs.org/dist/latest-v8.x/docs/api/) - [Notes]()  
+3. [node.js v8+](https://nodejs.org/dist/latest-v8.x/docs/api/) - [Notes]()  
 
 ## Development Schedule
 
@@ -37,3 +37,5 @@
 1. [node-capwap cfgserver](https://github.com/zqqiang/node-capwap)  
 2. [cloud-manager](https://github.com/zqqiang/cloud-manager)  
 
+### 2017-06
+1. [cloud-manager](https://github.com/zqqiang/cloud-manager)  
