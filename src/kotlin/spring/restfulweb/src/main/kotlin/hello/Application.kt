@@ -10,17 +10,16 @@ import org.springframework.context.annotation.Bean
 import org.springframework.web.client.RestTemplate
 
 @SpringBootApplication
-class Application {
-
+open class Application {
     @Bean
-    fun restTemplate(builder: RestTemplateBuilder): RestTemplate {
+    open fun restTemplate(builder: RestTemplateBuilder): RestTemplate {
         return builder.build()
     }
 
     @Bean
     @Throws(Exception::class)
-    fun run(restTemplate: RestTemplate): CommandLineRunner {
-        return {
+    open fun run(restTemplate: RestTemplate): CommandLineRunner {
+        return CommandLineRunner {
             val quote = restTemplate.getForObject(
                     "http://gturnquist-quoters.cfapps.io/api/random", Quote::class.java)
             log.info(quote.toString())
@@ -28,11 +27,9 @@ class Application {
     }
 
     companion object {
-
         private val log = LoggerFactory.getLogger(Application::class.java)
-
         @JvmStatic fun main(args: Array<String>) {
-            SpringApplication.run(Application::class.java)
+            SpringApplication.run(Application::class.java, *args)
         }
     }
 }
