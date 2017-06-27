@@ -5,17 +5,17 @@ Docs for RFC reading
 [reading & development schedule](schedule.md)  
 
 ## Content
-1. [rfc5246](https://tools.ietf.org/html/rfc5246) - [The Transport Layer Security (TLS) Protocol Version 1.2](rfc5246.md)
-2. [rfc6101](https://tools.ietf.org/html/rfc6101) - [The Secure Sockets Layer (SSL) Protocol Version 3.0](rfc6101.md)
+1. [rfc5246](https://tools.ietf.org/html/rfc5246) - [The Transport Layer Security (TLS) Protocol Version 1.2]()
+2. [rfc6101](https://tools.ietf.org/html/rfc6101) - [The Secure Sockets Layer (SSL) Protocol Version 3.0]()
 
 
 # web-reading-list
 Docs for Web reading
 
 ## Content
-1. [async-await](https://ponyfoo.com/articles/understanding-javascript-async-await) - [Understanding JavaScript’s async await]
-2. [2016 Web Summary](http://mp.weixin.qq.com/s/eJuNKJA45rJRUlk-DQeJrw) - [2016 Web Summary]
-
+1. [async-await](https://ponyfoo.com/articles/understanding-javascript-async-await) - [Understanding JavaScript’s async await]  
+2. [2016 Web Summary](http://mp.weixin.qq.com/s/eJuNKJA45rJRUlk-DQeJrw) - [2016 Web Summary]  
+3. [Understanding ECMAScript 6](https://github.com/nzakas/understandinges6)  
 
 # java-reading-list
 Docs for Java development
@@ -28,18 +28,18 @@ Docs for Java development
 Docs for AI reading
 
 ## Content
-1. [tensorflow](https://www.tensorflow.org) - [TensorFlow](tensorflow.md)
+1. [tensorflow](https://www.tensorflow.org) - [TensorFlow]()
 
 
 # code-reading-list
 Notes for Source Code reading
 
 ## Content
-1. [nginx](https://nginx.org) - [Nginx Source Code Reading Notes](nginx.md)
-2. [git](https://github.com/git/git) - [Git Source Code Reading Notes](git.md)
+1. [nginx](https://nginx.org) - [Nginx Source Code Reading Notes]()
+2. [git](https://github.com/git/git) - [Git Source Code Reading Notes]()
 
 # blog-reading-list
 
 ## Content
 1. [Paul Graham](http://paulgraham.com/index.html)
-2. [c-language-2016](https://matt.sh/howto-c) - [Howto-c Notes](howtoc.md)
+2. [c-language-2016](https://matt.sh/howto-c) - [Howto-c Notes]()
