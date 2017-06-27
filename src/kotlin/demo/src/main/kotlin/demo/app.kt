@@ -60,6 +60,35 @@ class Button : Clickable, Focusable {
     }
 }
 
+// open, final and abstract
+open class RichButton: Clickable {
+    // fun disable() {}
+    open fun animate() {}
+    final override fun click() {}
+}
+
+/*
+class TestRichButton : RichButton {
+    // override fun disable() {}
+    override fun animate() {}
+    override fun click() {}
+}
+*/
+
+abstract class Animate {
+    abstract fun animate()
+    open fun stopAnimate() {}
+    fun animateTwice() {}
+}
+
+/*
+class TestAnimate : Animate {
+    override fun animate() {}
+    override fun stopAnimate() {}
+    override fun animateTwice() {}
+}
+*/
+
 fun main(args: Array<String>) {
     println(getGreeting())
 
