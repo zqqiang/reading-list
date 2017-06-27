@@ -21,8 +21,8 @@ Docs for Web reading
 Docs for Java development
 
 ## Content
-1. [spring.io](https://spring.io/guides) - [spring-boot]
-
+1. [spring.io](https://spring.io/guides) - [spring-boot]  
+2. [kotlin](https://kotlinlang.org/docs/reference/)  
 
 # ai-reading-list
 Docs for AI reading
@@ -35,8 +35,9 @@ Docs for AI reading
 Notes for Source Code reading
 
 ## Content
-1. [nginx](https://nginx.org) - [Nginx Source Code Reading Notes]()
-2. [git](https://github.com/git/git) - [Git Source Code Reading Notes]()
+1. [nginx](https://nginx.org) - [Nginx Source Code Reading Notes]()  
+2. [git](https://github.com/git/git) - [Git Source Code Reading Notes]()  
+3. [libphenom](https://github.com/facebook/libphenom.git)  
 
 # blog-reading-list
 
