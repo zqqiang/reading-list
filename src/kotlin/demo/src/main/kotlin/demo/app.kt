@@ -89,6 +89,19 @@ class TestAnimate : Animate {
 }
 */
 
+// visibility modifiers
+internal open class TalkativeButton : Focusable {
+    private fun yell() = println("Hey!")
+    protected fun whisper() = println("Let's talk!")
+}
+
+/*
+fun TalkativeButton.giveSpeech() {
+    yell()
+    whisper()
+}
+*/
+
 fun main(args: Array<String>) {
     println(getGreeting())
 
