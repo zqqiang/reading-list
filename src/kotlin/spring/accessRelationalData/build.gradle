@@ -1,0 +1,45 @@
+buildscript {
+    ext.kotlin_version = '1.1.2' // Required for Kotlin integration
+    ext.spring_boot_version = '1.5.3.RELEASE'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Required for Kotlin integration
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'kotlin' // Required for Kotlin integration
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'gs-relational-data-access'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version" // Required for Kotlin integration
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework:spring-jdbc")
+    compile("com.h2database:h2")
+    testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.9'
+}
+
+springBoot {
+    mainClass = 'org.jetbrains.kotlin.hello.Application'
+}
