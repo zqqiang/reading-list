@@ -114,6 +114,16 @@ fun eval(e: Expr) : Int =
         is Expr.Sum -> eval(e.right) + eval(e.left)
     }
 
+// 4.2.1 Initializing classes: primary constructor and initializer blocks
+class User(val nickname: String, val isSubscribed: Boolean = true)
+
+// open class User(val nickname: String)
+// class TwitterUser(nickname: String): User(nickname)
+
+class Secretive {
+    private constructor()
+}
+
 fun main(args: Array<String>) {
     println(getGreeting())
 
@@ -125,4 +135,12 @@ fun main(args: Array<String>) {
     button.showOff()
     button.setFocus(true)
     button.click()
+
+    val alice = User("Alice")
+    println(alice.isSubscribed)
+    val bob = User("Bob", false)
+    println(bob.isSubscribed)
+
+    // Cannot access '<init>': it is 'private' in 'Secretive'
+    // val secretive = Secretive()
 }
