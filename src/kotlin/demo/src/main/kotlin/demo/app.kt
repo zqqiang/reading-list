@@ -124,6 +124,25 @@ class Secretive {
     private constructor()
 }
 
+// TODO: 4.2.2 Secondary constructors: initializing the superclass in different ways
+
+interface IUser {
+    val nickname: String
+}
+
+interface IEmailUser {
+    val email: String
+    val nickname: String
+        get() = email.substringBefore('@')
+}
+
+class PrivateUser(override val nickname: String): IUser
+class SubscribingUser(val email: String): IUser {
+    override val nickname: String
+        get() = email.substringBefore('@')
+}
+class GmailUser(override val email: String): IEmailUser
+
 fun main(args: Array<String>) {
     println(getGreeting())
 
@@ -143,4 +162,9 @@ fun main(args: Array<String>) {
 
     // Cannot access '<init>': it is 'private' in 'Secretive'
     // val secretive = Secretive()
+
+    println(PrivateUser("one@g.com").nickname)
+    println(SubscribingUser("one@g.com").nickname)
+    println(GmailUser("gmail@g.com").nickname)
+
 }
