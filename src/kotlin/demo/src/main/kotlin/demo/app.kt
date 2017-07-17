@@ -126,6 +126,7 @@ class Secretive {
 
 // TODO: 4.2.2 Secondary constructors: initializing the superclass in different ways
 
+// 4.2.3 Implementing properties declared in interfaces
 interface IUser {
     val nickname: String
 }
@@ -143,6 +144,19 @@ class SubscribingUser(val email: String): IUser {
 }
 class GmailUser(override val email: String): IEmailUser
 
+// 4.2.4 Accessing a backing field from a getter or setter
+
+class BUser(val name: String) {
+    var address: String = "unspecified"
+        set(value: String) {
+            println("""
+                Address was changed for $name:
+                "$field" -> "$value".""".trimIndent())
+            field = value
+        }
+}
+
+// =======================================================
 fun main(args: Array<String>) {
     println(getGreeting())
 
@@ -167,4 +181,6 @@ fun main(args: Array<String>) {
     println(SubscribingUser("one@g.com").nickname)
     println(GmailUser("gmail@g.com").nickname)
 
+    val balice =BUser("Alice")
+    balice.address = "3233 E 7th Ave"
 }
