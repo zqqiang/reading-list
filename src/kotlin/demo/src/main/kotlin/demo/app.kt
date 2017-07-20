@@ -269,6 +269,9 @@ fun testInnerObjectClass() {
     println(persons.sortedWith(InnerPerson.NameComparator))
 }
 
+// 4.4.2 Companion objects: a place for factory methods and static members
+
+
 // =======================================================
 fun main(args: Array<String>) {
     println(getGreeting())
