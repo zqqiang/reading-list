@@ -23,6 +23,7 @@ Docs for Java development
 ## Content
 1. [spring.io](https://spring.io/guides) - [spring-boot]  
 2. [kotlin](https://kotlinlang.org/docs/reference/)  
+3. [Learn Java for Web Development](www.pourzad.com/Programming/Learn%20Java%20for%20Web%20Development.pdf)  
 
 # ai-reading-list
 Docs for AI reading
