@@ -29,7 +29,7 @@ Docs for Java development
 Docs for AI reading
 
 ## Content
-1. [tensorflow](https://www.tensorflow.org) - [TensorFlow]()
+1. [tensorflow](https://www.tensorflow.org) - [TensorFlow]()  
 
 
 # code-reading-list
@@ -43,6 +43,6 @@ Notes for Source Code reading
 # blog-reading-list
 
 ## Content
-1. [Paul Graham](http://paulgraham.com/index.html)
-2. [c-language-2016](https://matt.sh/howto-c) - [Howto-c Notes]()
+1. [Paul Graham](http://paulgraham.com/index.html)  
+2. [c-language-2016](https://matt.sh/howto-c) - [Howto-c Notes]()  
 3. [Serverless Architectures](https://martinfowler.com/articles/serverless.html)  
