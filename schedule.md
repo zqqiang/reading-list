@@ -32,6 +32,7 @@
 4. [swagger.io](https://swagger.io/)  
 5. [tomcat](http://tomcat.apache.org)  
 5. [Progressive Web Applications](https://developers.google.com/web/progressive-web-apps/)  
+6. [GWT](http://www.gwtproject.org/)  
 
 ## Development Schedule
 
