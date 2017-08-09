@@ -15,7 +15,18 @@
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/gwtdocs/greet</url-pattern>
   </servlet-mapping>
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>customServiceImpl</servlet-name>
+    <servlet-class>com.google.gwt.sample.docs.server.CustomServiceImpl</servlet-class>
+  </servlet>
   
+  <servlet-mapping>
+    <servlet-name>customServiceImpl</servlet-name>
+    <url-pattern>/gwtdocs/customService</url-pattern>
+  </servlet-mapping>
+
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>GwtDocs.html</welcome-file>

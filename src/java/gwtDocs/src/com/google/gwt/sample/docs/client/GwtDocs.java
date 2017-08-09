@@ -32,15 +32,20 @@ public class GwtDocs implements EntryPoint {
 	 * Create a remote service proxy to talk to the server-side Greeting service.
 	 */
 	private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
+	
+	private final CustomServiceAsync customService = GWT.create(CustomService.class);
 
 	/**
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
 		final Button sendButton = new Button("Send");
+		final Button customButton = new Button("Query");
+		final Button clearButton = new Button("Clear");
 		final TextBox nameField = new TextBox();
 		nameField.setText("GWT User");
 		final Label errorLabel = new Label();
+		final Label customLabel = new Label();
 
 		// We can add style names to widgets
 		sendButton.addStyleName("sendButton");
@@ -50,6 +55,29 @@ public class GwtDocs implements EntryPoint {
 		RootPanel.get("nameFieldContainer").add(nameField);
 		RootPanel.get("sendButtonContainer").add(sendButton);
 		RootPanel.get("errorLabelContainer").add(errorLabel);
+		RootPanel.get("customLabelContainer").add(customLabel);
+		RootPanel.get("customButtonContainer").add(customButton);
+		RootPanel.get("clearButtonContainer").add(clearButton);
+		
+		customButton.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				customService.customMethod("Custom Message", new AsyncCallback<String>() {
+					public void onFailure(Throwable caught) {
+						// Show the RPC error message to the user
+
+					}
+					public void onSuccess(String result) {
+						customLabel.setText(result);
+					}
+				});
+			}
+		});
+
+		clearButton.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				customLabel.setText("");
+			}
+		});
 
 		// Focus the cursor on the name field when the app loads
 		nameField.setFocus(true);
