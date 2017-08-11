@@ -46,3 +46,4 @@ Notes for Source Code reading
 1. [Paul Graham](http://paulgraham.com/index.html)  
 2. [c-language-2016](https://matt.sh/howto-c) - [Howto-c Notes]()  
 3. [Serverless Architectures](https://martinfowler.com/articles/serverless.html)  
+4. [The world in which IPv6 was a good design](http://apenwarr.ca/log/?m=201708#10)  
