@@ -1,8 +1,13 @@
 package com.google.gwt.sample.docs.client;
 
+import com.google.gwt.sample.docs.basics.DelayedLogic;
 import com.google.gwt.sample.docs.shared.FieldVerifier;
+
+import java.util.Date;
+
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
@@ -14,14 +19,19 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.LayoutPanel;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TabPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
+import com.google.gwt.i18n.client.NumberFormat;
+
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -47,6 +57,7 @@ public class GwtDocs implements EntryPoint {
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
+    
 		final Button sendButton = new Button("Send");
 		final Button customButton = new Button("Query");
 		final Button clearButton = new Button("Clear");
@@ -209,5 +220,22 @@ public class GwtDocs implements EntryPoint {
 
 	    tabPanel.selectTab(0);
 	    RootPanel.get("tabContainer").add(tabPanel);
+	    
+	    final Label formattingLabel = new Label();
+	    RootPanel.get("formattingContainer").add(formattingLabel);
+	    
+	    NumberFormat fmt = NumberFormat.getDecimalFormat();
+	    double value = 12345.6789;
+	    String formatted = fmt.format(value);
+	    // Prints 1,2345.6789 in the default locale
+	    GWT.log("Formatted string is" + formatted, null);
+	    
+	    formattingLabel.setText(formatted);
+	    
+	    Date today = new Date();
+	    // prints Tue Dec 18 12:01:26 GMT-500 2007 in the default locale.
+	    GWT.log(today.toString(), null);
+	    
+	    new DelayedLogic().startWork();
 	}
 }
