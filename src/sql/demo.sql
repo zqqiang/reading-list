@@ -43,6 +43,30 @@ INSERT INTO stock VALUES(1, "food", 100);
     1           food        100       
 */
 
+CREATE TABLE customer (
+    id INT PRIMARY KEY NOT NULL, 
+    name TEXT NOT NULL, 
+    address TEXT NOT NULL, 
+    stockId INT NOT NULL
+);
+
+INSERT INTO customer VALUES(1, "Mary", "1616 Pine St", 1);
+
+/*
+    sqlite> select * from customer;
+    id          name        address       stockId   
+    ----------  ----------  ------------  ----------
+    1           Mary        1616 Pine St  1         
+*/
+
+CREATE TABLE order (
+    id INT PRIMARY KEY NOT NULL,
+    date DATETIME NOT NULL,
+    item INT NOT NULL,
+    price FLOAT NOT NULL,
+    discount FLOAT NOT NULL
+);
+
 
 
 
