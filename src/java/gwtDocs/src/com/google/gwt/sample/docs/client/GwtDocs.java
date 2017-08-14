@@ -1,12 +1,14 @@
 package com.google.gwt.sample.docs.client;
 
 import com.google.gwt.sample.docs.basics.DelayedLogic;
+import com.google.gwt.sample.docs.basics.WorkingWithJSON;
 import com.google.gwt.sample.docs.shared.FieldVerifier;
 
 import java.util.Date;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -237,5 +239,6 @@ public class GwtDocs implements EntryPoint {
 	    GWT.log(today.toString(), null);
 	    
 	    new DelayedLogic().startWork();
+	    
 	}
 }
