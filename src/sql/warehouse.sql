@@ -34,8 +34,6 @@ INSERT INTO stock VALUES(1, "food", 100);
     sqlite> select * from stock;
     id|name|quantity
     1|food|100
-    sqlite> 
-    sqlite>
     sqlite> .mode column
     sqlite> select * from stock;
     id          name        quantity  
@@ -59,15 +57,21 @@ INSERT INTO customer VALUES(1, "Mary", "1616 Pine St", 1);
     1           Mary        1616 Pine St  1         
 */
 
-CREATE TABLE order (
-    id INT PRIMARY KEY NOT NULL,
-    date DATETIME NOT NULL,
-    item INT NOT NULL,
-    price FLOAT NOT NULL,
+CREATE TABLE corders (
+    id INT PRIMARY KEY NOT NULL, 
+    customerId INT NOT NULL, 
+    date DATETIME NOT NULL, 
+    item INT NOT NULL, 
+    price FLOAT NOT NULL, 
     discount FLOAT NOT NULL
 );
 
+INSERT INTO corders VALUES(1, 1, "2017/8/14", 1, 10.99, 0.99);
 
-
-
+/*
+    sqlite> SELECT * FROM corders;
+    id          date        item        price       discount
+    ----------  ----------  ----------  ----------  ----------
+    1           2017/8/14   1           10.99       0.99
+*/
 
