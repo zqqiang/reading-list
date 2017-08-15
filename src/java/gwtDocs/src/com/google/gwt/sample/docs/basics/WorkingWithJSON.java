@@ -7,4 +7,8 @@ public class WorkingWithJSON {
 	public static <T extends JavaScriptObject> T parseJson(String jsonStr) {
 		return JsonUtils.safeEval(jsonStr);
 	}
+
+	public static native void alert(String msg) /*-{
+		$wnd.alert(msg);
+	}-*/;
 }

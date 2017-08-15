@@ -1,14 +1,12 @@
 package com.google.gwt.sample.docs.client;
 
 import com.google.gwt.sample.docs.basics.DelayedLogic;
-import com.google.gwt.sample.docs.basics.WorkingWithJSON;
 import com.google.gwt.sample.docs.shared.FieldVerifier;
 
 import java.util.Date;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -19,11 +17,12 @@ import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.LayoutPanel;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.SplitLayoutPanel;
 import com.google.gwt.user.client.ui.TabPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -54,7 +53,7 @@ public class GwtDocs implements EntryPoint {
 	private final CustomServiceAsync customService = GWT.create(CustomService.class);
 	
 	TabPanel tabPanel;
-
+	
 	/**
 	 * This is the entry point method.
 	 */
@@ -240,5 +239,7 @@ public class GwtDocs implements EntryPoint {
 	    
 	    new DelayedLogic().startWork();
 	    
+//	    WorkingWithJSON.alert("jnsi alert!");
+
 	}
 }
