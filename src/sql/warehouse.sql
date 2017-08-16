@@ -41,37 +41,74 @@ INSERT INTO stock VALUES(1, "food", 100);
     1           food        100       
 */
 
-CREATE TABLE customer (
-    id INT PRIMARY KEY NOT NULL, 
-    name TEXT NOT NULL, 
-    address TEXT NOT NULL, 
+CREATE TABLE merchandise (
+    id INT PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    band TEXT NOT NULL,
+    category INT NOT NULL,
+    expiredate DATETIME NOT NULL,
+    description TEXT NOT NULL,
     stockId INT NOT NULL
 );
 
-INSERT INTO customer VALUES(1, "Mary", "1616 Pine St", 1);
+INSERT INTO merchandise VALUES(1, "apple", "apple NO. 1", 1, "2017/10/01", "", 1);
 
 /*
-    sqlite> select * from customer;
-    id          name        address       stockId   
-    ----------  ----------  ------------  ----------
-    1           Mary        1616 Pine St  1         
+    sqlite> select * from merchandise;
+    id          name        band         category    expiredate  description  stockId
+    ----------  ----------  -----------  ----------  ----------  -----------  ----------
+    1           apple       apple NO. 1  1           2017/10/01               1
 */
 
-CREATE TABLE corders (
+CREATE TABLE member (
     id INT PRIMARY KEY NOT NULL, 
-    customerId INT NOT NULL, 
+    name TEXT NOT NULL, 
+    address TEXT NOT NULL,
+    type INT NOT NULL,
+    membership INT NOT NULL,
+    expiredate DATETIME NOT NULL
+);
+
+INSERT INTO member VALUES(1, "Mary", "1616 Pine St", 1, 123456789, "2018/01/01");
+
+/*
+    sqlite> select * from member;
+    id          name        address       type        membership  expiredate
+    ----------  ----------  ------------  ----------  ----------  ----------
+    1           Mary        1616 Pine St  1           123456789   2018/01/01 
+*/
+
+CREATE TABLE memberTypeMap (
+    typeId INT PRIMARY KEY NOT NULL,
+    typeName TEXT NOT NULL
+);
+
+INSERT INTO memberTypeMap VALUES(1, "Gold Star Membership"),(2, "Executive Membership"),(3, "Business Membership");
+
+/*
+    sqlite> select * from memberTypeMap;
+    typeId      typeName
+    ----------  --------------------
+    1           Gold Star Membership
+    2           Executive Membership
+    3           Business Membership
+*/
+
+CREATE TABLE orders (
+    id INT PRIMARY KEY NOT NULL, 
+    memberId INT NOT NULL, 
     date DATETIME NOT NULL, 
     item INT NOT NULL, 
     price FLOAT NOT NULL, 
     discount FLOAT NOT NULL
 );
 
-INSERT INTO corders VALUES(1, 1, "2017/8/14", 1, 10.99, 0.99);
+INSERT INTO orders VALUES(1, 1, "2017/8/14", 1, 10.99, 0.99);
 
 /*
-    sqlite> SELECT * FROM corders;
-    id          date        item        price       discount
-    ----------  ----------  ----------  ----------  ----------
-    1           2017/8/14   1           10.99       0.99
+    sqlite> select * from orders;
+    id          memberId    date        item        price       discount
+    ----------  ----------  ----------  ----------  ----------  ----------
+    1           1           2017/8/14   1           10.99       0.99
 */
 
