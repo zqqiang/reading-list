@@ -1,6 +1,7 @@
 package com.google.gwt.sample.docs.client;
 
 import com.google.gwt.sample.docs.basics.DelayedLogic;
+import com.google.gwt.sample.docs.basics.OptionalTextBox;
 import com.google.gwt.sample.docs.shared.FieldVerifier;
 
 import java.util.Date;
@@ -240,6 +241,8 @@ public class GwtDocs implements EntryPoint {
 	    new DelayedLogic().startWork();
 	    
 //	    WorkingWithJSON.alert("jnsi alert!");
-
+	    
+	    OptionalTextBox otb = new OptionalTextBox("Check this to enable me");
+	    RootPanel.get("widgetContainer").add(otb);
 	}
 }
