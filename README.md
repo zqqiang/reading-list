@@ -47,5 +47,3 @@ Notes for Source Code reading
 2. [c-language-2016](https://matt.sh/howto-c) - [Howto-c Notes]()  
 3. [Serverless Architectures](https://martinfowler.com/articles/serverless.html)  
 4. [The world in which IPv6 was a good design](http://apenwarr.ca/log/?m=201708#10)  
-5. [An Introduction to HAProxy and Load Balancing Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)  
-6. [Designing and Deploying High-Availability Websites](http://docs.rightscale.com/cm/designers_guide/cm-designing-and-deploying-high-availability-websites.html)  

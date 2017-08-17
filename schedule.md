@@ -37,6 +37,7 @@
 ### 2017-08
 1. [GWT](http://www.gwtproject.org/)  
 2. [Chromeless](https://github.com/graphcool/chromeless)  
+3. [High Availability](doc/ha.md)  
 
 ## Development Schedule
 
