@@ -29,19 +29,26 @@
 CREATE TABLE stock (
     id INT PRIMARY KEY NOT NULL,
     name TEXT NOT NULL,
-    quantity INT NOT NULL
+    category TEXT NOT NULL
 );
 
-INSERT INTO stock VALUES(1, "food", 100);
+INSERT INTO stock VALUES
+    (1, "food", "fruit"),
+    (2, "appliances", "refrigerators"),
+    (3, "appliances", "cooking appliances"),
+    (4, "appliances", "dishwashers"),
+    (5, "furniture", "mattresses")
+;
 
 /*
     sqlite> select * from stock;
-    id|name|quantity
-    1|food|100
-    sqlite> select * from stock;
-    id          name        quantity  
+    id          name        quantity
     ----------  ----------  ----------
-    1           food        100       
+    1           food        fruit
+    2           appliances  refrigerat
+    3           appliances  cooking ap
+    4           appliances  dishwasher
+    5           furniture   mattresses
 */
 
 CREATE TABLE merchandise (
