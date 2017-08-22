@@ -21,6 +21,11 @@
     0    main             /Users/EllaFan/Downloads/softwares/sqlite3/warehouse.db   
 */
 
+/*
+    sqlite> .header on
+    sqlite> .mode column
+*/
+
 CREATE TABLE stock (
     id INT PRIMARY KEY NOT NULL,
     name TEXT NOT NULL,
@@ -30,11 +35,9 @@ CREATE TABLE stock (
 INSERT INTO stock VALUES(1, "food", 100);
 
 /*
-    sqlite> .header on
     sqlite> select * from stock;
     id|name|quantity
     1|food|100
-    sqlite> .mode column
     sqlite> select * from stock;
     id          name        quantity  
     ----------  ----------  ----------
@@ -112,3 +115,17 @@ INSERT INTO orders VALUES(1, 1, "2017/8/14", 1, 10.99, 0.99);
     1           1           2017/8/14   1           10.99       0.99
 */
 
+CREATE TABLE employee (
+    id INT PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    department TEXT NOT NULL
+);
+
+INSERT INTO employee VALUES(1, "Bill", "Chasher");
+
+/*
+    sqlite> select * from employee;
+    id          name        department
+    ----------  ----------  ----------
+    1           Bill        Chasher
+*/
