@@ -26,6 +26,8 @@
     sqlite> .mode column
 */
 
+DROP TABLE IF EXISTS stock;
+
 CREATE TABLE stock (
     id INT PRIMARY KEY NOT NULL,
     name TEXT NOT NULL,
@@ -37,8 +39,7 @@ INSERT INTO stock VALUES
     (2, "appliances", "refrigerators"),
     (3, "appliances", "cooking appliances"),
     (4, "appliances", "dishwashers"),
-    (5, "furniture", "mattresses")
-;
+    (5, "furniture", "mattresses");
 
 /*
     sqlite> select * from stock;
@@ -50,6 +51,8 @@ INSERT INTO stock VALUES
     4           appliances  dishwasher
     5           furniture   mattresses
 */
+
+DROP TABLE IF EXISTS merchandise;
 
 CREATE TABLE merchandise (
     id INT PRIMARY KEY NOT NULL,
@@ -73,6 +76,8 @@ INSERT INTO merchandise VALUES
     2           watermelon  watermelon   1           2017/11/01               1
 */
 
+DROP TABLE IF EXISTS member;
+
 CREATE TABLE member (
     id INT PRIMARY KEY NOT NULL, 
     name TEXT NOT NULL, 
@@ -82,7 +87,18 @@ CREATE TABLE member (
     expiredate DATETIME NOT NULL
 );
 
-INSERT INTO member VALUES(1, "Mary", "1616 Pine St", 1, 123456789, "2018/01/01");
+INSERT INTO member VALUES
+    (1, "Mary", "1616 Pine St", 1, 1111111111, "2018/01/01"),
+    (2, "Tom", "1617 Pine St", 2, 2222222222, "2018/01/02"),
+    (3, "Tina", "1618 Pine St", 3, 33333333333, "2018/01/03"),
+    (4, "Jack", "1619 Pine St", 1, 44444444444, "2018/01/04"),
+    (5, "John", "1620 Pine St", 2, 55555555555, "2018/01/05"),
+    (6, "Elan", "1621 Pine St", 3, 666666666666, "2018/01/06"),
+    (7, "Lucy", "1622 Pine St", 2, 7777777777, "2018/01/07"),
+    (8, "Dave", "1623 Pine St", 3, 8888888888, "2018/01/08"),
+    (9, "Lucky", "1624 Pine St", 1, 9999999999, "2018/01/09"),
+    (10, "Allen", "1625 Pine St", 2, 1000000000, "2018/01/11"),
+    (11, "Mike", "1626 Pine St", 3, 200000000, "2018/01/12");
 
 /*
     sqlite> select * from member;
@@ -91,12 +107,17 @@ INSERT INTO member VALUES(1, "Mary", "1616 Pine St", 1, 123456789, "2018/01/01")
     1           Mary        1616 Pine St  1           123456789   2018/01/01 
 */
 
+DROP TABLE IF EXISTS memberTypeMap;
+
 CREATE TABLE memberTypeMap (
     typeId INT PRIMARY KEY NOT NULL,
     typeName TEXT NOT NULL
 );
 
-INSERT INTO memberTypeMap VALUES(1, "Gold Star Membership"),(2, "Executive Membership"),(3, "Business Membership");
+INSERT INTO memberTypeMap VALUES
+    (1, "Gold Star Membership"),
+    (2, "Executive Membership"),
+    (3, "Business Membership");
 
 /*
     sqlite> select * from memberTypeMap;
@@ -106,6 +127,8 @@ INSERT INTO memberTypeMap VALUES(1, "Gold Star Membership"),(2, "Executive Membe
     2           Executive Membership
     3           Business Membership
 */
+
+DROP TABLE IF EXISTS orders;
 
 CREATE TABLE orders (
     id INT NOT NULL, 
@@ -119,7 +142,14 @@ CREATE TABLE orders (
 
 INSERT INTO orders VALUES
     (1, 1, "2017/8/14", 1, 10.99, 0.99),
-    (1, 1, "2017/8/14", 2, 11.99, 0.99);
+    (1, 1, "2017/8/14", 2, 11.99, 2.99),
+    (1, 2, "2017/8/15", 3, 12.99, 1.99),
+    (1, 2, "2017/8/15", 4, 13.99, 2.99),
+    (2, 3, "2017/8/16", 5, 14.99, 1.99),
+    (2, 3, "2017/8/16", 6, 15.99, 3.99),
+    (2, 4, "2017/8/17", 7, 16.99, 4.99),
+    (2, 4, "2017/8/17", 8, 17.99, 5.99),
+    (2, 5, "2017/8/18", 9, 18.99, 2.99);
 
 /*
     sqlite> select * from orders;
@@ -128,19 +158,58 @@ INSERT INTO orders VALUES
     1           1           2017/8/14   1              10.99       0.99
 */
 
-CREATE TABLE employee (
-    id INT PRIMARY KEY NOT NULL,
-    name TEXT NOT NULL,
-    department TEXT NOT NULL
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee(
+   id INT PRIMARY KEY NOT NULL,
+   name TEXT NOT NULL,
+   age INT NOT NULL,
+   address TEXT NOT NULL,
+   salary FLOAT NOT NULL
 );
 
-INSERT INTO employee VALUES(1, "Bill", "Chasher");
+INSERT INTO employee VALUES
+    (1, 'Paul', 32, 'California' , 20000.0),
+    (2, 'Allen', 25, 'Texas' , 15000.0),
+    (3, 'Teddy', 23, 'Norway' , 20000.0),
+    (4, 'Mark', 25, 'Rich-Mond' , 65000.0),
+    (5, 'David', 27, 'Texas' , 85000.0),
+    (6, 'Kim', 22, 'South-Hall' , 45000.0),
+    (7, 'James', 24, 'Houston' , 10000.0);
 
 /*
     sqlite> select * from employee;
-    id          name        department
+    id          name        age         address     salary
+    ----------  ----------  ----------  ----------  ----------
+    1           Paul        32          California  20000.0
+    2           Allen       25          Texas       15000.0
+    3           Teddy       23          Norway      20000.0
+    4           Mark        25          Rich-Mond   65000.0
+    5           David       27          Texas       85000.0
+    6           Kim         22          South-Hall  45000.0
+    7           James       24          Houston     10000.0
+*/
+
+DROP TABLE IF EXISTS department;
+
+CREATE TABLE department(
+   id INT PRIMARY KEY NOT NULL,
+   dept CHAR(50) NOT NULL,
+   emp_id INT NOT NULL
+);
+
+INSERT INTO department VALUES
+    (1, 'IT Billing', 1),
+    (2, 'Engineering', 2),
+    (3, 'Finance', 7);
+
+/*
+    sqlite> select * from department;
+    id          dept        emp_id
     ----------  ----------  ----------
-    1           Bill        Chasher
+    1           IT Billing  1
+    2           Engineerin  2
+    3           Finance     7
 */
 
 /*
