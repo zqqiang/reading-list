@@ -61,13 +61,16 @@ CREATE TABLE merchandise (
     stockId INT NOT NULL
 );
 
-INSERT INTO merchandise VALUES(1, "apple", "apple NO. 1", 1, "2017/10/01", "", 1);
+INSERT INTO merchandise VALUES
+    (1, "apple", "apple NO. 1", 1, "2017/10/01", "", 1),
+    (2, "watermelon", "watermelon US", 1, "2017/11/01", "", 1);
 
 /*
     sqlite> select * from merchandise;
     id          name        band         category    expiredate  description  stockId
     ----------  ----------  -----------  ----------  ----------  -----------  ----------
     1           apple       apple NO. 1  1           2017/10/01               1
+    2           watermelon  watermelon   1           2017/11/01               1
 */
 
 CREATE TABLE member (
@@ -105,21 +108,24 @@ INSERT INTO memberTypeMap VALUES(1, "Gold Star Membership"),(2, "Executive Membe
 */
 
 CREATE TABLE orders (
-    id INT PRIMARY KEY NOT NULL, 
+    id INT NOT NULL, 
     memberId INT NOT NULL, 
     date DATETIME NOT NULL, 
-    item INT NOT NULL, 
+    merchandiseId INT NOT NULL, 
     price FLOAT NOT NULL, 
-    discount FLOAT NOT NULL
+    discount FLOAT NOT NULL,
+    PRIMARY KEY (id, merchandiseId)
 );
 
-INSERT INTO orders VALUES(1, 1, "2017/8/14", 1, 10.99, 0.99);
+INSERT INTO orders VALUES
+    (1, 1, "2017/8/14", 1, 10.99, 0.99),
+    (1, 1, "2017/8/14", 2, 11.99, 0.99);
 
 /*
     sqlite> select * from orders;
-    id          memberId    date        item        price       discount
-    ----------  ----------  ----------  ----------  ----------  ----------
-    1           1           2017/8/14   1           10.99       0.99
+    id          memberId    date        merchandiseId  price       discount
+    ----------  ----------  ----------  -------------  ----------  ----------
+    1           1           2017/8/14   1              10.99       0.99
 */
 
 CREATE TABLE employee (
@@ -135,4 +141,22 @@ INSERT INTO employee VALUES(1, "Bill", "Chasher");
     id          name        department
     ----------  ----------  ----------
     1           Bill        Chasher
+*/
+
+/*
+    step 1: get customer Mary order details
+*/
+
+select m.name,m.address,good.name,o.price,o.discount from orders o 
+    join member m on o.memberId = m.id 
+    join merchandise good on good.id = o.merchandiseId;
+
+/*
+    sqlite> select m.name,m.address,good.name,o.price,o.discount from orders o
+       ...>     join member m on o.memberId = m.id
+       ...>     join merchandise good on good.id = o.merchandiseId;
+    name        address       name        price       discount
+    ----------  ------------  ----------  ----------  ----------
+    Mary        1616 Pine St  apple       10.99       0.99
+    Mary        1616 Pine St  watermelon  11.99       0.99
 */
