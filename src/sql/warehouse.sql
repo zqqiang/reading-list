@@ -213,19 +213,74 @@ INSERT INTO department VALUES
 */
 
 /*
-    step 1: get customer Mary order details
+    step 1: get customer order details
 */
 
-select m.name,m.address,good.name,o.price,o.discount from orders o 
+select m.name,m.address,good.name,o.price,o.discount,o.date from orders o 
     join member m on o.memberId = m.id 
     join merchandise good on good.id = o.merchandiseId;
 
 /*
-    sqlite> select m.name,m.address,good.name,o.price,o.discount from orders o
+    sqlite> select m.name,m.address,good.name,o.price,o.discount,o.date from orders o
        ...>     join member m on o.memberId = m.id
        ...>     join merchandise good on good.id = o.merchandiseId;
-    name        address       name        price       discount
-    ----------  ------------  ----------  ----------  ----------
-    Mary        1616 Pine St  apple       10.99       0.99
-    Mary        1616 Pine St  watermelon  11.99       0.99
+    name        address       name        price       discount    date
+    ----------  ------------  ----------  ----------  ----------  ----------
+    Mary        1616 Pine St  apple       10.99       0.99        2017/8/14
+    Mary        1616 Pine St  watermelon  11.99       2.99        2017/8/14
+    Tom         1617 Pine St  apple       12.99       1.99        2017/8/15
+    Tom         1617 Pine St  watermelon  13.99       2.99        2017/8/15
+    Tina        1618 Pine St  apple       14.99       1.99        2017/8/16
+    Tina        1618 Pine St  watermelon  15.99       3.99        2017/8/16
+    Jack        1619 Pine St  apple       16.99       4.99        2017/8/17
+    Jack        1619 Pine St  watermelon  17.99       5.99        2017/8/17
+    John        1620 Pine St  apple       18.99       2.99        2017/8/18
+*/
+
+/*
+    step 2: get customer order total summary by date
+*/
+
+select m.name, sum(o.price) as total, sum(o.discount) as discount, o.date from orders o 
+    join member m on o.memberId = m.id 
+    join merchandise me on me.id = o.merchandiseId
+    group by m.name,o.date;
+
+/*
+    sqlite> select m.name, sum(o.price) as total, sum(o.discount) as discount, o.date from orders o
+       ...>     join member m on o.memberId = m.id
+       ...>     join merchandise me on me.id = o.merchandiseId
+       ...>     group by m.name,o.date;
+    name        total       discount    date
+    ----------  ----------  ----------  ----------
+    Jack        34.98       10.98       2017/8/17
+    John        18.99       2.99        2017/8/18
+    Mary        22.98       3.98        2017/8/14
+    Tina        30.98       5.98        2017/8/16
+    Tom         26.98       4.98        2017/8/15
+*/
+
+/*
+    step 3: get customer order total summary order by total
+*/
+
+select m.name, sum(o.price) as total, sum(o.discount) as discount, o.date from orders o 
+    join member m on o.memberId = m.id 
+    join merchandise me on me.id = o.merchandiseId
+    group by m.name,o.date
+    order by total desc;
+
+/*
+    sqlite> select m.name, sum(o.price) as total, sum(o.discount) as discount, o.date from orders o
+       ...>     join member m on o.memberId = m.id
+       ...>     join merchandise me on me.id = o.merchandiseId
+       ...>     group by m.name,o.date
+       ...>     order by total desc;
+    name        total       discount    date
+    ----------  ----------  ----------  ----------
+    Jack        34.98       10.98       2017/8/17
+    Tina        30.98       5.98        2017/8/16
+    Tom         26.98       4.98        2017/8/15
+    Mary        22.98       3.98        2017/8/14
+    John        18.99       2.99        2017/8/18
 */
