@@ -34,12 +34,14 @@ CREATE TABLE stock (
     category TEXT NOT NULL
 );
 
-INSERT INTO stock VALUES
-    (1, "food", "fruit"),
-    (2, "appliances", "refrigerators"),
-    (3, "appliances", "cooking appliances"),
-    (4, "appliances", "dishwashers"),
-    (5, "furniture", "mattresses");
+/*
+    INSERT INTO stock VALUES
+        (1, "food", "fruit"),
+        (2, "appliances", "refrigerators"),
+        (3, "appliances", "cooking appliances"),
+        (4, "appliances", "dishwashers"),
+        (5, "furniture", "mattresses");
+*/
 
 /*
     sqlite> select * from stock;
@@ -284,3 +286,34 @@ select m.name, sum(o.price) as total, sum(o.discount) as discount, o.date from o
     Mary        22.98       3.98        2017/8/14
     John        18.99       2.99        2017/8/18
 */
+
+/*
+    requirement 1: list customers rewards
+*/
+
+select m.name, sum(o.price) as total, sum(o.discount) as discount, sum(o.price)*0.02 as rewards from orders o 
+    join member m on o.memberId = m.id 
+    join merchandise me on me.id = o.merchandiseId
+    group by m.name
+    order by total desc;
+
+/*
+    sqlite> select m.name, sum(o.price) as total, sum(o.discount) as discount, sum(o.price)*0.02 as rewards from orders o
+       ...>     join member m on o.memberId = m.id
+       ...>     join merchandise me on me.id = o.merchandiseId
+       ...>     group by m.name
+       ...>     order by total desc;
+    name        total       discount    rewards
+    ----------  ----------  ----------  ----------
+    Jack        34.98       10.98       0.6996
+    Tina        30.98       5.98        0.6196
+    Tom         26.98       4.98        0.5396
+    Mary        22.98       3.98        0.4596
+    John        18.99       2.99        0.3798
+*/
+
+
+/*
+    retuqirement 2: which merchandise is most popular. 
+*/
+
