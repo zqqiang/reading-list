@@ -39,6 +39,9 @@
 2. [Chromeless](https://github.com/graphcool/chromeless)  
 3. [High Availability](doc/ha.md)  
 
+### 2017-09
+
+
 ## Development Schedule
 
 ### 2017-03
@@ -61,3 +64,6 @@
 1. [node-capwap chromeless](https://github.com/zqqiang/node-capwap/tree/master/tools/chromeless)  
 2. [ut-capwap](https://github.com/zqqiang/ut-capwap.git)  
 3. [openvpn](https://github.com/OpenVPN/openvpn)  
+
+### 2017-09
+1. [nx-ha](https://github.com/zqqiang/ut-capwap/tree/master/hademo)  
