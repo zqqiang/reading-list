@@ -34,25 +34,6 @@ CREATE TABLE stock (
     category TEXT NOT NULL
 );
 
-/*
-    INSERT INTO stock VALUES
-        (1, "food", "fruit"),
-        (2, "appliances", "refrigerators"),
-        (3, "appliances", "cooking appliances"),
-        (4, "appliances", "dishwashers"),
-        (5, "furniture", "mattresses");
-*/
-
-/*
-    sqlite> select * from stock;
-    id          name        quantity
-    ----------  ----------  ----------
-    1           food        fruit
-    2           appliances  refrigerat
-    3           appliances  cooking ap
-    4           appliances  dishwasher
-    5           furniture   mattresses
-*/
 
 DROP TABLE IF EXISTS merchandise;
 
