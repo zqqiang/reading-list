@@ -40,6 +40,8 @@
 3. [High Availability](doc/ha.md)  
 
 ### 2017-09
+1. [Systems Analysis and Design]()  
+2. [The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling]()  
 
 
 ## Development Schedule
@@ -67,3 +69,5 @@
 
 ### 2017-09
 1. [nx-ha](https://github.com/zqqiang/ut-capwap/tree/master/hademo)  
+2. [node-capwap portal](https://github.com/zqqiang/node-capwap/tree/master/portal)  
+3. [sql](https://github.com/zqqiang/reading-list/tree/master/src/sql)  
