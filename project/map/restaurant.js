@@ -48,10 +48,10 @@ const requests = {
         .then(responseBody),
 };
 
-const location = '-33.8670522,151.1957362';
+const location = '49.249660,-123.119340';
 const radius = 500;
 const type = 'restaurant';
-const key = 'AIzaSyBpESHbNIQ7LDc5P4ZlXC0D8Q6VgJuHYSc';
+const key = '';
 
 const details = (place_id) => {
     requests.get(`/details/json?placeid=${place_id}&key=${key}`)
