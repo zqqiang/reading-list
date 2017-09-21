@@ -48,7 +48,7 @@ const requests = {
         .then(responseBody),
 };
 
-const location = '49.249660,-123.119340';
+const location = '49.2640794,-123.0357783';
 const radius = 500;
 const type = 'restaurant';
 const key = '';
@@ -56,7 +56,11 @@ const key = '';
 const details = (place_id) => {
     requests.get(`/details/json?placeid=${place_id}&key=${key}`)
         .then(({ result, status }) => {
-            console.log(result.formatted_address);
+            let weekday_text = '';
+            result.opening_hours.weekday_text.map((day) => {
+                weekday_text = weekday_text + ' ' + day;
+            });
+            console.log(`${result.name},${result.formatted_phone_number},${result.formatted_address},${result.rating}`);
         });
 }
 
