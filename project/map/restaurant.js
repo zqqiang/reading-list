@@ -1,5 +1,7 @@
 const superagentPromise = require('superagent-promise');
 const _superagent = require('superagent');
+const { Chromeless } = require('chromeless');
+const path = require('path');
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
@@ -48,10 +50,22 @@ const requests = {
         .then(responseBody),
 };
 
-const location = '49.2640794,-123.0357783';
-const radius = 500;
+const location = '49.282965, -123.115443';
+const radius = 3000;
 const type = 'restaurant';
 const key = '';
+
+async function detailsFromUrl(url) {
+    const chromeless = new Chromeless();
+
+    const screenshot = await chromeless
+        .goto(url)
+        .screenshot()
+
+    console.log(screenshot);
+
+    await chromeless.end()
+};
 
 const details = (place_id) => {
     requests.get(`/details/json?placeid=${place_id}&key=${key}`)
@@ -60,13 +74,29 @@ const details = (place_id) => {
             result.opening_hours.weekday_text.map((day) => {
                 weekday_text = weekday_text + ' ' + day;
             });
-            console.log(`${result.name},${result.formatted_phone_number},${result.formatted_address},${result.rating}`);
+            console.log(`${result.name}|${result.formatted_phone_number}|${result.formatted_address}|${result.rating}|${result.geometry.location.lat}|${result.geometry.location.lng}|${weekday_text}`);
+            // detailsFromUrl(result.url);
+        });
+};
+
+let place = 0;
+
+const query = (pagetoken) => {
+    let url = (pagetoken) ? `key=${key}&pagetoken=${pagetoken}` : `location=${location}&radius=${radius}&type=${type}&key=${key}`;
+    // console.log(url);
+    requests.get(`/nearbysearch/json?${url}`)
+        .then(({ next_page_token, results, status }) => {
+            results.map(result => {
+                details(result.place_id);
+                // console.log(`${place++}. ${result.place_id}`);
+            })
+            // console.log(`${status}`)
+            if (next_page_token) {
+                setTimeout(() => {
+                    query(next_page_token);
+                }, 3000);
+            }
         });
 }
 
-requests.get(`/nearbysearch/json?location=${location}&radius=${radius}&type=${type}&key=${key}`)
-    .then(({ next_page_token, results, status }) => {
-        results.map(result => {
-            details(result.place_id);
-        })
-    });
+query();
