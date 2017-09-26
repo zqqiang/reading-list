@@ -51,12 +51,12 @@ const requests = {
 const location = '49.249660,-123.119340';
 const radius = 500;
 const type = 'restaurant';
-const key = '';
+const key = 'AIzaSyBpESHbNIQ7LDc5P4ZlXC0D8Q6VgJuHYSc';
 
 const details = (place_id) => {
     requests.get(`/details/json?placeid=${place_id}&key=${key}`)
         .then(({ result, status }) => {
-            console.log(result.formatted_address);
+            console.log(`${result.name} : ${result.formatted_address} : ${result.rating}`);
         });
 }
 

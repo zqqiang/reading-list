@@ -7,3 +7,5 @@ build
 .idea
 *.iml
 node_modules
+.RData
+.Rhistory
