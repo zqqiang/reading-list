@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chromeless": "^1.3.0",
+    "string": "^3.3.3",
     "superagent": "^3.6.0",
     "superagent-promise": "^1.1.0"
   }
