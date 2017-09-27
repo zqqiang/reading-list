@@ -42,6 +42,7 @@
 ### 2017-09
 1. [Systems Analysis and Design]()  
 2. [The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling]()  
+3. [Navarro2014]()  
 
 
 ## Development Schedule
