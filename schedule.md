@@ -44,6 +44,11 @@
 2. [The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling]()  
 3. [Navarro2014]()  
 
+### 2017-10
+1. [Systems Analysis and Design]()  
+2. [The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling]()  
+3. [Navarro2014]()  
+
 
 ## Development Schedule
 
@@ -72,3 +77,6 @@
 1. [nx-ha](https://github.com/zqqiang/ut-capwap/tree/master/hademo)  
 2. [node-capwap portal](https://github.com/zqqiang/node-capwap/tree/master/portal)  
 3. [sql](https://github.com/zqqiang/reading-list/tree/master/src/sql)  
+
+### 2017-10
+1. [node-capwap portal](https://github.com/zqqiang/node-capwap/tree/master/portal)  
