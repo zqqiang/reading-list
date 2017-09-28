@@ -48,6 +48,7 @@
 1. [Systems Analysis and Design]()  
 2. [The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling]()  
 3. [Navarro2014]()  
+4. [Nginx Source Code](https://github.com/nginx/nginx) - [Notes]()  
 
 
 ## Development Schedule
@@ -80,3 +81,4 @@
 
 ### 2017-10
 1. [node-capwap portal](https://github.com/zqqiang/node-capwap/tree/master/portal)  
+2. [api-capwap](https://github.com/zqqiang/api-capwap.git)  
