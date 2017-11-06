@@ -50,6 +50,9 @@
 3. [Navarro2014]()  
 4. [Nginx Source Code](https://github.com/nginx/nginx) - [Notes]()  
 
+### 2017-11
+1. []()  
+
 
 ## Development Schedule
 
@@ -82,3 +85,6 @@
 ### 2017-10
 1. [node-capwap portal](https://github.com/zqqiang/node-capwap/tree/master/portal)  
 2. [api-capwap](https://github.com/zqqiang/api-capwap.git)  
+
+### 2017-11
+1. [api-capwap](https://github.com/zqqiang/api-capwap.git)  
