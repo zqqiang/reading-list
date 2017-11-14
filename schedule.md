@@ -51,7 +51,7 @@
 4. [Nginx Source Code](https://github.com/nginx/nginx) - [Notes]()  
 
 ### 2017-11
-1. []()  
+1. [Kubernetes](https://kubernetes.io/docs/concepts/)  
 
 
 ## Development Schedule
