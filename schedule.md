@@ -54,7 +54,7 @@
 1. [Kubernetes](https://kubernetes.io/docs/concepts/)  
 
 ### 2017-12
-1. []()  
+1. [Kubernetes](https://kubernetes.io/docs/home/)  
 
 
 ## Development Schedule
