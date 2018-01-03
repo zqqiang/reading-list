@@ -3,7 +3,7 @@
 ## Reading Schedule
 
 ### 2018-01
-1. [golang](https://golang.org/) - [Tour: interfaces]()  
+1. [golang](https://golang.org/) - [Tour: interfaces/Package names/Write web application]()  
 
 
 ## Development Schedule
