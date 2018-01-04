@@ -11,3 +11,4 @@ node_modules
 .Rhistory
 package-lock.json
 src/go/bin
+src/go/gowiki/*.txt
