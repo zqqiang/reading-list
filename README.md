@@ -28,9 +28,8 @@ Docs for Java development
 # ai-reading-list
 Docs for AI reading
 
-## Content
+## Content 
 1. [tensorflow](https://www.tensorflow.org) - [TensorFlow]()  
-2. [The case for learned index structures](https://arxiv.org/pdf/1712.01208v1.pdf)
 
 
 # code-reading-list
