@@ -66,6 +66,7 @@ func (r *Resource) Poll() string {
 
 func (r *Resource) Sleep(done chan<- *Resource) {
     time.Sleep(pollInterval + errTimeout*time.Duration(r.errCount))
+    done <- r
 }
 
 func Poller(in <-chan *Resource, out chan<- *Resource, status chan<- State) {
