@@ -9,7 +9,6 @@ import (
 	"github.com/elazarl/go-bindata-assetfs"
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
-	// "github.com/wadahiro/gin-react-boilerplate/server/controllers"
 )
 
 type binaryFileSystem struct {
@@ -43,7 +42,7 @@ func main() {
 	// We can't use router.Static method to use '/' for static files.
 	// see https://github.com/gin-gonic/gin/issues/75
 	// r.StaticFS("/", assetFS())
-	r.Use(static.Serve("/", BinaryFileSystem("assets")))
+	r.Use(static.Serve("/", BinaryFileSystem("public")))
 
 	// add routes
 	// r.GET("/api/home", controllers.Home)
