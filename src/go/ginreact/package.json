@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-css": "lessc public/theme/less/main.less public/theme/css/main.css",
-    "bindata": "go-bindata -debug -o ./bindata.go public/...",
     "dev": "webpack -w --config webpack.config.js"
   },
   "author": "zqqiang",
