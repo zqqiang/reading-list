@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-css": "lessc public/theme/less/main.less public/theme/css/main.css",
-    "dev": "webpack -w --config webpack.config.js"
+    "watch-js": "webpack -w --config webpack.config.js",
+    "debug": "fresh",
+    "build": "go build main.go"
   },
   "author": "zqqiang",
   "license": "MIT",
