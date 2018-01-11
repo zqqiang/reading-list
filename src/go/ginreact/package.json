@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-css": "lessc public/theme/less/main.less public/theme/css/main.css",
-    "watch-js": "webpack -w --config webpack.config.js",
+    "watch-js-css": "webpack -w --config webpack.config.js",
     "watch-server": "fresh",
-    "debug": "concurrently -k \"npm run watch-server\" \"npm run watch-js\"",
+    "debug": "concurrently -k \"npm run watch-server\" \"npm run watch-js-css\"",
     "build": "go build main.go"
   },
   "author": "zqqiang",
@@ -19,6 +18,10 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "concurrently": "^3.5.1",
+    "css-loader": "^0.28.8",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.19.1",
     "webpack": "^3.10.0"
   },
   "dependencies": {
