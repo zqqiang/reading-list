@@ -54,6 +54,41 @@ func Closure() {
 	num = 2
 }
 
+func Count(i int) (n int) {
+	defer func(i int) {
+		n = n + i
+	}(i)
+	i = i * 2
+	n = i
+	return
+}
+
+type Car struct {
+	model string
+}
+
+func (c Car) PrintModelByObj() {
+	fmt.Println(c.model)
+}
+
+func (c *Car) PrintModelByPointer() {
+	fmt.Println(c.model)
+}
+
+func DeferedMethod() {
+	c := Car{model: "Benz"}
+
+	defer c.PrintModelByObj()
+
+	c.model = "Toyota"
+
+	p := &Car{model: "Benz"}
+
+	defer p.PrintModelByPointer()
+
+	p.model = "Toyota"
+}
+
 func main() {
 	example()
 
@@ -62,4 +97,8 @@ func main() {
 	Panic()
 
 	Closure()
+
+	fmt.Println("Count:", Count(10))
+
+	DeferedMethod()
 }
