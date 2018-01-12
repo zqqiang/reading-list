@@ -1,8 +1,8 @@
-#ginreact
+# ginreact
 
 This project is a boilerplate for Facebook React with Golang server Gin.
 
-##Setup
+## Setup
 
 1. Install some golang tools by go get  
 ```
