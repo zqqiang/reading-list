@@ -48,8 +48,22 @@ func testWeekdays() {
 	fmt.Println(Sunday.Weekend())
 }
 
+type Timezone int
+
+const (
+	EST Timezone = -(5 + iota)
+	CST
+	MST
+	PST
+)
+
+func testTimezone() {
+	fmt.Println(PST)
+}
+
 func main() {
 	testWeekdays()
+	testTimezone()
 }
 
 // go get -u -a golang.org/x/tools/cmd/stringer
