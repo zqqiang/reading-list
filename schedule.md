@@ -3,7 +3,7 @@
 ## Reading Schedule
 
 ### 2018-01
-1. [golang](https://golang.org/) - [Effective Go: Package names/Advanced Concurrency Patterns]()  
+1. [golang](https://golang.org/) - [Effective Go: Semicolons/Advanced Concurrency Patterns]()  
 
 
 ## Development Schedule
