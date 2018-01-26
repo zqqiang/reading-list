@@ -16,6 +16,7 @@ Docs for Web reading
 1. [async-await](https://ponyfoo.com/articles/understanding-javascript-async-await) - [Understanding JavaScript’s async await]  
 2. [2016 Web Summary](http://mp.weixin.qq.com/s/eJuNKJA45rJRUlk-DQeJrw) - [2016 Web Summary]  
 3. [Understanding ECMAScript 6](https://github.com/nzakas/understandinges6)  
+4. [A recap of front-end development in 2017](https://levelup.gitconnected.com/a-recap-of-front-end-development-in-2017-7072ce99e727)  
 
 # java-reading-list
 Docs for Java development
