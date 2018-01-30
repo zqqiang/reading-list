@@ -70,6 +70,10 @@ body {
     overflow: hidden;
 }
 
+.main-navbar .navbar-custom-menu {
+    float: right;
+}
+
 @supports (display: grid) {
     .wrapper>* {
         width: auto;
