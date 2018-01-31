@@ -9,6 +9,7 @@ module.exports = {
         path: path.resolve(__dirname, 'public')
     },
     module: {
+        loaders: [],
         rules: [{
             test: /\.js$/,
             exclude: /(node_modules)/,
