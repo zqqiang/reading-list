@@ -36,7 +36,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: './public/themes/css/main.css',
+            filename: './themes/css/main.css',
             allChunks: true,
         }),
     ]
