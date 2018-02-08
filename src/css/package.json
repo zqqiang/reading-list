@@ -6,13 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-js": "webpack -w --config webpack.config.js",
-    "watch-css": "sass public/themes/sass/main.scss public/themes/css/main.css",
+    "watch-css": "lessc public/themes/less/main.less public/themes/css/main.css",
     "watch-go": "fresh",
     "dev": "concurrently -k \"npm run watch-js\" \"npm run watch-go\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
@@ -26,8 +27,8 @@
     "concurrently": "^3.5.1",
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
     "style-loader": "^0.20.1",
     "webpack": "^3.10.0"
   }
