@@ -1,4 +1,4 @@
-package main
+package codewalk
 
 import (
 	"context"
@@ -32,8 +32,4 @@ func test_leak_goroutine() {
 			break
 		}
 	}
-}
-
-func main() {
-	test_leak_goroutine()
 }

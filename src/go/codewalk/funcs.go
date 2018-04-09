@@ -1,4 +1,4 @@
-package main
+package codewalk
 
 import (
 	"fmt"
@@ -8,7 +8,6 @@ func variadic_funcs(name ...string) {
 	fmt.Println(name)
 }
 
-func main() {
-
+func funcsDemo() {
 	variadic_funcs("hello", "variadic", "funcs")
 }

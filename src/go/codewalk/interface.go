@@ -1,4 +1,4 @@
-package main
+package codewalk
 
 import (
 	"fmt"
@@ -18,7 +18,7 @@ func (i Binary) Get() uint64 {
 	return uint64(i)
 }
 
-func main() {
+func interfaceDemo() {
 	b := Binary(200)
 	s := Stringer(b)
 	fmt.Println(s.String())

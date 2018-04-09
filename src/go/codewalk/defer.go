@@ -1,4 +1,4 @@
-package main
+package codewalk
 
 import (
 	"encoding/json"
@@ -89,7 +89,7 @@ func DeferedMethod() {
 	p.model = "Toyota"
 }
 
-func main() {
+func deferDemo() {
 	example()
 
 	NewFromFile("json.go")

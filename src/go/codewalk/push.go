@@ -1,4 +1,4 @@
-package main
+package codewalk
 
 import (
 	"log"
@@ -15,7 +15,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func main() {
+func pushDemo() {
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8090", nil)
 }

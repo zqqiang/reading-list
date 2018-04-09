@@ -1,5 +1,5 @@
 // https://blog.learngoprogramming.com/golang-const-type-enums-iota-bc4befd096d3
-package main
+package codewalk
 
 import (
 	"fmt"
@@ -61,7 +61,7 @@ func testTimezone() {
 	fmt.Println(PST)
 }
 
-func main() {
+func enumsDemo() {
 	testWeekdays()
 	testTimezone()
 }

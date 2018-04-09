@@ -1,4 +1,4 @@
-package main
+package codewalk
 
 import (
 	"encoding/json"
@@ -101,7 +101,7 @@ func stream() {
 	}
 }
 
-func main() {
+func jsonDemo() {
 
 	b := encoding()
 

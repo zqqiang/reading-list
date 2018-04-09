@@ -1,6 +1,6 @@
 // https://blog.learngoprogramming.com/golang-variadic-funcs-how-to-patterns-369408f19085
 
-package main
+package codewalk
 
 import (
 	"fmt"
@@ -91,7 +91,7 @@ func testLogger() {
 	logger.Info("1 second passed")
 }
 
-func main() {
+func variadicDemo() {
 	testVariadic()
 	testLogger()
 }

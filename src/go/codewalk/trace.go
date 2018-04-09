@@ -1,4 +1,4 @@
-package main
+package codewalk
 
 import (
 	"fmt"
@@ -51,6 +51,6 @@ func trace2() {
 	}
 }
 
-func main() {
+func traceDemo() {
 	trace2()
 }
