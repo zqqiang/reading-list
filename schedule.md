@@ -13,7 +13,7 @@
 
 ### 2018-04
 1. [angular](https://angular.io/guide/quickstart)  
-2. [golang](https://golang.org/) - [Effective Go: Allocation with new/Advanced Concurrency Patterns]()  
+2. [golang](https://golang.org/) - [Effective Go: Constructors and composite literals/Advanced Concurrency Patterns]()  
 
 
 ## Development Schedule
