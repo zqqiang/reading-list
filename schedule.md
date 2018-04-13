@@ -13,7 +13,7 @@
 
 ### 2018-04
 1. [angular](https://angular.io/guide/quickstart)  
-2. [golang](https://golang.org/) - [Effective Go: Pointers vs. Values/Advanced Concurrency Patterns]()  
+2. [golang](https://golang.org/) - [Effective Go: Conversions/Advanced Concurrency Patterns]()  
 
 
 ## Development Schedule
