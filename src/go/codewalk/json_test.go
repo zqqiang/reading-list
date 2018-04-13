@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"testing"
 )
 
 type Message struct {
@@ -101,7 +102,7 @@ func stream() {
 	}
 }
 
-func jsonDemo() {
+func TestJson(t *testing.T) {
 
 	b := encoding()
 

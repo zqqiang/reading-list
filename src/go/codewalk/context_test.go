@@ -3,6 +3,7 @@ package codewalk
 import (
 	"context"
 	"fmt"
+	"testing"
 )
 
 func gen(ctx context.Context) <-chan int {
@@ -21,7 +22,7 @@ func gen(ctx context.Context) <-chan int {
 	return ch
 }
 
-func test_leak_goroutine() {
+func TestLeakGoroutine(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 

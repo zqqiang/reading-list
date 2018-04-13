@@ -3,6 +3,7 @@ package codewalk
 import (
 	"log"
 	"net/http"
+	"testing"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -15,7 +16,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func pushDemo() {
+func TestPush(t *testing.T) {
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8090", nil)
 }

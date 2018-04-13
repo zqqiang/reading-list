@@ -5,6 +5,7 @@ package codewalk
 import (
 	"fmt"
 	"strings"
+	"testing"
 )
 
 func toFullName(names ...string) string {
@@ -91,7 +92,7 @@ func testLogger() {
 	logger.Info("1 second passed")
 }
 
-func variadicDemo() {
+func TestVariadic(t *testing.T) {
 	testVariadic()
 	testLogger()
 }

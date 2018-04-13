@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"testing"
 )
 
 func example() {
@@ -89,7 +90,7 @@ func DeferedMethod() {
 	p.model = "Toyota"
 }
 
-func deferDemo() {
+func TestDefer(t *testing.T) {
 	example()
 
 	NewFromFile("json.go")

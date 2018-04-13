@@ -2,6 +2,7 @@ package codewalk
 
 import (
 	"fmt"
+	"testing"
 )
 
 type Stringer interface {
@@ -18,7 +19,7 @@ func (i Binary) Get() uint64 {
 	return uint64(i)
 }
 
-func interfaceDemo() {
+func TestInterface(t *testing.T) {
 	b := Binary(200)
 	s := Stringer(b)
 	fmt.Println(s.String())

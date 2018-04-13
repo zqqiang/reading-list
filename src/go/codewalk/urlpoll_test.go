@@ -3,6 +3,7 @@ package codewalk
 import (
 	"log"
 	"net/http"
+	"testing"
 	"time"
 )
 
@@ -77,7 +78,7 @@ func Poller(in <-chan *Resource, out chan<- *Resource, status chan<- State) {
 	}
 }
 
-func urlpollDemo() {
+func TestUrlPoll(t *testing.T) {
 	pending, complete := make(chan *Resource), make(chan *Resource)
 
 	status := StateMonitor(statusInterval)

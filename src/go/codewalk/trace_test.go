@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"net/http/httptrace"
+	"testing"
 )
 
 type transport struct {
@@ -36,7 +37,7 @@ func trace() {
 	}
 }
 
-func trace2() {
+func TestTrace(test *testing.T) {
 	t := &transport{}
 
 	req, _ := http.NewRequest("GET", "https://google.com", nil)
@@ -49,8 +50,4 @@ func trace2() {
 	if _, err := client.Do(req); err != nil {
 		log.Fatal(err)
 	}
-}
-
-func traceDemo() {
-	trace2()
 }

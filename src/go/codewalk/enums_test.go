@@ -3,6 +3,7 @@ package codewalk
 
 import (
 	"fmt"
+	"testing"
 )
 
 type Weekday int8
@@ -61,7 +62,7 @@ func testTimezone() {
 	fmt.Println(PST)
 }
 
-func enumsDemo() {
+func TestEnum(t *testing.T) {
 	testWeekdays()
 	testTimezone()
 }
