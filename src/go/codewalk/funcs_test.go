@@ -5,10 +5,10 @@ import (
 	"testing"
 )
 
-func variadic_funcs(name ...string) {
+func variadicFuncs(name ...string) {
 	fmt.Println(name)
 }
 
 func TestFuncs(t *testing.T) {
-	variadic_funcs("hello", "variadic", "funcs")
+	variadicFuncs("hello", "variadic", "funcs")
 }
