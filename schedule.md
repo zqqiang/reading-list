@@ -13,7 +13,7 @@
 
 ### 2018-04
 1. [angular](https://angular.io/guide/quickstart)  
-2. [golang](https://golang.org/) - [Effective Go: Interface conversions and type assertions/Generality/Advanced Concurrency Patterns]()  
+2. [golang](https://golang.org/) - [Effective Go: The blank identifier/Advanced Concurrency Patterns]()  
 
 
 ## Development Schedule
