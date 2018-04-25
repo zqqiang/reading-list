@@ -1,0 +1,12 @@
+{
+  "name": "sass-ui",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/css/sass-ui.min.css",
+  "scripts": {
+    "dev": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp sass"
+  },
+  "author": "zqqiang",
+  "license": "MIT"
+}
