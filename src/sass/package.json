@@ -8,5 +8,8 @@
     "build": "./node_modules/.bin/gulp sass"
   },
   "author": "zqqiang",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
