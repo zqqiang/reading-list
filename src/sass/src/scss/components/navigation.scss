@@ -1,0 +1,46 @@
+.navbar-custom-menu {
+    float: right;
+}
+
+.navbar-nav {
+    @include breakpoint-min($bp-medium) {
+        float: left;
+        margin: 0;
+    }
+    li {
+        @include breakpoint-min($bp-medium) {
+            float: left;
+        }
+    }
+    >li>a {
+        line-height: 20px;
+        @include breakpoint-min($bp-medium) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+.navbar-custom-menu>.navbar-nav>li {
+    position: relative;
+}
+
+.nav {
+    padding-left: 0;
+    list-style: none;
+    >li>a {
+        color: #ffffff;
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        >.label {
+            position: absolute;
+            top: 9px;
+            right: 7px;
+            text-align: center;
+            font-size: 9px;
+            padding: 2px 3px;
+            line-height: .9;
+        }
+    }
+}

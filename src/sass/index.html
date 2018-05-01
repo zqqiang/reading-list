@@ -9,6 +9,7 @@
 
     <!-- Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
     <!-- Mustard UI -->
     <link rel="stylesheet" href="/dist/css/sass-ui.min.css">
@@ -19,7 +20,18 @@
         <a href="" class="logo">
             <span class="logo-lg"><b>Cloud</b>Demo</span>
         </a>
-        <nav class="navbar navbar-static-top"></nav>
+        <nav class="navbar navbar-static-top">
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="far fa-envelope"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <aside class="main-sidebar"></aside>
