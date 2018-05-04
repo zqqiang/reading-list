@@ -16,7 +16,7 @@
 2. [golang](https://golang.org/) - [Effective Go: Channels/Advanced Concurrency Patterns]()  
 
 ### 2018-05
-1. [golang](https://golang.org) - [Effective Go: Channels/Advanced Concurrency Patterns]()
+1. [golang](https://golang.org) - [Effective Go: Channels of channels/Advanced Concurrency Patterns]()
 
 
 ## Development Schedule
