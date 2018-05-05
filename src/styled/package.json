@@ -1,0 +1,19 @@
+{
+  "name": "styled",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp"
+  },
+  "author": "zqqiang",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1"
+  }
+}
