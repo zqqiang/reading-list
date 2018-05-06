@@ -1,6 +1,5 @@
 const path = require("path");
 const webpack = require("webpack");
-const bundlePath = path.resolve(__dirname, "./dist/");
 
 module.exports = {
   entry: "./src/index.js",
@@ -14,13 +13,13 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [ 'style-loader', 'css-loader', 'sass-loader']
+        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       }
     ]
   },
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
-    publicPath: bundlePath,
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
   devServer: {
