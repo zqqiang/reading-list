@@ -19,11 +19,11 @@ module.exports = {
   },
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "."),
     filename: "bundle.js"
   },
   devServer: {
-    contentBase: path.join(__dirname,'public'),
+    contentBase: path.join(__dirname,'.'),
     port: 3000
   },
   plugins: [ new webpack.HotModuleReplacementPlugin() ]
