@@ -30,7 +30,7 @@ class App extends Component{
     return(
       <Header>
         <LogoLink>
-          <span class="logo-lg"><b>Styled</b>Component</span>
+          <span className="logo-lg"><b>Styled</b>Component</span>
         </LogoLink>
       </Header>
     );
