@@ -19,7 +19,7 @@
 1. [golang](https://golang.org) - [Effective Go: Done/Advanced Concurrency Patterns]()
 
 ### 2018-06
-1. [OpenSSL]() - [OpenSSL Essentials: Working with SSL Certificates, Private Keys and CSRs](https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs)
+
 
 
 ## Development Schedule
