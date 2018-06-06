@@ -1,14 +1,12 @@
 package main
 
-// include <stdio.h>
+// #include <stdio.h>
 // void callC() {
 // 	printf("Calling C code!\n");
 // }
+import "C"
 
-import (
-	"C"
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	fmt.Println("A Go Statement!")
