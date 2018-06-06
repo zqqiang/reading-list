@@ -19,7 +19,7 @@
 1. [golang](https://golang.org) - [Effective Go: Done/Advanced Concurrency Patterns]()
 
 ### 2018-06
-1. [golang]()
+1. [golang](https://golang.org) - [Mastering Go => Calling C Code from Go]()
 
 
 ## Development Schedule
