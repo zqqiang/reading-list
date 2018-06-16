@@ -13,7 +13,7 @@
 
 ### 2018-04
 1. [angular](https://angular.io/guide/quickstart)  
-2. [golang](https://golang.org/) - [Effective Go: Channels/Advanced Concurrency Patterns]()  
+1. [golang](https://golang.org/) - [Effective Go: Channels/Advanced Concurrency Patterns]()  
 
 ### 2018-05
 1. [golang](https://golang.org) - [Effective Go: Done/Advanced Concurrency Patterns]()
@@ -21,6 +21,7 @@
 ### 2018-06
 #### start golang code reading
 1. [echo](https://github.com/labstack/echo.git)  
+1. [mongodb](https://docs.mongodb.com/manual)  
 
 
 ## Development Schedule
