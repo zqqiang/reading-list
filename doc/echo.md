@@ -34,8 +34,8 @@ start from a simple echo server
 ```
 
 ## Content
-1. [echo.go](#echo-go)
-1. [router.go](#router-go)
+1. [echo.go](#echo.go)
+1. [router.go](#router.go)
 
 
 ## echo.go
