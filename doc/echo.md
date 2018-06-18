@@ -35,33 +35,58 @@ start from a simple echo server
 
 ## Content
 1. [echo.go](#echo-go)
+1. [router.go](#router-go)
 
 
 ## echo.go
-
+create an instance of Echo  
+A return statement without arguments returns the [named return values](https://tour.golang.org/basics/7)  
+If so, they are treated as variables defined at the top of the function  
 ```golang
-// New creates an instance of Echo.
 func New() (e *Echo) {
-	e = &Echo{
-		Server:    new(http.Server),
-		TLSServer: new(http.Server),
-		AutoTLSManager: autocert.Manager{
-			Prompt: autocert.AcceptTOS,
-		},
-		Logger:   log.New("echo"),
-		colorer:  color.New(),
-		maxParam: new(int),
-	}
-	e.Server.Handler = e
-	e.TLSServer.Handler = e
-	e.HTTPErrorHandler = e.DefaultHTTPErrorHandler
-	e.Binder = &DefaultBinder{}
-	e.Logger.SetLevel(log.ERROR)
-	e.stdLogger = stdLog.New(e.Logger.Output(), e.Logger.Prefix()+": ", 0)
-	e.pool.New = func() interface{} {
-		return e.NewContext(nil, nil)
-	}
-	e.router = NewRouter(e)
-	return
+  e = $Echo{...}
+  return
+}
+```
+register Middleware
+```golang
+func (e *Echo) Use(middleware ...MiddlewareFunc) {
+  e.middleware = append(e.middleware, middleware...)
+}
+```
+register GET handler
+```golang
+func (e *Echo) GET(path string, h HandlerFunc, m ...MiddlewareFunc) *Route {
+  return e.Add(GET, path, h, m...)
+}
+```
+call router Add, construct Route and add it to routes array
+```golang
+func (e *Echo) Add(method, path string, handler HandlerFunc, middleware ...MiddlewareFunc) *Route {
+  e.router.Add(method, path, func(c Context) error {})
+  r := &Route{}
+  e.router.routes[mehod+path] = r
+  return r
+}
+```
+start http server
+```golang
+func (e *Echo) Start(address string) error {
+  e.Server.Addr = address
+  return e.StartServer(e.Server)
+}
+func (e *Echo) StartServer(s *http.Server) (err error) {
+  ...
+  return s.Serve(e.Listener)
+  or ...
+  return s.Serve(e.TLSListener)
+}
+```
+
+## router.go
+router register handler
+```golang
+func (r *Router) Add(method, path string, h HandlerFunc) {
+  // todo
 }
 ```
