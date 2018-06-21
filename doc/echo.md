@@ -87,6 +87,19 @@ func (e *Echo) StartServer(s *http.Server) (err error) {
 router register handler
 ```golang
 func (r *Router) Add(method, path string, h HandlerFunc) {
-  // todo
+  // e.GET("/", hello) => return e.Add(GET, "/", hello)
+  r.insert(method, path, h, skind, ppath, pnames)
+}
+
+func (r *Router) insert(method, path string, h HandlerFunc, t kind, ppath string, pnames []string) {
+  cn := r.tree // Current node as root
+  ...
+  cn.addHandler(method, h)
+  ...
+}
+
+func (n *node) addHandler(method string, h HandlerFunc) {
+  case GET:
+    n.methodHandler.get = h
 }
 ```
