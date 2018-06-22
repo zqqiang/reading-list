@@ -54,6 +54,7 @@ Notes for Source Code reading
 1. [git](https://github.com/git/git) - [Git Source Code Reading Notes]()  
 1. [libphenom](https://github.com/facebook/libphenom.git)  
 1. [echo](https://github.com/labstack/echo) - [Golang Echo Reading Notes](doc/echo.md)  
+1. [react](https://github.com/facebook/react) - [React.js Reading Notes](doc/react.md)  
 
 ## blog-reading-list
 
