@@ -1,4 +1,6 @@
-Echo golang source code reading notes
+# Echo
+Echo golang source code reading notes.  
+Heavy reuse golang http module so little framework code.  
 
 ## Start
 start from a simple echo server
@@ -76,6 +78,9 @@ func (e *Echo) Start(address string) error {
   return e.StartServer(e.Server)
 }
 func (e *Echo) StartServer(s *http.Server) (err error) {
+  ...
+  // todo: 
+  s.Handler = e
   ...
   return s.Serve(e.Listener)
   or ...
