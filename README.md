@@ -69,3 +69,4 @@ Notes for Source Code reading
 
 ### Content
 1. [LVM2 Snapshot](doc/snapshot.md)
+1. [Ceph](http://docs.ceph.com/docs/master/architecture/)
