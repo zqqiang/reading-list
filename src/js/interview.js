@@ -135,3 +135,18 @@
 
     console.log(`equals({ a: [2, { e: 3 }], b: [4], c: 'foo' }, { a: [2, { e: 3 }], b: [4], c: 'foo' }): ${equals({ a: [2, { e: 3 }], b: [4], c: 'foo' }, { a: [2, { e: 3 }], b: [4], c: 'foo' })}`);
 })();
+
+(() => {
+    console.log(`Generate an array, containing the Fibonacci sequence, up until the nth term.`);
+
+    console.log([...Array(3)]);
+    console.log(...Array(3));
+    console.log(Array(3));
+    
+    const fibonacci = n => 
+        [...Array(n)].reduce(
+            (acc, val, i) => acc.concat(i > 1 ? acc[i-1] + acc[i-2] : i), [] 
+        )
+
+    console.log(`fibonacci(10): ${fibonacci(10)}`);
+})();
