@@ -150,3 +150,13 @@
 
     console.log(`fibonacci(10): ${fibonacci(10)}`);
 })();
+
+(() => {
+    console.log(`What will the console log in this example?`);
+    var foo = 1;
+    var foobar = function () {
+        console.log(foo);
+        var foo = 2;
+    };
+    foobar();
+})();
