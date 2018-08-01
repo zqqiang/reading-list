@@ -36,6 +36,11 @@
 1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews)
 1.  [system-design-primer](https://github.com/donnemartin/system-design-primer)
 
+### 2018-08
+
+1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews)
+1.  [system-design-primer](https://github.com/donnemartin/system-design-primer)
+
 ## Development Schedule
 
 ### 2018-01
@@ -63,6 +68,11 @@
 1.  [nx-web](https://github.com/zqqiang/nx-web)
 
 ### 2018-07
+
+1.  [nx-web](https://github.com/zqqiang/nx-web)
+1.  [go-capwap](https://github.com/zqqiang/go-capwap.git)
+
+### 2018-08
 
 1.  [nx-web](https://github.com/zqqiang/nx-web)
 1.  [go-capwap](https://github.com/zqqiang/go-capwap.git)
