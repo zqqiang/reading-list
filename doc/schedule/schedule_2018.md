@@ -38,9 +38,13 @@
 
 ### 2018-08
 
-1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews) - [What is the difference between a parameter and an argument?]()
+1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews) - [What is Big O Notation?]()
 1.  [system-design-primer](https://github.com/donnemartin/system-design-primer) - [application-layer](https://github.com/donnemartin/system-design-primer#application-layer)
 1.  [openssl-cookbook](https://www.feistyduck.com/library/openssl-cookbook/online/index.html) - [Use Strong Key Exchange]()
+
+#### todo:
+1.  [JavaScript Demo: Function.apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) - [hard to understand]()
+
 
 ## Development Schedule
 

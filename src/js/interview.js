@@ -195,3 +195,22 @@
   }
   console.log(`greet() ${greet()}`);
 })();
+
+(() => {
+  console.log(`What is the difference between a parameter and an argument?`);
+  function myFunction(parameter1, parameter2) {
+    console.log(arguments[0]) // "argument1"
+  }
+  myFunction("argument1", "argument2")
+  console.log(`myFunction.length => ${myFunction.length}`);
+})();
+
+(() => {
+  console.log(`Create a standalone function bind that is functionally equivalent to the method Function.prototype.bind`);
+  const bind = (fn, context) => (...args) => fn.apply(context, args)
+  function example() {
+    console.log(this)
+  }
+  const boundExample = bind(example, { a: true })
+  boundExample.call({ b: true }) // logs { a: true }
+})();
