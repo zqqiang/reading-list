@@ -38,7 +38,7 @@
 
 ### 2018-08
 
-1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews) - [Are semicolons required in JavaScript?]()
+1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews) - [What is the difference between a parameter and an argument?]()
 1.  [system-design-primer](https://github.com/donnemartin/system-design-primer) - [application-layer](https://github.com/donnemartin/system-design-primer#application-layer)
 1.  [openssl-cookbook](https://www.feistyduck.com/library/openssl-cookbook/online/index.html) - [Use Strong Key Exchange]()
 

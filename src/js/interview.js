@@ -184,3 +184,14 @@
   };
   foobar();
 })();
+
+(() => {
+  console.log(`What does the following function return?`);
+  function greet() {
+    return
+    {
+      message: "hello"
+    }
+  }
+  console.log(`greet() ${greet()}`);
+})();
