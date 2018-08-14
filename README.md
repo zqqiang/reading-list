@@ -21,11 +21,6 @@ reading list and notes
 
 Docs for RFC reading
 
-### Schedule
-
-1. [reading & development schedule 2017](doc/schedule_2017.md)
-1. [reading & development schedule 2018](doc/schedule_2018.md)
-
 ### Content
 
 1. [rfc5246](https://tools.ietf.org/html/rfc5246) - [The Transport Layer Security (TLS) Protocol Version 1.2]()
@@ -88,3 +83,8 @@ Notes for Source Code reading
 
 1. [LVM2 Snapshot](doc/snapshot.md)
 1. [Ceph](https://github.com/ceph/ceph)
+
+## Schedule
+
+1. [reading & development schedule 2017](doc/schedule_2017.md)
+1. [reading & development schedule 2018](doc/schedule_2018.md)
