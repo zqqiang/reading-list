@@ -1,6 +1,6 @@
 # Book list
 
-Some books I have ever read  
+Some books I have read  
 (notes: :+1: Recommanded, :+1::+1: Highly Recommanded, :x: Bad Review)
 
 ## Content
