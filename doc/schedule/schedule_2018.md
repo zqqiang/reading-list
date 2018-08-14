@@ -38,7 +38,7 @@
 
 ### 2018-08
 
-1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews) - [What is recursion and when is it useful?]()
+1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews) - [What is the this keyword and how does it work?]()
 1.  [system-design-primer](https://github.com/donnemartin/system-design-primer) - [Database](https://github.com/donnemartin/system-design-primer#database)
 1.  [openssl-cookbook](https://www.feistyduck.com/library/openssl-cookbook/online/index.html) - [Use Strong Key Exchange]()
 
