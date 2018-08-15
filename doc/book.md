@@ -6,6 +6,7 @@ Some books I have read
 ## Content
 
 - [Start a Business](#start-a-business)
+- [Coding](#coding)
 
 ## Start a business
 
@@ -18,6 +19,7 @@ Some books I have read
 1. 精益创业 : 新创企业的成长思维，埃里克·莱斯
 1. 硅谷之谜 : 《浪潮之巅》续集，吴军，2018
 1. :+1::+1: 数学之美：吴军，2007
+1. NO ANCIENT WISDOM, NO FOLLOWERS: The Challenges of Chinese Authoritarian Capitalism，James McGregor，2018-08
 
 ## Coding
 
