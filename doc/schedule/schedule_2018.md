@@ -38,9 +38,10 @@
 
 ### 2018-08
 
-1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews) - [What is event-driven programming?]()
+1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews) - [Explain the difference between a static method and an instance method.]()
 1.  [system-design-primer](https://github.com/donnemartin/system-design-primer) - [Database](https://github.com/donnemartin/system-design-primer#database)
 1.  [openssl-cookbook](https://www.feistyduck.com/library/openssl-cookbook/online/index.html) - [Use Strong Key Exchange]()
+1.  [function's this keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) - [As an object method]()
 
 ## Development Schedule
 
