@@ -38,11 +38,12 @@
 
 ### 2018-08
 
-1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews) - [CSS]()
+1.  [interviews](https://github.com/fejes713/30-seconds-of-interviews) - [Done]()
 1.  [system-design-primer](https://github.com/donnemartin/system-design-primer) - [NoSQL]()
 1.  [openssl-cookbook](https://www.feistyduck.com/library/openssl-cookbook/online/index.html) - [Use Strong Key Exchange]()
-1.  [function's this keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
-1.  [intro-to-go-modules](https://roberto.selbach.ca/intro-to-go-modules/)
+1.  [function's this keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) - [Done]()
+1.  [intro-to-go-modules](https://roberto.selbach.ca/intro-to-go-modules/) - [Done]()
+1.  [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
 
 ## Development Schedule
 
