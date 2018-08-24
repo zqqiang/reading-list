@@ -44,7 +44,7 @@
 1.  [function's this keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) - [Done]()
 1.  [intro-to-go-modules](https://roberto.selbach.ca/intro-to-go-modules/) - [Done]()
 1.  [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
-1.  [og-aws](https://github.com/open-guides/og-aws) - [Start]()
+1.  [og-aws](https://github.com/open-guides/og-aws) - [S3]()
 
 ## Development Schedule
 
