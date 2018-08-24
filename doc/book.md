@@ -48,4 +48,5 @@ Some books I have read
 1. 数据结构与算法分析 : C 语言描述，维斯 / 冯舜玺，2007
 1. 程序员的思维修炼 : 开发认知潜能，Andy Hunt，2009
 1. C 和指针，Kenneth A.Reek，2009
-1.
+1. Modern C, Jens Gustedt, 2018
+1. 深入理解 Nginx 模块开发与架构解析：第 2 版, 陶辉，2017
