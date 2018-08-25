@@ -46,7 +46,7 @@
 1.  [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
 1.  [og-aws](https://github.com/open-guides/og-aws) - [S3]()
 1.  [howto-c](https://matt.sh/howto-c) - [Types]()
-1.  [ModernC](http://icube-icps.unistra.fr/img_auth.php/d/db/ModernC.pdf) - []()
+1.  [bash](https://guide.bash.academy/) - [Coprocesses](https://guide.bash.academy/commands/)
 
 ## Development Schedule
 
