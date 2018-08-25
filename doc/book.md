@@ -7,6 +7,7 @@ Some books I have read
 
 - [Start a Business](#start-a-business)
 - [Coding](#coding)
+- [History and Life](#history-and-life)
 
 ## Start a business
 
@@ -19,7 +20,6 @@ Some books I have read
 1. 精益创业 : 新创企业的成长思维，埃里克·莱斯
 1. 硅谷之谜 : 《浪潮之巅》续集，吴军，2018
 1. :+1::+1: 数学之美：吴军，2007
-1. NO ANCIENT WISDOM, NO FOLLOWERS: The Challenges of Chinese Authoritarian Capitalism，James McGregor，2018-08，p23：To continue growth
 
 ## Coding
 
@@ -49,3 +49,10 @@ Some books I have read
 1. 程序员的思维修炼 : 开发认知潜能，Andy Hunt，2009
 1. C 和指针，Kenneth A.Reek，2009
 1.
+
+## History and Life
+
+1. One Billion Customers, James McGregor, Lessons from the Front Lines of Doing Business in China, 2010
+1. NO ANCIENT WISDOM, NO FOLLOWERS: The Challenges of Chinese Authoritarian Capitalism，James McGregor, 2018-08，p23：To continue growth
+1. Life and Death in Shanghai, Nien Cheng, 2018
+1. River Town, Two Years on the Yangtze, 彼得·海斯勒，
