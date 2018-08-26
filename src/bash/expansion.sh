@@ -33,3 +33,9 @@ rm -rv 'myscript.txt' 'mybudget.xsl' 'hello.txt' '05 Between Angels and Insects.
 echo 'home is: ' ~
 
 echo 'root home is: ' ~root
+
+echo 'Hello world.' > hello.txt
+
+echo "The file <hello.txt> contains: $(cat hello.txt)"
+
+rm -v hello.txt
