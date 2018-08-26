@@ -46,7 +46,7 @@
 1.  [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
 1.  [og-aws](https://github.com/open-guides/og-aws) - [S3]()
 1.  [howto-c](https://matt.sh/howto-c) - [Types]()
-1.  [bash](https://guide.bash.academy/) - [expansions](https://guide.bash.academy/expansions/)
+1.  [bash](https://guide.bash.academy/) - [Command Substitution](https://guide.bash.academy/expansions/)
 
 ## Development Schedule
 
