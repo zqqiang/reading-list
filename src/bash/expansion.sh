@@ -39,3 +39,25 @@ echo 'Hello world.' > hello.txt
 echo "The file <hello.txt> contains: $(cat hello.txt)"
 
 rm -v hello.txt
+
+greeting="hello"
+
+echo "$greeting"
+
+greeting+=" world"
+
+echo "${greeting##* }"
+
+echo "${greeting^}."
+
+echo "${greeting/ / big }"
+
+echo "$greeting" > "${greeting// /_}.txt"
+
+rm -v "${greeting// /_}.txt"
+
+greeting="${greeting/ / big }"
+echo "${greeting}"
+middle=${greeting% *};echo "${middle}"
+middle=${middle#* };echo "${middle}"
+echo "${greeting%% *} ${middle^^} ${greeting##* }"
