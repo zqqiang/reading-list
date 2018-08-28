@@ -50,4 +50,14 @@ echo "${greeting##* }"
 
 echo "${greeting^}."
 
-echo "${greeting/ / big}"
+echo "${greeting/ / big }"
+
+echo "$greeting" > "${greeting// /_}.txt"
+
+rm -v "${greeting// /_}.txt"
+
+greeting="${greeting/ / big }"
+echo "${greeting}"
+middle=${greeting% *};echo "${middle}"
+middle=${middle#* };echo "${middle}"
+echo "${greeting%% *} ${middle^^} ${greeting##* }"
