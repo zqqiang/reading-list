@@ -43,10 +43,14 @@
 1.  [openssl-cookbook](https://www.feistyduck.com/library/openssl-cookbook/online/index.html) - [Use Strong Key Exchange]()
 1.  [function's this keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) - [Done]()
 1.  [intro-to-go-modules](https://roberto.selbach.ca/intro-to-go-modules/) - [Done]()
-1.  [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
-1.  [og-aws](https://github.com/open-guides/og-aws) - [S3]()
 1.  [howto-c](https://matt.sh/howto-c) - [Types]()
 1.  [bash](https://guide.bash.academy/) - [How do I store and re-use data?](https://guide.bash.academy/expansions/)
+1.  [C Programming A Modern Approach Second Edition]() [p62:Formatted Input/Output]()
+
+### 2018-09
+
+1.  [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
+1.  [og-aws](https://github.com/open-guides/og-aws) - [S3]()
 
 ## Development Schedule
 
@@ -82,3 +86,7 @@
 ### 2018-08
 
 1.  [nx-web](https://github.com/zqqiang/nx-web)
+
+### 2018-09
+
+1.  []()

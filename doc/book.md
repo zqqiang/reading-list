@@ -40,6 +40,7 @@ Some books I have read
 1. 设计模式 : 可复用面向对象软件的基础，Erich Gamma、Richard Helm、Ralph Johnson、John Vlissides，2013
 1. 编程之美 : 微软技术面试心得，《编程之美》小组，2009
 1. UNIX 编程艺术，Eric S. Raymond，2012
+1. UNIX 网络编程，蒂文斯 / 芬纳 / 鲁道夫，2008
 1. Effective java 中文版（第 2 版），Joshua Bloch，2009
 1. 代码整洁之道，]Robert C. Martin，2012
 1. Head First 设计模式（中文版），弗里曼，2010
@@ -50,7 +51,12 @@ Some books I have read
 1. C 和指针，Kenneth A.Reek，2009
 1. Modern C, Jens Gustedt, 2018
 1. 深入理解 Nginx 模块开发与架构解析：第 2 版, 陶辉，2017
-1. C Programming A Modern Approach Second Edition, K.N.King,2018, p26:Introducing C
+1. C Programming A Modern Approach Second Edition, K.N.King,2018
+1. Core Java Volume I--Fundamentals (10th Edition) (Core Series) 10th Edition, Cay S. Horstmann, 2018
+1. Spring in Action, Fifth Edition, Craig Walls, 2018
+1. Spring Boot in Action, Craig Walls,
+1. 鸟哥的 Linux 私房菜，鸟哥，2007
+1. 计算机网络（第 6 版），James F.Kurose /Keith W.Ross，2018
 
 ## History and Life
 
