@@ -45,7 +45,7 @@
 1.  [intro-to-go-modules](https://roberto.selbach.ca/intro-to-go-modules/) - [Done]()
 1.  [howto-c](https://matt.sh/howto-c) - [Types]()
 1.  [bash](https://guide.bash.academy/) - [How do I store and re-use data?](https://guide.bash.academy/expansions/)
-1.  [C Programming A Modern Approach Second Edition]() [p62:Formatted Input/Output]()
+1.  [C Programming A Modern Approach Second Edition]() [p66:Escape Sequence]()
 
 ### 2018-09
 
