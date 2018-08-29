@@ -4,7 +4,8 @@
 #include <stdint.h>
 #include <stdio.h>
 
-void case1() {
+void case1()
+{
   printf("modern type size {\n");
   printf("  int8_t size is %lld\n", sizeof(int8_t));
   printf("  int16_t size is %lld\n", sizeof(int16_t));
@@ -19,7 +20,8 @@ void case1() {
   printf("}\n");
 }
 
-void case2() {
+void case2()
+{
   printf("unicode {\n");
   const char *unicode_str = u8"abc😬";
   printf("  unicode str is %s\n", unicode_str);
@@ -43,25 +45,30 @@ void case2() {
 //   printf("}\n");
 // }
 
-void case4() {
+void case4()
+{
   printf("max type {\n");
   printf("  intmax_t size is %lld\n", sizeof(intmax_t));
   printf("  uintmax_t size is %lld\n", sizeof(uintmax_t));
   printf("}\n");
 }
 
-void case5() {
+void case5()
+{
   printf("variable declarations anywhere {\n");
-  for (uint32_t i = 0; i < 10; i++) {
+  for (uint32_t i = 0; i < 10; i++)
+  {
   }
   printf("}\n");
 }
 
-void case6() {
+void case6()
+{
   printf("allows static initialization of auto-allocated arrays/structs {\n");
 
   uint32_t numbers[64] = {0};
-  struct thing {
+  struct thing
+  {
     uint64_t index;
     uint32_t counter;
   };
@@ -73,7 +80,8 @@ void case6() {
   printf("}\n");
 }
 
-void case7() {
+void case7()
+{
   printf("added variable length arrays {\n");
 
   uintmax_t arrayLength = 16;
@@ -86,39 +94,44 @@ void case7() {
   printf("}\n");
 }
 
-void case8() {
+void case8()
+{
   printf("bind type modifier and qualifiers to the left\n");
 
-  char* name = "char*";
-  char const* const path_name = "char const* const";
+  char *name = "char*";
+  char const *const path_name = "char const* const";
 
   printf("}\n");
 }
 
 // The ﬁrst stresses the fact that strlen must receive a valid (non-null) pointer
-size_t string_len(char const string[static 1]) {
+size_t string_len(char const string[static 1])
+{
   return 0;
 }
 
 // one null pointer terminates the array
-int test_main(int argc, char* argv[argc + 1]) {
+int test_main(int argc, char *argv[argc + 1])
+{
   return 0;
 }
 
-void test_void(void) {};
-void test_aexit(void test_func(void)) {
+void test_void(void){};
+void test_aexit(void test_func(void))
+{
   return;
 }
 
-void case9() {
+void case9()
+{
   printf("array or function notation for pointer parameters to functions\n");
 
   string_len("string");
-  
+
   // warning: null passed to a callee that requires a non-null argument
   // string_len(NULL);
 
-  char* test_string[] = {"one", NULL};
+  char *test_string[] = {"one", NULL};
   test_main(1, test_string);
 
   test_aexit(test_void);
@@ -126,27 +139,42 @@ void case9() {
   printf("}\n");
 }
 
-void case10() {
+void case10()
+{
   printf("all variables should be initialized\n");
 
-  double A[] = {7.8,};
-  double B[3] = {2 * A[0], 7, 33, };
-  double C[] = {[0] = 7.8, [7] = 0, };
+  double A[] = {
+      7.8,
+  };
+  double B[3] = {
+      2 * A[0],
+      7,
+      33,
+  };
+  double C[] = {
+      [0] = 7.8,
+      [7] = 0,
+  };
 
-  printf("sizeof double A[] = {7.8,}; is %lld\n", sizeof(A)/sizeof(double));
-  printf("sizeof double B[3] = {2 * a[0], 7, 33, }; is %lld\n", sizeof(B)/sizeof(double));
-  printf("sizeof double C[] = {[0] = 7.8, [7] = 0, }; is %lld\n", sizeof(C)/sizeof(double));
+  printf("sizeof double A[] = {7.8,}; is %lld\n", sizeof(A) / sizeof(double));
+  printf("sizeof double B[3] = {2 * a[0], 7, 33, }; is %lld\n", sizeof(B) / sizeof(double));
+  printf("sizeof double C[] = {[0] = 7.8, [7] = 0, }; is %lld\n", sizeof(C) / sizeof(double));
 
   printf("}\n");
 }
 
-void case11() {
+void case11()
+{
   printf("enumeration constants {\n");
 
-  enum corvid {magpie, raven};
-  char const* const animal[2] = {
-    [magpie] = "magpie",
-    [raven] = "raven",
+  enum corvid
+  {
+    magpie,
+    raven
+  };
+  char const *const animal[2] = {
+      [magpie] = "magpie",
+      [raven] = "raven",
   };
 
   printf("%s\n", animal[magpie]);
@@ -155,7 +183,14 @@ void case11() {
   printf("}\n");
 }
 
-int main(int argc, char const *argv[]) {
+void printf_demo()
+{
+  float num = 234.5678f;
+  printf("%-2.2f\n", num);
+}
+
+int main(int argc, char const *argv[])
+{
   printf("how-to-c starting\n\n");
 
   case1();
@@ -169,6 +204,8 @@ int main(int argc, char const *argv[]) {
   case9();
   case10();
   case11();
+
+  printf_demo();
 
   printf("\nhow-to-c end\n");
   return 0;
