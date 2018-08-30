@@ -62,5 +62,21 @@ middle=${greeting% *};echo "${middle}"
 middle=${middle#* };echo "${middle}"
 echo "${greeting%% *} ${middle^^} ${greeting##* }"
 
-echo "What is the environment and what is it used for?"
+names() {
+    echo "The Name Script"
+    echo "usage: names 'My Full Name'"; echo
+    first=${1%% *} last=${1##* } middle=${1#$first} middle=${middle%$last}
+    echo "Your first name is: $first"
+    echo "Your last name is: $last"
+    echo "Your middle names are: $middle"
+}
 
+names 'Zhaoqing Bill Qiang'
+
+set -- 'New First Argument' Second Third 'Fourth Argument'
+echo "1: $1, 2: $2, 4: $4"
+
+shift 2
+echo "1: $1, 2: $2, 4: $4"
+
+bash -cv 'echo "1: $1, 2: $2, 4: $4"' -- 'New First Argument' Second Third 'Fourth Argument'
