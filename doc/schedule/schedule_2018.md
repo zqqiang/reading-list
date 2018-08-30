@@ -44,7 +44,7 @@
 1.  [function's this keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) - [Done]()
 1.  [intro-to-go-modules](https://roberto.selbach.ca/intro-to-go-modules/) - [Done]()
 1.  [howto-c](https://matt.sh/howto-c) - [Types]()
-1.  [bash](https://guide.bash.academy/) - [What is the environment and what is it used for?](https://guide.bash.academy/expansions/)
+1.  [bash](https://guide.bash.academy/) - [Shell Initialization](https://guide.bash.academy/expansions/)
 1.  [C Programming A Modern Approach Second Edition]() [p66:Escape Sequence]()
 
 ### 2018-09
