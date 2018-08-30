@@ -61,3 +61,6 @@ echo "${greeting}"
 middle=${greeting% *};echo "${middle}"
 middle=${middle#* };echo "${middle}"
 echo "${greeting%% *} ${middle^^} ${greeting##* }"
+
+echo "What is the environment and what is it used for?"
+
