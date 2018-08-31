@@ -80,3 +80,7 @@ shift 2
 echo "1: $1, 2: $2, 4: $4"
 
 bash -cv 'echo "1: $1, 2: $2, 4: $4"' -- 'New First Argument' Second Third 'Fourth Argument'
+
+echo 'Special Parameters'
+
+bash -cv 'echo "args: $*"' -- 'one' 'two' 'three'
