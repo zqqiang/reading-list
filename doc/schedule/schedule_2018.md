@@ -45,7 +45,7 @@
 1.  [intro-to-go-modules](https://roberto.selbach.ca/intro-to-go-modules/) - [Done]()
 1.  [howto-c](https://matt.sh/howto-c) - [Done]()
 1.  [bash](https://guide.bash.academy/) - [Special Parameters](https://guide.bash.academy/expansions/)
-1.  [C Programming A Modern Approach Second Edition]() [TODOS: p194:8.2 Multidimentional Arrays]()
+1.  [C Programming A Modern Approach Second Edition]() [TODOS: p208: 9 Functions]()
 
 ### 2018-09
 
