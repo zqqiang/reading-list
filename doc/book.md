@@ -51,7 +51,7 @@ Some books I have read
 1. C 和指针，Kenneth A.Reek，2009
 1. Modern C, Jens Gustedt, 2018
 1. 深入理解 Nginx 模块开发与架构解析：第 2 版, 陶辉，2017
-1. C Programming A Modern Approach Second Edition, K.N.King,2018
+1. C Programming A Modern Approach Second Edition, K.N.King, 2018
 1. Core Java Volume I--Fundamentals (10th Edition) (Core Series) 10th Edition, Cay S. Horstmann, 2018
 1. Spring in Action, Fifth Edition, Craig Walls, 2018
 1. Spring Boot in Action, Craig Walls,
