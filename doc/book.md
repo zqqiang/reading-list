@@ -57,6 +57,7 @@ Some books I have read
 1. Spring Boot in Action, Craig Walls,
 1. 鸟哥的 Linux 私房菜，鸟哥，2007
 1. 计算机网络（第 6 版），James F.Kurose /Keith W.Ross，2018
+1. Understanding the Linux Kernel, Daniel Plerre Bovet / Marco Cesati, 2009
 
 ## History and Life
 
