@@ -49,11 +49,12 @@
 
 ### 2018-09
 
-1.  [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
-1.  [og-aws](https://github.com/open-guides/og-aws) - [S3]()
-1.  [Secure Coding](https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard)
-1.  [Modern C]()
-1.  [Unaligned Memory Access](https://www.kernel.org/doc/Documentation/unaligned-memory-access.txt)
+1. [CLI: improved](https://remysharp.com/2018/08/23/cli-improved) - [diff-so-fancy > diff]()
+1. [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
+1. [og-aws](https://github.com/open-guides/og-aws) - [S3]()
+1. [Secure Coding](https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard)
+1. [Modern C]()
+1. [Unaligned Memory Access](https://www.kernel.org/doc/Documentation/unaligned-memory-access.txt)
 
 ## Development Schedule
 
