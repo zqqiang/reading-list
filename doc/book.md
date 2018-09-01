@@ -61,7 +61,7 @@ Some books I have read
 
 ## History and Life
 
-1. One Billion Customers, James McGregor, Lessons from the Front Lines of Doing Business in China, 2010
+1. One Billion Customers, James McGregor, Lessons from the Front Lines of Doing Business in China, 2010, 为钱疯狂
 1. NO ANCIENT WISDOM, NO FOLLOWERS: The Challenges of Chinese Authoritarian Capitalism，James McGregor, 2018-08，p23：To continue growth
 1. Life and Death in Shanghai, Nien Cheng, 2018
 1. River Town, Two Years on the Yangtze, 彼得·海斯勒，
