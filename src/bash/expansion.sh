@@ -105,3 +105,13 @@ echo "${files[@]}"
 names=( "one" "two" "three" )
 echo "<${names[*]}>"
 ( IFS=','; echo "<${names[*]}>" )
+
+names=("Susan Quinn" "Anne-Marie Davis" "Mary Tate")
+echo "${names[@]/ /_}"
+(IFS=','; echo "${names[*]/#/Ms }")
+echo "${#names[@]}"
+echo "${#names[1]}"
+echo "${names[@]:1:2}"
+echo "${names[@]: -2}"
+
+
