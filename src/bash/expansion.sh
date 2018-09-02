@@ -84,3 +84,24 @@ bash -cv 'echo "1: $1, 2: $2, 4: $4"' -- 'New First Argument' Second Third 'Four
 echo 'Special Parameters'
 
 bash -cv 'echo "args: $*"' -- 'one' 'two' 'three'
+bash -cv 'echo "args: $@"' -- 'one' 'two' 'three'
+bash -cv 'echo "args count: $#"' -- 'one' 'two' 'three'
+bash -cv 'echo "\$-: $-"' -- 'one' 'two' 'three'
+bash -cv 'echo "\$$: $$"' -- 'one' 'two' 'three'
+bash -cv 'echo "\$!: $!"' -- 'one' 'two' 'three'
+bash -cv 'echo "\$_: $_"' -- 'one' 'two' 'three'
+
+bash -cv 'echo ${@: -1}' -- 'one' 'two' 'three'
+
+files=( one.txt two.txt "three or four.txt" )
+echo "${files[@]}"
+
+files+=( five.txt )
+echo "${files[0]}"
+echo "$files"
+unset "files[1]"
+echo "${files[@]}"
+
+names=( "one" "two" "three" )
+echo "<${names[*]}>"
+( IFS=','; echo "<${names[*]}>" )

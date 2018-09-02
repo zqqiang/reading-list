@@ -49,7 +49,7 @@
 
 ### 2018-09
 
-1. [bash](https://guide.bash.academy/) - [Special Parameters](https://guide.bash.academy/expansions/)
+1. [bash](https://guide.bash.academy/) - [What else can I do with arrays?](https://guide.bash.academy/expansions/)
 1. [CLI: improved](https://remysharp.com/2018/08/23/cli-improved) - [diff-so-fancy > diff]()
 1. [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
 1. [og-aws](https://github.com/open-guides/og-aws) - [S3]()
