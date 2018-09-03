@@ -56,6 +56,7 @@
 1. [Secure Coding](https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard)
 1. [Modern C]()
 1. [Unaligned Memory Access](https://www.kernel.org/doc/Documentation/unaligned-memory-access.txt)
+1. [libuv](http://libuv.org/)
 
 ## Development Schedule
 
