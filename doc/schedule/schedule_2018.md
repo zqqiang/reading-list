@@ -49,7 +49,7 @@
 
 ### 2018-09
 
-1. [bash](https://guide.bash.academy/) - [Test And Conditionals](https://guide.bash.academy/conditionals/)
+1. [bash](https://guide.bash.academy/) - [Done]()
 1. [CLI: improved](https://remysharp.com/2018/08/23/cli-improved) - [ack || ag > grep]()
 1. [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
 1. [og-aws](https://github.com/open-guides/og-aws) - [S3]()
