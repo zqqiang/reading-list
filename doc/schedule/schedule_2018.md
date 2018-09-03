@@ -57,7 +57,7 @@
 1. [Modern C]() - [p21: Acquaintance]()
 1. [Unaligned Memory Access](https://www.kernel.org/doc/Documentation/unaligned-memory-access.txt)
 1. [libuv](http://libuv.org/)
-1. [Understanding the Linux Kernel]() - []()
+1. [Understanding the Linux Kernel]() - [p21:命名空间]()
 
 ## Development Schedule
 
