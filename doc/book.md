@@ -8,6 +8,7 @@ Some books I have read
 - [Start a Business](#start-a-business)
 - [Coding](#coding)
 - [History and Life](#history-and-life)
+- [Economic](#economic)
 
 ## Start a business
 
@@ -66,3 +67,7 @@ Some books I have read
 1. NO ANCIENT WISDOM, NO FOLLOWERS: The Challenges of Chinese Authoritarian Capitalism，James McGregor, 2018-08，p23：To continue growth
 1. Life and Death in Shanghai, Nien Cheng, 2018
 1. River Town, Two Years on the Yangtze, 彼得·海斯勒，
+
+## Economic
+
+1. 经济学原理（第七版），曼昆，2018-09，p24：人们如何做出决策
