@@ -51,13 +51,13 @@
 
 1. [bash](https://guide.bash.academy/) - [Done]()
 1. [CLI: improved](https://remysharp.com/2018/08/23/cli-improved) - [Done]()
-1. [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
-1. [og-aws](https://github.com/open-guides/og-aws) - [S3]()
-1. [Secure Coding](https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard)
-1. [Modern C]() - [p21: Acquaintance/p254:Improve type generic expression programming]()
 1. [Unaligned Memory Access](https://www.kernel.org/doc/Documentation/unaligned-memory-access.txt) - [Done]()
 1. [libuv](http://libuv.org/) - [api done/test:echo-server.c]()
 1. [Understanding the Linux Kernel]() - [p28:计时]()
+1. [css-sprites](https://css-tricks.com/css-sprites/) - [Todos]()
+1. [Secure Coding](https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard) - [ \_Generic]()
+1. [Modern C]() - [p21: Acquaintance/p254:Improve type generic expression programming]()
+1. [og-aws](https://github.com/open-guides/og-aws) - [S3]()
 
 ## Development Schedule
 
