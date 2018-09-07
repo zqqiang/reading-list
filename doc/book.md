@@ -60,6 +60,7 @@ Some books I have read
 1. 计算机网络（第 6 版），James F.Kurose /Keith W.Ross，2018
 1. Understanding the Linux Kernel, Daniel Plerre Bovet / Marco Cesati, 2009
 1. Linux 高性能服务器编程，游双，
+1. The Linux Programming Interface, Michael Kerrisk, 2018 - [p1399: The epoll API]()
 
 ## History and Life
 
