@@ -58,6 +58,7 @@
 1. [Secure Coding](https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard) - [PRE31-C. Avoid side effects in arguments to unsafe macros]()
 1. [Modern C]() - [p21: Acquaintance/p254:Improve type generic expression programming]()
 1. [og-aws](https://github.com/open-guides/og-aws) - [S3]()
+1. [python crash course]() - []()
 
 ## Development Schedule
 
