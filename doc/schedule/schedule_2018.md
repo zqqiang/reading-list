@@ -58,7 +58,7 @@
 1. [Secure Coding](https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard) - [Rule 02: DCL36-C]()
 1. [Modern C]() - [p21: Acquaintance/p254:Improve type generic expression programming]()
 1. [og-aws](https://github.com/open-guides/og-aws) - [S3]()
-1. [python crash course]() - []()
+1. [python crash course]() - [p55]()
 
 ## Development Schedule
 
