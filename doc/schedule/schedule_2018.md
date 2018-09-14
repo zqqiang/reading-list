@@ -59,7 +59,7 @@
 1. [Modern C]() - [p21: Acquaintance/p254:Improve type generic expression programming]()
 1. [og-aws](https://github.com/open-guides/og-aws) - [S3]()
 1. [python crash course]() - [p55]()
-1. [docker](https://docs.docker.com) - []()
+1. [docker](https://docs.docker.com) - [Get Started, Part 3: Services]()
 
 ## Development Schedule
 
