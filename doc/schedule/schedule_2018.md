@@ -58,7 +58,7 @@
 1. [Secure Coding](https://www.securecoding.cert.org/confluence/display/c/SEI+CERT+C+Coding+Standard) - [Rule 02: DCL38-C]()
 1. [Modern C]() - [p21: Acquaintance/p254:Improve type generic expression programming]()
 1. [og-aws](https://github.com/open-guides/og-aws) - [S3]()
-1. [python crash course]() - [6 Dictionaries]()
+1. [python crash course]() - [7 User input and while loops]()
 1. [docker](https://docs.docker.com) - [Get Started, Part 3: Services]()
 
 ## Development Schedule
