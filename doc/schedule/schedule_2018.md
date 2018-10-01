@@ -62,6 +62,12 @@
 1. [docker](https://docs.docker.com) - [Get Started, Part 3: Services]()
 1. [markojs](https://markojs.com/) - [Components]()
 
+### 2018-10
+
+1. [libuv](http://libuv.org/) - [uv_async_t]()
+1. [python crash course]() - [12 A ship that fires bullets/Starting the Game Project]()
+1. [markojs](https://markojs.com/) - [Server-side rending]()
+
 ## Development Schedule
 
 ### 2018-01
@@ -101,3 +107,7 @@
 
 1. [nx-web](https://github.com/zqqiang/nx-web)
 1. [go-capwap](https://github.com/zqqiang/go-capwap.git)
+
+### 2018-10
+
+1. [nx-web](https://github.com/zqqiang/nx-web)
