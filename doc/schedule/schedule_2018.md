@@ -67,7 +67,7 @@
 1. [libuv](http://libuv.org/) - [uv_async_t]()
 1. [python crash course]() - [12 A ship that fires bullets/Starting the Game Project]()
 1. [markojs](https://markojs.com/) - [Server-side rending]()
-1. [hadoop]() - [Hadoop: The Definitive Guide/Grid Computing]()
+1. [Hadoop: The Definitive Guide]() - [Chapter 2 MapReduce]()
 
 ## Development Schedule
 
