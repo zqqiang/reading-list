@@ -69,6 +69,8 @@
 1. [markojs](https://markojs.com/) - [Server-side rending]()
 1. [Hadoop: The Definitive Guide]() - [Chapter 2 MapReduce]()
 
+### 2018-11
+
 ## Development Schedule
 
 ### 2018-01
@@ -112,3 +114,5 @@
 ### 2018-10
 
 1. [nx-web](https://github.com/zqqiang/nx-web)
+
+### 2018-11
