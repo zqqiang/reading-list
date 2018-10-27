@@ -188,9 +188,9 @@
 (() => {
   console.log(`What does the following function return?`);
   function greet() {
-    return
+    return;
     {
-      message: "hello"
+      message: "hello";
     }
   }
   console.log(`greet() ${greet()}`);
@@ -199,18 +199,45 @@
 (() => {
   console.log(`What is the difference between a parameter and an argument?`);
   function myFunction(parameter1, parameter2) {
-    console.log(arguments[0]) // "argument1"
+    console.log(arguments[0]); // "argument1"
   }
-  myFunction("argument1", "argument2")
+  myFunction("argument1", "argument2");
   console.log(`myFunction.length => ${myFunction.length}`);
 })();
 
 (() => {
-  console.log(`Create a standalone function bind that is functionally equivalent to the method Function.prototype.bind`);
-  const bind = (fn, context) => (...args) => fn.apply(context, args)
+  console.log(
+    `Create a standalone function bind that is functionally equivalent to the method Function.prototype.bind`
+  );
+  const bind = (fn, context) => (...args) => fn.apply(context, args);
   function example() {
-    console.log(this)
+    console.log(this);
   }
-  const boundExample = bind(example, { a: true })
-  boundExample.call({ b: true }) // logs { a: true }
+  const boundExample = bind(example, { a: true });
+  boundExample.call({ b: true }); // logs { a: true }
+})();
+
+(() => {
+  console.log(
+    `JavaScript closure is a function that returns another function.`
+  );
+  function generator(input) {
+    var index = 0;
+    return {
+      next: function() {
+        if (index < input.length) {
+          index += 1;
+          return input[index - 1];
+        }
+        return "";
+      }
+    };
+  }
+  var myGenerator = generator(`boomerang`);
+  console.log(`${myGenerator.next()}`);
+  console.log(`${myGenerator.next()}`);
+
+  myGenerator = generator("toon");
+  console.log(`${myGenerator.next()}`);
+  console.log(`${myGenerator.next()}`);
 })();
