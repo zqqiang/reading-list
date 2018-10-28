@@ -241,3 +241,7 @@
   console.log(`${myGenerator.next()}`);
   console.log(`${myGenerator.next()}`);
 })();
+
+(() => {
+  console.log(`Understand Prototypical Inheritance well`);
+})();
