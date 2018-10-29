@@ -68,6 +68,7 @@
 1. [python crash course]() - [12 A ship that fires bullets/Starting the Game Project]()
 1. [markojs](https://markojs.com/) - [Server-side rending]()
 1. [Hadoop: The Definitive Guide]() - [Chapter 2 MapReduce]()
+1. [Jiuzhang]() - [Implement strStr]()
 
 ### 2018-11
 
