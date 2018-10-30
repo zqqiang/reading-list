@@ -241,3 +241,14 @@
   console.log(`${myGenerator.next()}`);
   console.log(`${myGenerator.next()}`);
 })();
+
+(() => {
+  console.log(`how to check if input is an object ?`);
+  function isObject(obj) {
+    return typeof obj === "object" && obj !== null && !Array.isArray(obj);
+  }
+  console.log(`${isObject(null)}`);
+  console.log(`${isObject([1, 2])}`);
+})();
+
+(() => {})();
