@@ -68,8 +68,8 @@
 1. [python crash course]() - [12 A ship that fires bullets/Starting the Game Project]()
 1. [markojs](https://markojs.com/) - [Server-side rending]()
 1. [Hadoop: The Definitive Guide]() - [Chapter 2 MapReduce]()
-1. [A perfect guide for cracking a JavaScript interview]() - [Understand the callbacks and promises well]()
-1. [Jiuzhang]() - [Implement strStr]()
+1. [A perfect guide for cracking a JavaScript interview]() - [done]()
+1. [Jiuzhang]() - [Chapter2]()
 
 ### 2018-11
 
