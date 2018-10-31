@@ -70,6 +70,7 @@
 1. [Hadoop: The Definitive Guide]() - [Chapter 2 MapReduce]()
 1. [A perfect guide for cracking a JavaScript interview]() - [done]()
 1. [Jiuzhang]() - [Chapter2]()
+1. [Designing Data-Intensive Applications]() - [Maintainability]()
 
 ### 2018-11
 
