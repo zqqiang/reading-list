@@ -1,5 +1,10 @@
 package leetcode
 
+import (
+	"fmt"
+	"testing"
+)
+
 /*
 2. Add Two Numbers
 
@@ -84,8 +89,8 @@ Given a string, find the length of the longest substring without repeating chara
 Example 1:
 
 Input: "abcabcbb"
-Output: 3 
-Explanation: The answer is "abc", with the length of 3. 
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
 Example 2:
 
 Input: "bbbbb"
@@ -95,10 +100,32 @@ Example 3:
 
 Input: "pwwkew"
 Output: 3
-Explanation: The answer is "wke", with the length of 3. 
+Explanation: The answer is "wke", with the length of 3.
              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 */
 
 func lengthOfLongestSubstring(s string) int {
-    return 0
+	start := 0
+	max := 0
+	lastMax := 0
+	for i := 0; i < len(s); i++ {
+		for j := start; j < i; j++ {
+			fmt.Printf("%c  %c\n", s[j], s[i])
+			if s[i] == s[j] {
+				if lastMax < max {
+					lastMax = max
+					fmt.Printf("%d\n", lastMax)
+					max = 0
+					start = i + 1
+					break
+				}
+			}
+			max++
+		}
+	}
+	return lastMax
+}
+
+func TestLengthOfLongestSubstring(t *testing.T) {
+	lengthOfLongestSubstring("abcabcbb")
 }
