@@ -128,3 +128,54 @@ The median is (2 + 3)/2 = 2.5
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	return float64(0.0)
 }
+
+/*
+5. Longest Palindromic Substring
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+
+Example 1:
+
+Input: "babad"
+Output: "bab"
+Note: "aba" is also a valid answer.
+Example 2:
+
+Input: "cbbd"
+Output: "bb"
+*/
+func isPalindromic(s string, start int, end int) bool {
+	if end-start > 0 {
+		for i, j := start, end; i < j; {
+			if s[i] == s[j] {
+				if i+1 == j {
+					return true
+				}
+				i++
+				j--
+			} else {
+				return false
+			}
+		}
+		return true
+	}
+	return false
+}
+
+func longestPalindrome(s string) string {
+	maxStart := 0
+	maxEnd := 0
+	if len(s) == 0 {
+		return s
+	}
+	for i := 0; i < len(s); i++ {
+		for j := i + 1; j < len(s); j++ {
+			if isPalindromic(s, i, j) {
+				if (maxEnd - maxStart) < j-i+1 {
+					maxEnd = j
+					maxStart = i
+				}
+			}
+		}
+	}
+	return s[maxStart : maxEnd+1]
+}
