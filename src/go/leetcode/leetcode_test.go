@@ -110,13 +110,12 @@ func lengthOfLongestSubstring(s string) int {
 	lastMax := 0
 	for i := 0; i < len(s); i++ {
 		for j := start; j < i; j++ {
-			fmt.Printf("%c  %c\n", s[j], s[i])
+			fmt.Printf("%d->%c  %d->%c  max->%d\n", j, s[j], i, s[i], max)
 			if s[i] == s[j] {
 				if lastMax < max {
 					lastMax = max
-					fmt.Printf("%d\n", lastMax)
 					max = 0
-					start = i + 1
+					start = i
 					break
 				}
 			}
