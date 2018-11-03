@@ -1,10 +1,5 @@
 package leetcode
 
-import (
-	"fmt"
-	"testing"
-)
-
 /*
 2. Add Two Numbers
 
@@ -105,26 +100,31 @@ Explanation: The answer is "wke", with the length of 3.
 */
 
 func lengthOfLongestSubstring(s string) int {
-	start := 0
-	max := 0
-	lastMax := 0
-	for i := 0; i < len(s); i++ {
-		for j := start; j < i; j++ {
-			fmt.Printf("%d->%c  %d->%c  max->%d\n", j, s[j], i, s[i], max)
-			if s[i] == s[j] {
-				if lastMax < max {
-					lastMax = max
-					max = 0
-					start = i
-					break
-				}
-			}
-			max++
-		}
-	}
-	return lastMax
+	return 0
 }
 
-func TestLengthOfLongestSubstring(t *testing.T) {
-	lengthOfLongestSubstring("abcabcbb")
+/*
+4. Median of Two Sorted Arrays
+There are two sorted arrays nums1 and nums2 of size m and n respectively.
+
+Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+
+You may assume nums1 and nums2 cannot be both empty.
+
+Example 1:
+
+nums1 = [1, 3]
+nums2 = [2]
+
+The median is 2.0
+Example 2:
+
+nums1 = [1, 2]
+nums2 = [3, 4]
+
+The median is (2 + 3)/2 = 2.5
+*/
+
+func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+	return 0.0
 }
