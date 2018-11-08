@@ -1,6 +1,7 @@
 package leetcode
 
 import (
+	"bytes"
 	"fmt"
 	"testing"
 )
@@ -218,30 +219,41 @@ P     I
  */
 
 func convert(s string, numRows int) string {
-	numCols := ((len(s) / (2*numRows - 2)) * (numRows - 1)) + 1
-	target := make([][]byte, numRows)
-	for i := range target {
-		target[i] = make([]byte, numCols)
+	if numRows == 1 {
+		return s
 	}
+	numCols := 0
+	if len(s) < (2*numRows - 2) {
+		numCols = (len(s)/numRows + 1)
+	} else {
+		numCols = ((len(s) / (2*numRows - 2)) * (numRows - 1)) + 1
+	}
+
+	target := make([]byte, numRows*numCols)
 	row := 0
 	col := 0
 	for i := 0; i < len(s); i++ {
-		target[row][col] = s[i]
-		if row == (numRows - 1) {
+		target[numCols*row+col] = s[i]
+		// fmt.Printf("target[%d][%d] = s[%d] => %c\n", row, col, i, s[i])
+		if (row == (numRows - 1)) || 0 != (col%(numRows-1)) {
 			row--
 			col++
 		} else {
 			row++
 		}
 	}
-	for i := 0; i < numRows; i++ {
-		for j := 0; j < numCols; j++ {
-			fmt.Printf("%c", target[i][j])
+	var buffer bytes.Buffer
+	for i := 0; i < numCols*numRows; i++ {
+		if target[i] != 0 {
+			buffer.WriteByte(target[i])
 		}
 	}
-	return ""
+	return buffer.String()
 }
 
 func TestCovert(t *testing.T) {
-	convert("PAYPALISHIRING", 4)
+	// fmt.Println(convert("PAYPALISHIRING", 4))
+	// fmt.Println(convert("", 1))
+	// fmt.Println(convert("ABCDE", 4))
+	fmt.Println(convert("PAYPALISHIRING", 5))
 }
