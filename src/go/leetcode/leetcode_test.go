@@ -218,12 +218,25 @@ P     I
  */
 
 func convert(s string, numRows int) string {
+	numCols := ((len(s) / (2*numRows - 2)) * (numRows - 1)) + 1
+	target := make([][]byte, numRows)
+	for i := range target {
+		target[i] = make([]byte, numCols)
+	}
+	row := 0
+	col := 0
 	for i := 0; i < len(s); i++ {
-		step := i * (2*numRows - 2)
-		if step > len(s) {
-
+		target[row][col] = s[i]
+		if row == (numRows - 1) {
+			row--
+			col++
 		} else {
-			fmt.Printf("%c", s[step])
+			row++
+		}
+	}
+	for i := 0; i < numRows; i++ {
+		for j := 0; j < numCols; j++ {
+			fmt.Printf("%c", target[i][j])
 		}
 	}
 	return ""
