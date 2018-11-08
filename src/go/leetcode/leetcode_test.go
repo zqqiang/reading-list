@@ -2,7 +2,7 @@ package leetcode
 
 import (
 	"fmt"
-	"strings"
+	"testing"
 )
 
 /*
@@ -213,6 +213,22 @@ Y A   H R
 P     I
 */
 
+/*
+
+ */
+
 func convert(s string, numRows int) string {
+	for i := 0; i < len(s); i++ {
+		step := i * (2*numRows - 2)
+		if step > len(s) {
+
+		} else {
+			fmt.Printf("%c", s[step])
+		}
+	}
 	return ""
+}
+
+func TestCovert(t *testing.T) {
+	convert("PAYPALISHIRING", 4)
 }
