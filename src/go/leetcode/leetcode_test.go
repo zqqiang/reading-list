@@ -214,15 +214,5 @@ P     I
 */
 
 func convert(s string, numRows int) string {
-	var row int
-	var col int
-	var result strings.Builder
-
-	for i := 0; i < len(s); i++ {
-		row = i / numRows
-		col = i % numRows
-		fmt.Fprintf(&result, "%d", i)
-	}
-
-	return result.String()
+	return ""
 }
