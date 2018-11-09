@@ -2,8 +2,6 @@ package leetcode
 
 import (
 	"bytes"
-	"fmt"
-	"testing"
 )
 
 /*
@@ -214,19 +212,17 @@ Y A   H R
 P     I
 */
 
-/*
-
- */
-
 func convert(s string, numRows int) string {
 	if numRows == 1 {
 		return s
 	}
 	numCols := 0
 	if len(s) < (2*numRows - 2) {
-		numCols = (len(s)/numRows + 1)
+		numCols = len(s)%numRows + 1
 	} else {
-		numCols = ((len(s) / (2*numRows - 2)) * (numRows - 1)) + 1
+		m := len(s) / (2*numRows - 2)
+		n := len(s) % (2*numRows - 2)
+		numCols = m*(numRows-1) + (n / numRows) + (n % numRows)
 	}
 
 	target := make([]byte, numRows*numCols)
@@ -234,7 +230,6 @@ func convert(s string, numRows int) string {
 	col := 0
 	for i := 0; i < len(s); i++ {
 		target[numCols*row+col] = s[i]
-		// fmt.Printf("target[%d][%d] = s[%d] => %c\n", row, col, i, s[i])
 		if (row == (numRows - 1)) || 0 != (col%(numRows-1)) {
 			row--
 			col++
@@ -249,11 +244,4 @@ func convert(s string, numRows int) string {
 		}
 	}
 	return buffer.String()
-}
-
-func TestCovert(t *testing.T) {
-	// fmt.Println(convert("PAYPALISHIRING", 4))
-	// fmt.Println(convert("", 1))
-	// fmt.Println(convert("ABCDE", 4))
-	fmt.Println(convert("PAYPALISHIRING", 5))
 }
