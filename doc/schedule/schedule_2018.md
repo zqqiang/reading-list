@@ -74,6 +74,8 @@
 
 ### 2018-11
 
+1. [Designing Data-Intensive Applications]() - [Maintainability]()
+
 ## Development Schedule
 
 ### 2018-01
