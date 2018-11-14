@@ -16,3 +16,5 @@ bindata.go
 bundle.js
 tmp
 .sass-cache
+__pycache__
+*.pyc
