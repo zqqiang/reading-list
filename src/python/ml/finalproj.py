@@ -5,6 +5,9 @@ from sklearn.preprocessing import LabelEncoder
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import LSTM
+from numpy import concatenate
+from sklearn.metrics import mean_squared_error
+from math import sqrt
 
 
 def time_series_pre_process(csv):
@@ -53,7 +56,7 @@ def col_label_encode_and_normalize(csv_data, encode_col_index):
 
     scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_data = scaler.fit_transform(encoded_data)
-    return scaled_data
+    return scaler, scaled_data
 
 
 def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
@@ -124,7 +127,7 @@ def machine_learning(train_X, train_y, test_X, test_y):
     seqModel.compile(loss='mae', optimizer='adam')
     history = seqModel.fit(train_X, train_y, epochs=neurons, batch_size=72,
                            validation_data=(test_X, test_y), verbose=2, shuffle=False)
-    return history
+    return seqModel, history
 
 
 def history_plot(result):
@@ -138,23 +141,38 @@ def history_plot(result):
     pyplot.show()
 
 
-def evaluateModel():
+def evaluateModel(model, scaler, test_X, test_y):
     """
     """
-    print("todo: Evaluate Model")
+    # make a prediction
+    yhat = model.predict(test_X)
+    test_X = test_X.reshape((test_X.shape[0], test_X.shape[2]))
+    # invert scaling for forecast
+    inv_yhat = concatenate((yhat, test_X[:, 1:]), axis=1)
+    inv_yhat = scaler.inverse_transform(inv_yhat)
+    inv_yhat = inv_yhat[:, 0]
+    # invert scaling for actual
+    test_y = test_y.reshape((len(test_y), 1))
+    inv_y = concatenate((test_y, test_X[:, 1:]), axis=1)
+    inv_y = scaler.inverse_transform(inv_y)
+    inv_y = inv_y[:, 0]
+    # calculate RMSE
+    rmse = sqrt(mean_squared_error(inv_y, inv_yhat))
+    print('Test RMSE: %.3f' % rmse)
 
 
 def main():
     pm25_time_series = time_series_pre_process('Beijing.csv')
     time_series_quick_view(pm25_time_series)
-    encode_normalize_data = col_label_encode_and_normalize(pm25_time_series, 4)
+    scaler, encode_normalize_data = col_label_encode_and_normalize(
+        pm25_time_series, 4)
     supervised_data = series_to_supervised(encode_normalize_data, 1, 1)
     cleanup_supervised_data(supervised_data)
     train_X, train_y, test_X, test_y = split_train_test_datas(
         supervised_data, 365*24)
-    result = machine_learning(train_X, train_y, test_X, test_y)
+    model, result = machine_learning(train_X, train_y, test_X, test_y)
     history_plot(result)
-    evaluateModel()
+    evaluateModel(model, scaler, test_X, test_y)
 
 
 if __name__ == "__main__":
