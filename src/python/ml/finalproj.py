@@ -163,7 +163,7 @@ def history_plot(result):
 
 def evaluate_model(model, scaler, test_X, test_y):
     """
-    todo: 
+    todo: expand to cross validation
     """
     # make a prediction
     y_pred = model.predict(test_X)
