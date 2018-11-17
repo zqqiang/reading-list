@@ -118,21 +118,41 @@ def machine_learning(train_X, train_y, test_X, test_y):
     """
     fit an LSTM on the multivariate input data
     """
-    # in production we need set neurons bigger than 50
-    neurons = 5
-    seqModel = Sequential()
-    seqModel.add(LSTM(neurons, input_shape=(
-        train_X.shape[1], train_X.shape[2])))
-    seqModel.add(Dense(1))
-    seqModel.compile(loss='mae', optimizer='adam')
-    history = seqModel.fit(train_X, train_y, epochs=neurons, batch_size=72,
-                           validation_data=(test_X, test_y), verbose=2, shuffle=False)
-    return seqModel, history
+    neurons = 64
+    data_dim = train_X.shape[2]
+    timesteps = train_X.shape[1]
+    batch_size = 64
+    epochs = 50
+
+    print("data_dim:{0}, timesteps:{1}\n".format(data_dim, timesteps))
+
+    model = Sequential()
+    # we stack 3 LSTM layers on top of each other,
+    # making the model capable of learning higher-level temporal representations
+    model.add(LSTM(neurons, return_sequences=True,
+                   input_shape=(timesteps, data_dim)))
+    model.add(LSTM(neurons, return_sequences=True))
+    model.add(LSTM(neurons))
+
+    model.add(Dense(1))
+    # we need to configure the learning process
+    # which is done via the compile method
+    # why we choose adam optimizer?
+    #
+    model.compile(optimizer='adam', loss='mae')
+    # Keras models are trained on Numpy arrays of input data and labels
+    # For training a model, you will typically use the  fit function
+    history = model.fit(train_X, train_y, epochs=epochs, batch_size=batch_size,
+                        validation_data=(test_X, test_y), verbose=2, shuffle=False)
+    # Its History.history attribute is a record of training
+    # loss values and metrics values at successive epochs
+    return model, history
 
 
 def history_plot(result):
     """
-
+    Plot training lost values vs metrics values
+    If they close enough the epochs is big enough
     """
     pyplot.figure(figsize=(10, 10))
     pyplot.plot(result.history['loss'], label='train')
@@ -141,23 +161,25 @@ def history_plot(result):
     pyplot.show()
 
 
-def evaluateModel(model, scaler, test_X, test_y):
+def evaluate_model(model, scaler, test_X, test_y):
     """
+    todo: 
     """
     # make a prediction
-    yhat = model.predict(test_X)
+    y_pred = model.predict(test_X)
     test_X = test_X.reshape((test_X.shape[0], test_X.shape[2]))
-    # invert scaling for forecast
-    inv_yhat = concatenate((yhat, test_X[:, 1:]), axis=1)
-    inv_yhat = scaler.inverse_transform(inv_yhat)
-    inv_yhat = inv_yhat[:, 0]
-    # invert scaling for actual
+    # invert scaling for forecast (y predict)
+    y_pred = concatenate((y_pred, test_X[:, 1:]), axis=1)
+    y_pred = scaler.inverse_transform(y_pred)
+    y_pred = y_pred[:, 0]
+    # invert scaling for actual (y true)
     test_y = test_y.reshape((len(test_y), 1))
-    inv_y = concatenate((test_y, test_X[:, 1:]), axis=1)
-    inv_y = scaler.inverse_transform(inv_y)
-    inv_y = inv_y[:, 0]
+    y_true = concatenate((test_y, test_X[:, 1:]), axis=1)
+    y_true = scaler.inverse_transform(y_true)
+    y_true = y_true[:, 0]
     # calculate RMSE
-    rmse = sqrt(mean_squared_error(inv_y, inv_yhat))
+    print("y_true:{0}\ny_pred:{1}\n".format(y_true, y_pred))
+    rmse = sqrt(mean_squared_error(y_true, y_pred))
     print('Test RMSE: %.3f' % rmse)
 
 
@@ -172,7 +194,7 @@ def main():
         supervised_data, 365*24)
     model, result = machine_learning(train_X, train_y, test_X, test_y)
     history_plot(result)
-    evaluateModel(model, scaler, test_X, test_y)
+    evaluate_model(model, scaler, test_X, test_y)
 
 
 if __name__ == "__main__":
