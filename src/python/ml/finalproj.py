@@ -110,7 +110,8 @@ def split_train_test_datas(datasets, threshold):
     # reshape input to be 3D [samples, timesteps, features]
     train_X = train_X.reshape((train_X.shape[0], 1, train_X.shape[1]))
     test_X = test_X.reshape((test_X.shape[0], 1, test_X.shape[1]))
-    print(train_X.shape, train_y.shape, test_X.shape, test_y.shape)
+    print("train_X.shape:{0}, train_y.shape:{1}, test_X.shape:{2}, test_y.shape:{3}".format(
+        train_X.shape, train_y.shape, test_X.shape, test_y.shape))
     return train_X, train_y, test_X, test_y
 
 
@@ -118,7 +119,7 @@ def machine_learning(train_X, train_y, test_X, test_y):
     """
     fit an LSTM on the multivariate input data
     """
-    neurons = 64
+    neurons = 32
     data_dim = train_X.shape[2]
     timesteps = train_X.shape[1]
     batch_size = 64
@@ -163,7 +164,6 @@ def history_plot(result):
 
 def evaluate_model(model, scaler, test_X, test_y):
     """
-    todo: expand to cross validation
     """
     # make a prediction
     y_pred = model.predict(test_X)
@@ -181,6 +181,7 @@ def evaluate_model(model, scaler, test_X, test_y):
     print("y_true:{0}\ny_pred:{1}\n".format(y_true, y_pred))
     rmse = sqrt(mean_squared_error(y_true, y_pred))
     print('Test RMSE: %.3f' % rmse)
+    return rmse
 
 
 def main():
@@ -190,11 +191,15 @@ def main():
         pm25_time_series, 4)
     supervised_data = series_to_supervised(encode_normalize_data, 1, 1)
     cleanup_supervised_data(supervised_data)
-    train_X, train_y, test_X, test_y = split_train_test_datas(
-        supervised_data, 365*24)
-    model, result = machine_learning(train_X, train_y, test_X, test_y)
-    history_plot(result)
-    evaluate_model(model, scaler, test_X, test_y)
+    rmse_list = list()
+    for i in range(1, 6):
+        train_X, train_y, test_X, test_y = split_train_test_datas(
+            supervised_data, 365*24*i)
+        model, result = machine_learning(train_X, train_y, test_X, test_y)
+        history_plot(result)
+        rmse_list.append(evaluate_model(model, scaler, test_X, test_y))
+    print(
+        "5-fold cross-validation result: {0}".format(sum(rmse_list)/len(rmse_list)))
 
 
 if __name__ == "__main__":
