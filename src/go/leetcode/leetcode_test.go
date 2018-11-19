@@ -330,6 +330,7 @@ func myAtoi(str string) int {
 	var sign byte
 	var result int
 	var step int
+	var noneNumCount int
 
 	const (
 		MaxInt32 = 1<<31 - 1
@@ -338,16 +339,29 @@ func myAtoi(str string) int {
 
 	for i := 0; i < len(str); i++ {
 		if str[i] == '+' || str[i] == '-' {
+			if step != 0 {
+				break
+			}
 			sign = str[i]
-		} else if str[i] >= 0 && str[i] <= 9 {
+			noneNumCount++
+			if noneNumCount > 1 {
+				return 0
+			}
+		} else if str[i] >= '0' && str[i] <= '9' {
 			if step == 0 {
 				result += (int(str[i]) - '0')
 			} else {
-				result += (int(str[i]) - '0') * step * 10
+				result *= 10
+				result += (int(str[i]) - '0')
+			}
+			if result > MaxInt32 {
+				break
 			}
 			step++
 		} else if str[i] == ' ' {
-
+			if step != 0 || sign != 0 {
+				break
+			}
 		} else if step == 0 {
 			return 0
 		} else if step != 0 {

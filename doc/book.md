@@ -63,6 +63,10 @@ Some books I have read
 1. The Linux Programming Interface, Michael Kerrisk, 2018 - [p1399: The epoll API]()
 1. Python Crash Course, Eric Matthes, 2018
 
+## System & Design
+
+1. Designing Data-Intensive Application, Martin Kleppmann, 2018 - []
+
 ## History and Life
 
 1. One Billion Customers, James McGregor, Lessons from the Front Lines of Doing Business in China, 2010, 为钱疯狂
