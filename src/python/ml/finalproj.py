@@ -31,6 +31,9 @@ def time_series_pre_process(csv):
     return csv_data
 
 
+pm25_time_series = time_series_pre_process('Beijing.csv')
+
+
 def time_series_quick_view(time_series):
     """
     create a time series quick view of each series
@@ -49,6 +52,9 @@ def time_series_quick_view(time_series):
         plot_index += 1
 
     display(fig)
+
+
+time_series_quick_view(pm25_time_series)
 
 
 def col_label_encode_and_normalize(csv_data, encode_col_index):
@@ -72,6 +78,10 @@ def col_label_encode_and_normalize(csv_data, encode_col_index):
     print("after nromalize:\n{}".format(scaled_data))
 
     return scaler, scaled_data
+
+
+scaler, encode_normalize_data = col_label_encode_and_normalize(
+    pm25_time_series, 4)
 
 
 def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
@@ -106,6 +116,9 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     return agg
 
 
+supervised_data = series_to_supervised(encode_normalize_data, 1, 1)
+
+
 def cleanup_supervised_data(supervised_data):
     """
     drop columns we don't want to predict
@@ -116,6 +129,9 @@ def cleanup_supervised_data(supervised_data):
 
     print("supervised datasets after cleanup unused column\n{}".format(
         supervised_data.head()))
+
+
+cleanup_supervised_data(supervised_data)
 
 
 def split_train_test_datas(datasets, threshold):
@@ -133,6 +149,10 @@ def split_train_test_datas(datasets, threshold):
     test_X = test_X.reshape((test_X.shape[0], 1, test_X.shape[1]))
 
     return train_X, train_y, test_X, test_y
+
+
+train_X, train_y, test_X, test_y = split_train_test_datas(
+    supervised_data, 365*24)
 
 
 def machine_learning(train_X, train_y, test_X, test_y):
@@ -169,6 +189,9 @@ def machine_learning(train_X, train_y, test_X, test_y):
     return model, history
 
 
+model, result = machine_learning(train_X, train_y, test_X, test_y)
+
+
 def history_plot(result):
     """
     Plot training lost values vs metrics values
@@ -181,6 +204,9 @@ def history_plot(result):
     plt.legend()
 
     display(fig)
+
+
+history_plot(result)
 
 
 def evaluate_model(model, scaler, test_X, test_y):
@@ -207,20 +233,4 @@ def evaluate_model(model, scaler, test_X, test_y):
     return rmse
 
 
-def main():
-    pm25_time_series = time_series_pre_process(
-        '/dbfs/FileStore/tables/Beijing.csv')
-    time_series_quick_view(pm25_time_series)
-    scaler, encode_normalize_data = col_label_encode_and_normalize(
-        pm25_time_series, 4)
-    supervised_data = series_to_supervised(encode_normalize_data, 1, 1)
-    cleanup_supervised_data(supervised_data)
-    train_X, train_y, test_X, test_y = split_train_test_datas(
-        supervised_data, 365*24)
-    model, result = machine_learning(train_X, train_y, test_X, test_y)
-    history_plot(result)
-    evaluate_model(model, scaler, test_X, test_y)
-
-
-if __name__ == "__main__":
-    main()
+evaluate_model(model, scaler, test_X, test_y)
