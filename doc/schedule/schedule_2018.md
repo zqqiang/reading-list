@@ -74,7 +74,7 @@
 
 ### 2018-11
 
-1. [Designing Data-Intensive Applications]() - [Maintainability]()
+1. [Designing Data-Intensive Applications]() - [Query Languages for Data]()
 
 ## Development Schedule
 
