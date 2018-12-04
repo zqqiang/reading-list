@@ -96,7 +96,7 @@ class Solution
         std::map<int, int> right;
         std::map<int, int> count;
 
-        for (int i = 0; i < nums.size; ++i)
+        for (int i = 0; i < nums.size(); ++i)
         {
             if (!left[nums[i]])
             {
@@ -115,13 +115,18 @@ class Solution
             }
         }
 
-        int result = 0;
+        std::cout << "degree => " << degree << endl;
+
+        int result = 50000;
         for (std::map<int, int>::iterator it = count.begin(); it != count.end(); ++it)
         {
+            std::cout << "count => " << it->second << endl;
+
             if (it->second == degree)
             {
                 result = min(result, right[it->second] - left[it->second] + 1);
             }
         }
+        return result;
     }
 };
