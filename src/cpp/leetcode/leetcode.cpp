@@ -29,34 +29,38 @@ class Solution
     int maximumSwap(int num)
     {
         // Write your code here
-        int max = 0;
+        int last[8] = {0};
         int index = 0;
-        int max_index = 0;
-        int next = num;
-        int cur = 0;
+        int calc = num;
 
-        while (next)
+        while (calc)
         {
-            cur = next % 10;
-            if (max < cur)
-            {
-                max = cur;
-                max_index = index;
-            }
-            next = next / 10;
-            index++;
+            last[index++] = calc % 10;
+            calc = calc / 10;
         }
 
-        if (max_index == index - 1)
+        for (int i = index - 1; i >= 0; --i)
         {
-            if (index == 1)
+            for (int j = 9; j > last[i]; --j)
             {
-                return num;
-            }
-            int top = num / pow(10, index - 1);
-            return top * pow(10, index - 1) + maximumSwap(top / pow(10, index - 1));
-        }
+                for (int t = 0; t < i; ++t)
+                {
+                    if (last[t] == j)
+                    {
+                        int temp = last[i];
+                        last[i] = j;
+                        last[t] = temp;
 
-        return num - max * pow(10, max_index) - cur * pow(10, index - 1) + max * pow(10, index - 1) + cur * pow(10, max_index);
+                        int result = 0;
+                        for (int m = 0; m <= index - 1; ++m)
+                        {
+                            result += last[m] * pow(10, m);
+                        }
+                        return result;
+                    }
+                }
+            }
+        }
+        return num;
     }
 };
