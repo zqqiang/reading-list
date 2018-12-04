@@ -76,6 +76,10 @@
 
 1. [Designing Data-Intensive Applications]() - [Query Languages for Data]()
 
+### 2018-12
+
+1. [Designing Data-Intensive Applications]() - [Query Languages for Data]()
+
 ## Development Schedule
 
 ### 2018-01
@@ -122,5 +126,9 @@
 1. [go-capwap](https://github.com/zqqiang/go-capwap.git)
 
 ### 2018-11
+
+1. [nx-web-marko](https://github.com/zqqiang/nx-web-marko)
+
+### 2018-12
 
 1. [nx-web-marko](https://github.com/zqqiang/nx-web-marko)
