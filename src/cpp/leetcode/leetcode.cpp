@@ -104,10 +104,6 @@ class Solution
             }
             right[nums[i]] = i;
             count[nums[i]] += 1;
-
-            std::cout << nums[i] << "left ->" << left[nums[i]] << endl;
-            std::cout << nums[i] << "right ->" << right[nums[i]] << endl;
-            std::cout << nums[i] << "count ->" << count[nums[i]] << endl;
         }
 
         int degree = 0;
@@ -124,9 +120,7 @@ class Solution
         {
             if (it->second == degree)
             {
-                std::cout << it->first << "->" << it->second << endl;
                 result = min(result, right[it->first] - left[it->first] + 1);
-                std::cout << "set result: " << it->second << "->" << result << endl;
             }
         }
         return result;
