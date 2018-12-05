@@ -98,12 +98,16 @@ class Solution
 
         for (int i = 0; i < nums.size(); ++i)
         {
-            if (!left[nums[i]])
+            if (left.find(nums[i]) == left.end())
             {
                 left[nums[i]] = i;
             }
             right[nums[i]] = i;
             count[nums[i]] += 1;
+
+            std::cout << nums[i] << "left ->" << left[nums[i]] << endl;
+            std::cout << nums[i] << "right ->" << right[nums[i]] << endl;
+            std::cout << nums[i] << "count ->" << count[nums[i]] << endl;
         }
 
         int degree = 0;
@@ -115,16 +119,14 @@ class Solution
             }
         }
 
-        std::cout << "degree => " << degree << endl;
-
         int result = 50000;
         for (std::map<int, int>::iterator it = count.begin(); it != count.end(); ++it)
         {
-            std::cout << "count => " << it->second << endl;
-
             if (it->second == degree)
             {
-                result = min(result, right[it->second] - left[it->second] + 1);
+                std::cout << it->first << "->" << it->second << endl;
+                result = min(result, right[it->first] - left[it->first] + 1);
+                std::cout << "set result: " << it->second << "->" << result << endl;
             }
         }
         return result;
