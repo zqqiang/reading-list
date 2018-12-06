@@ -152,22 +152,43 @@ class Solution
   public:
     vector<int> smallestRange(vector<vector<int>> &nums)
     {
-        int left = 100000;
-        int right = -100000;
+        bool flag = true;
+        int minx = 0, miny = INT_MAX;
+        vector<int> next(nums.size(), 0);
 
-        for (std::vector<vector<int>>::iterator it = nums.begin(); it != nums.end(); ++it)
+        for (int i = 0; i < nums.size() && flag; ++i)
         {
-            int first = it->front();
-            if (left > first)
+            for (int j = 0; j < nums[i].size() && flag; ++j)
             {
-                left = first;
-            }
-            int last = it->back();
-            if (right < last)
-            {
-                right = last;
+                int min_i = 0;
+                int max_i = 0;
+
+                for (int k = 0; k < nums.size(); ++k)
+                {
+                    if (nums[min_i][next[min_i]] > nums[k][next[k]])
+                    {
+                        min_i = k;
+                    }
+                    if (nums[max_i][next[max_i]] > nums[k][next[k]])
+                    {
+                        max_i = k;
+                    }
+                }
+
+                if (miny - minx > nums[max_i][next[max_i]] - nums[min_i][next[min_i]])
+                {
+                    miny = nums[max_i][next[max_i]];
+                    minx = nums[min_i][next[min_i]];
+                }
+
+                next[min_i]++;
+
+                if (next[min_i] == nums[min_i].size())
+                {
+                    flag = false;
+                }
             }
         }
-        return vector<int>{left, right};
+        return vector<int>{minx, miny};
     }
 };
