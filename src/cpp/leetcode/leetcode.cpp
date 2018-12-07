@@ -290,7 +290,8 @@ class Solution
 /*
 Lintcode => 213. String Compression
 Description
-Implement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2b1c5a3.
+Implement a method to perform basic string compression using the counts of repeated characters. 
+For example, the string aabcccccaaa would become a2b1c5a3.
 
 If the "compressed" string would not become smaller than the original string, your method should return the original string.
 
@@ -311,5 +312,35 @@ class Solution
     string compress(string &originalString)
     {
         // write your code here
+        int total = 0;
+        std::string::iterator cur_it = originalString.begin();
+        std::string result_str;
+
+        for (std::string::iterator it = originalString.begin(); it != originalString.end();)
+        {
+            char last = *it;
+            int count = 0;
+            total++;
+            for (; it != originalString.end() && *it == last; it++)
+            {
+                count++;
+            }
+
+            result_str.push_back(last);
+            std::string count_str = std::to_string(count);
+            for (int i = 0; i < count_str.size(); i++)
+            {
+                result_str.push_back(count_str[i]);
+            }
+            total += count_str.size();
+        }
+        if (total >= originalString.size())
+        {
+            return originalString;
+        }
+        else
+        {
+            return result_str;
+        }
     }
 };
