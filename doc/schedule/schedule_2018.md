@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [Query Languages for Data]()
+1. [Designing Data-Intensive Applications]() - [Graph-Like Data Models]()
 
 ## Development Schedule
 
