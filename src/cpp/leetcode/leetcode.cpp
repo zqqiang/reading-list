@@ -417,14 +417,16 @@ class Solution
     int maxProfit(vector<int> &prices)
     {
         int max_profit = 0;
+        int min_price = INT_MAX;
         for (std::vector<int>::iterator it = prices.begin(); it != prices.end(); it++)
         {
-            for (std::vector<int>::iterator next_it = it + 1; next_it != prices.end(); next_it++)
+            if (min_price > *it)
             {
-                if (max_profit < *next_it - *it)
-                {
-                    max_profit = *next_it - *it;
-                }
+                min_price = *it;
+            }
+            else if (max_profit < *it - min_price)
+            {
+                max_profit = *it - min_price;
             }
         }
         return max_profit;
