@@ -475,5 +475,34 @@ class Solution
   public:
     string frequencySort(string s)
     {
+        struct counter
+        {
+            char s;
+            unsigned int count;
+        };
+
+        vector<struct counter> vec_counter;
+
+        for (std::string::iterator it = s.begin(); it != s.end(); ++it)
+        {
+            for (std::vector::iterator v_it = vec_counter.begin(); v_it != vec_counter.end(); ++v_it)
+            {
+                if (*v_it.s == *it)
+                {
+                    *v_it.count++;
+                }
+                else
+                {
+                    vec_counter.push_back({*it, 0});
+                }
+            }
+        }
+
+        bool comp(struct counter i, struct counter j)
+        {
+            return i.count > j.count;
+        }
+
+        std::sort(vec_counter.begin(), vec_counter.end(), comp)
     }
 };
