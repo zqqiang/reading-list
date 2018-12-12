@@ -433,7 +433,7 @@ class Solution
     }
 };
 /*
-451. Sort Characters By Frequency
+451. Sort Characters By Frequency (todo)
 Given a string, sort it in decreasing order based on the frequency of characters.
 
 Example 1:
@@ -475,5 +475,122 @@ class Solution
   public:
     string frequencySort(string s)
     {
+    }
+};
+/*
+347. Top K Frequent Elements
+Given a non-empty array of integers, return the k most frequent elements.
+
+Example 1:
+
+Input: nums = [1,1,1,2,2,3], k = 2
+Output: [1,2]
+Example 2:
+
+Input: nums = [1], k = 1
+Output: [1]
+Note:
+
+You may assume k is always valid, 1 ≤ k ≤ number of unique elements.
+Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
+*/
+typedef pair<int, int> P;
+
+class Solution
+{
+  public:
+    vector<int> topKFrequent(vector<int> &nums, int k)
+    {
+        unordered_map<int, int> cnt;
+        for (int x : nums)
+            cnt[x]++;
+        priority_queue<P, vector<P>, greater<P>> q;
+        for (auto &x : cnt)
+        {
+            if (q.size() < k)
+                q.push(make_pair(x.second, x.first));
+            else
+            {
+                if (q.top().first < x.second)
+                {
+                    q.pop();
+                    q.push(make_pair(x.second, x.first));
+                }
+            }
+        }
+        vector<int> ans;
+        while (!q.empty())
+        {
+            ans.push_back(q.top().second);
+            q.pop();
+        }
+        return ans;
+    }
+};
+/*
+LintCode => 471. Top K Frequent Words
+Given a list of words and an integer k, return the top k frequent words in the list.
+
+Example
+Given
+
+[
+    "yes", "lint", "code",
+    "yes", "code", "baby",
+    "you", "baby", "chrome",
+    "safari", "lint", "code",
+    "body", "lint", "code"
+]
+for k = 3, return ["code", "lint", "baby"].
+
+for k = 4, return ["code", "lint", "baby", "yes"],
+
+Challenge
+Do it in O(nlogk) time and O(n) extra space.
+
+Notice
+You should order the words by the frequency of them in the return list, the most frequent one comes first. If two words has the same frequency, the one with lower alphabetical order come first.
+*/
+class Solution
+{
+  public:
+    /**
+     * @param words: an array of string
+     * @param k: An integer
+     * @return: an array of string
+     */
+    vector<string> topKFrequentWords(vector<string> &words, int k)
+    {
+        // write your code here
+        unordered_map<string, int> counts;
+        for (const auto &word : words)
+        {
+            ++counts[word];
+        }
+        vector<vector<string>> buckets(words.size() + 1);
+        for (const auto &kvp : counts)
+        {
+            buckets[kvp.second].emplace_back(kvp.first);
+        }
+
+        vector<pair<int, string>> p;
+        for (int i = buckets.size() - 1; i >= 0; --i)
+        {
+            for (const auto &word : buckets[i])
+            {
+                p.emplace_back(-i, word);
+            }
+            if (p.size() >= k)
+            {
+                break;
+            }
+        }
+        sort(p.begin(), p.end());
+        vector<string> result;
+        for (int i = 0; i < k; ++i)
+        {
+            result.emplace_back(p[i].second);
+        }
+        return result;
     }
 };
