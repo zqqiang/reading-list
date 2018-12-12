@@ -10,3 +10,8 @@
 ## Amazon
 
 1. [Three Data-at-Rest Encryption Announcements](https://aws.amazon.com/blogs/security/three-data-at-rest-encryption-announcements/)
+
+## Microsoft
+
+1. [Azure encryption overview](https://docs.microsoft.com/en-us/azure/security/security-azure-encryption-overview)
+1. [Azure Data Encryption-at-Rest](https://docs.microsoft.com/en-us/azure/security/azure-security-encryption-atrest)
