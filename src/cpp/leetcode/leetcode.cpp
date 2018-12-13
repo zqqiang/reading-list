@@ -288,7 +288,7 @@ class Solution
 };
 
 /*
-Lintcode => 213. String Compression
+LintCode => 213. String Compression
 Description
 Implement a method to perform basic string compression using the counts of repeated characters. 
 For example, the string aabcccccaaa would become a2b1c5a3.
@@ -592,5 +592,103 @@ class Solution
             result.emplace_back(p[i].second);
         }
         return result;
+    }
+};
+/*
+242. Valid Anagram
+Given two strings s and t , write a function to determine if t is an anagram of s.
+
+Example 1:
+
+Input: s = "anagram", t = "nagaram"
+Output: true
+Example 2:
+
+Input: s = "rat", t = "car"
+Output: false
+Note:
+You may assume the string contains only lowercase alphabets.
+
+Follow up:
+What if the inputs contain unicode characters? How would you adapt your solution to such case?
+*/
+class Solution
+{
+  public:
+    bool isAnagram(string s, string t)
+    {
+        if (s.length() != t.length())
+        {
+            return false;
+        }
+        vector<int> vec_freq(26, 0);
+        for (int i = 0; i < s.length(); ++i)
+        {
+            vec_freq[s[i] - 'a']++;
+            vec_freq[t[i] - 'a']--;
+        }
+        for (std::vector<int>::iterator it = vec_freq.begin(); it != vec_freq.end(); ++it)
+        {
+            if (*it != 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+};
+/*
+LintCode => 158. Valid Anagram
+Write a method anagram(s,t) to decide if two strings are anagrams or not.
+
+Example
+Given s = "abcd", t = "dcab", return true.
+Given s = "ab", t = "ab", return true.
+Given s = "ab", t = "ac", return false.
+
+Challenge
+O(n) time, O(1) extra space
+
+Clarification
+What is Anagram?
+
+Two strings are anagram if they can be the same after change the order of characters.
+*/
+class Solution
+{
+  public:
+    /**
+     * @param s: The first string
+     * @param t: The second string
+     * @return: true or false
+     */
+    bool anagram(string &s, string &t)
+    {
+        // write your code here
+        if (s.length() != t.length())
+        {
+            return false;
+        }
+        vector<int> vec_freq(57, 0);
+        for (int i = 0; i < s.length(); ++i)
+        {
+            if (s[i] != ' ')
+            {
+                vec_freq[s[i] - 'A']++;
+            }
+
+            if (t[i] != ' ')
+            {
+                vec_freq[t[i] - 'A']--;
+            }
+        }
+        for (std::vector<int>::iterator it = vec_freq.begin(); it != vec_freq.end(); ++it)
+        {
+            if (*it != 0)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 };
