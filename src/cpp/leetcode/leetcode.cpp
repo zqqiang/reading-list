@@ -725,46 +725,47 @@ cache.get(4);    // returns 4
  * obj.put(key,value);
  */
 
-class LRUCache
+åclass LRUCache
 {
-  private:
-    std::map<int, int> m;
-    std::vector<int> vkey;
-    int count;
-    int cap;
-
   public:
-    LRUCache(int capacity)
+    LRUCache(int capacity) : cacheSize(capacity)
     {
-        this->cap = capacity;
-        this->count = 0;
+        listSize = 0;
     }
-
     int get(int key)
     {
-        if (this->m.find(key) == this->m.end())
-        {
+        auto it = mapping.find(key);
+        if (it == mapping.end())
             return -1;
+        itemList.splice(itemList.begin(), itemList, it->second);
+        //mapping[key] == it->second still holds
+        return it->second->second;
+    }
+    void put(int key, int value)
+    {
+        auto it = mapping.find(key);
+        if (it != mapping.end())
+        {
+            itemList.splice(itemList.begin(), itemList, it->second);
+            it->second->second = value;
         }
         else
         {
-            return this->m[key];
+            itemList.push_front(make_pair(key, value));
+            ++listSize;
+            mapping.insert(make_pair(key, itemList.begin()));
+        }
+        if (listSize > cacheSize)
+        {
+            mapping.erase(itemList.back().first);
+            --listSize;
+            itemList.pop_back();
         }
     }
 
-    void put(int key, int value)
-    {
-        if (this->count == this->cap)
-        {
-            int rkey = this->vkey.back();
-            this->m.erase(rkey);
-            this->vkey.pop_back();
-        }
-        if (this->m.find(key) == this->m.end())
-        {
-            this->m[key] = value;
-            this->count++;
-            this->vkey.push_back(key);
-        }
-    }
+  private:
+    int cacheSize;
+    int listSize;
+    list<pair<int, int>> itemList;
+    unordered_map<int, list<pair<int, int>>::iterator> mapping;
 };
