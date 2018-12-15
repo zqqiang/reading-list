@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [Graph-Like Data Models]()
+1. [Designing Data-Intensive Applications]() - [SSTables and LSM-Trees]()
 
 ## Development Schedule
 
