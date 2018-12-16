@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [Other Indexing Structures]()
+1. [Designing Data-Intensive Applications]() - [Transaction Processing or Analytics?]()
 
 ## Development Schedule
 
