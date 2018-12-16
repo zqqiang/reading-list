@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [SSTables and LSM-Trees]()
+1. [Designing Data-Intensive Applications]() - [Other Indexing Structures]()
 
 ## Development Schedule
 
