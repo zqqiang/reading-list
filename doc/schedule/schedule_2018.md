@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [The divergence between OLTP databases and data warehouses]()
+1. [Designing Data-Intensive Applications]() - [Writing to Column-Oriented Storage]()
 
 ## Development Schedule
 
