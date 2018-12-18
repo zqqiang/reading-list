@@ -925,7 +925,7 @@ class Solution
     }
 };
 /*
-139. Word Break
+139. Word Break (todo)
 Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, 
 determine if s can be segmented into a space-separated sequence of one or more dictionary words.
 
@@ -954,5 +954,36 @@ class Solution
   public:
     bool wordBreak(string s, vector<string> &wordDict)
     {
+        for (std::string::iterator it = s.begin(); it != s.end();)
+        {
+            bool find_dic = false;
+            for (std::vector<string>::iterator it_dic = wordDict.begin(); it_dic != wordDict.end(); it_dic++)
+            {
+                bool find = true;
+                for (std::string::iterator d = it_dic->begin(); d != it_dic->end(); d++)
+                {
+                    if (*it == *d)
+                    {
+                        it++;
+                        d++;
+                    }
+                    else
+                    {
+                        find = false;
+                        break;
+                    }
+                }
+                if (find)
+                {
+                    find_dic = true;
+                    break;
+                }
+            }
+            if (!find_dic)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 };
