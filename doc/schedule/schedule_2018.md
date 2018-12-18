@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [Writing to Column-Oriented Storage]()
+1. [Designing Data-Intensive Applications]() - [Avro]()
 
 ## Development Schedule
 
