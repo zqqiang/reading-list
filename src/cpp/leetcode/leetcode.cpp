@@ -1045,6 +1045,10 @@ class Solution
   public:
     int maxProfit(vector<int> &prices)
     {
+        if (0 == prices.size())
+        {
+            return 0;
+        }
         int max_profit = 0;
         int buy_price = prices[0];
         int sell_price = 0;
@@ -1058,6 +1062,7 @@ class Solution
                     max_profit += sell_price - buy_price;
                 }
                 buy_price = prices[i];
+                sell_price = 0;
                 start_price = buy_price;
             }
             else if (start_price < prices[i])
@@ -1067,5 +1072,62 @@ class Solution
 
             start_price = prices[i];
         }
+        if (sell_price != 0)
+        {
+            max_profit += sell_price - buy_price;
+        }
+
+        return max_profit;
+    }
+};
+/*
+Approach 2: Peak Valley Approach
+*/
+class Solution
+{
+  public:
+    int maxProfit(vector<int> &prices)
+    {
+        int peak = 0;
+        int valley = 0;
+        int max_profit = 0;
+        int len = prices.size();
+        int i = 0;
+
+        while (i < len - 1)
+        {
+            while (i < len - 1 && prices[i] >= prices[i + 1])
+            {
+                i++;
+            }
+            valley = prices[i];
+            while (i < len - 1 && prices[i] <= prices[i + 1])
+            {
+                i++;
+            }
+            peak = prices[i];
+            max_profit += peak - valley;
+        }
+
+        return max_profit;
+    }
+};
+/*
+Approach 3: Simple One Pass
+*/
+class Solution
+{
+  public:
+    int maxProfit(vector<int> &prices)
+    {
+        int maxprofit = 0;
+        for (int i = 1; i < prices.size(); ++i)
+        {
+            if (prices[i - 1] <= prices[i])
+            {
+                maxprofit += prices[i] - prices[i - 1];
+            }
+        }
+        return maxprofit;
     }
 };
