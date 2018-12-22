@@ -979,7 +979,7 @@ class Solution
     unordered_map<string, bool> mem_;
 };
 /*
-123. Best Time to Buy and Sell Stock III
+123. Best Time to Buy and Sell Stock III (todo)
 Say you have an array for which the ith element is the price of a given stock on day i.
 
 Design an algorithm to find the maximum profit. You may complete at most two transactions.
@@ -1010,6 +1010,20 @@ class Solution
   public:
     int maxProfit(vector<int> &prices)
     {
+        int buy1 = INT_MAX;
+        int buy2 = INT_MAX;
+        int sell1 = 0;
+        int sell2 = 0;
+
+        for (int i = 0; i < prices.size(); ++i)
+        {
+            buy1 = std::min(buy1, prices[i]);
+            sell1 = std::max(sell1, prices[i] - buy1);
+            buy2 = std::min(buy2, prices[i] - sell1);
+            sell2 = std::max(sell2, prices[i] - buy2);
+        }
+
+        return sell2;
     }
 };
 /*
