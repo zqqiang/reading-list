@@ -1178,6 +1178,10 @@ If 99% of all integer numbers from the stream are between 0 and 100, how would y
 */
 class MedianFinder
 {
+  private:
+    priority_queue<int> lo;
+    priority_queue<int, vector<int>, greater<int>> hi;
+
   public:
     /** initialize your data structure here. */
     MedianFinder()
@@ -1186,10 +1190,79 @@ class MedianFinder
 
     void addNum(int num)
     {
+        lo.push(num);
+
+        hi.push(lo.top());
+        lo.pop();
+
+        if (lo.size() < hi.size())
+        {
+            lo.push(hi.top());
+            hi.pop();
+        }
     }
 
     double findMedian()
     {
+        return (lo.size() > hi.size() ? (double)lo.top() : (lo.top() + hi.top()) * 0.5);
+    }
+};
+
+/*
+81. Find Median from Data Stream - LintCode
+Description
+Numbers keep coming, return the median of numbers at every time a new number added.
+
+Have you met this question in a real interview?  
+Clarification
+What's the definition of Median?
+
+Median is the number that in the middle of a sorted array. 
+If there are n numbers in a sorted array A, the median is A[(n - 1) / 2]. 
+For example, if A=[1,2,3], median is 2. If A=[1,19], median is 1.
+
+Example
+For numbers coming list: [1, 2, 3, 4, 5], return [1, 1, 2, 2, 3].
+
+For numbers coming list: [4, 5, 1, 3, 2, 6, 0], return [4, 4, 4, 3, 3, 3, 3].
+
+For numbers coming list: [2, 20, 100], return [2, 2, 20].
+
+Challenge
+Total run time in O(nlogn).
+*/
+
+class Solution
+{
+  private:
+    priority_queue<int> lo;
+    priority_queue<int, vector<int>, greater<int>> hi;
+    vector<int> result;
+
+  public:
+    /**
+     * @param nums: A list of integers
+     * @return: the median of numbers
+     */
+    vector<int> medianII(vector<int> &nums)
+    {
+        // write your code here
+        for (int i = 0; i < nums.size(); ++i)
+        {
+            lo.push(nums[i]);
+
+            hi.push(lo.top());
+            lo.pop();
+
+            if (lo.size() < hi.size())
+            {
+                lo.push(hi.top());
+                hi.pop();
+            }
+
+            result.push_back(lo.top());
+        }
+        return result;
     }
 };
 
