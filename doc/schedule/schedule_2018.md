@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [Avro]()
+1. [Designing Data-Intensive Applications]() - [Modes of Dataflow]()
 
 ## Development Schedule
 
