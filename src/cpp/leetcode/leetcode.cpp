@@ -1312,8 +1312,93 @@ p and q are different and both values will exist in the binary tree.
  */
 class Solution
 {
+  private:
+    TreeNode *ans;
+
+    bool recurseTree(TreeNode *current, TreeNode *p, TreeNode *q)
+    {
+        if (NULL == current)
+        {
+            return false;
+        }
+
+        int right = recurseTree(current->right, p, q) ? 1 : 0;
+        int left = recurseTree(current->left, p, q) ? 1 : 0;
+        int mid = (current == p || current == q) ? 1 : 0;
+
+        if (left + right + mid >= 2)
+        {
+            this->ans = current;
+        }
+
+        return (left + right + mid > 0);
+    }
+
   public:
     TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q)
     {
+        this->recurseTree(root, p, q);
+        return this->ans;
+    }
+};
+/*
+88. Lowest Common Ancestor of a Binary Tree
+Description
+Given the root and two nodes in a Binary Tree. Find the lowest common ancestor(LCA) of the two nodes.
+
+The lowest common ancestor is the node with largest depth which is the ancestor of both nodes.
+
+Assume two nodes are exist in tree.
+
+Have you met this question in a real interview?  
+Example
+For the following binary tree:
+
+  4
+ / \
+3   7
+   / \
+  5   6
+LCA(3, 5) = 4
+
+LCA(5, 6) = 7
+
+LCA(6, 7) = 7
+*/
+class Solution
+{
+  private:
+    TreeNode *ans;
+
+    bool recurseTree(TreeNode *current, TreeNode *p, TreeNode *q)
+    {
+        if (NULL == current)
+        {
+            return false;
+        }
+
+        if (current == p && current == q)
+        {
+            this->ans = current;
+            return true;
+        }
+
+        int right = recurseTree(current->right, p, q) ? 1 : 0;
+        int left = recurseTree(current->left, p, q) ? 1 : 0;
+        int mid = (current == p || current == q) ? 1 : 0;
+
+        if (left + right + mid >= 2)
+        {
+            this->ans = current;
+        }
+
+        return (left + right + mid > 0);
+    }
+
+  public:
+    TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q)
+    {
+        this->recurseTree(root, p, q);
+        return this->ans;
     }
 };
