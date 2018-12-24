@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [Distributed Data]()
+1. [Designing Data-Intensive Applications]() - [Setting Up New Followers]()
 
 ## Development Schedule
 
