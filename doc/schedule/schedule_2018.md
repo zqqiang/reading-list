@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [Modes of Dataflow]()
+1. [Designing Data-Intensive Applications]() - [Distributed Data]()
 
 ## Development Schedule
 
