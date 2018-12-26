@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [Setting Up New Followers]()
+1. [Designing Data-Intensive Applications]() - [Leaderless Replication]()
 
 ## Development Schedule
 
