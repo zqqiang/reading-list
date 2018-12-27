@@ -15,3 +15,7 @@
 
 1. [Azure encryption overview](https://docs.microsoft.com/en-us/azure/security/security-azure-encryption-overview)
 1. [Azure Data Encryption-at-Rest](https://docs.microsoft.com/en-us/azure/security/azure-security-encryption-atrest)
+
+## Vault
+
+1. [Internals Architecture](https://www.vaultproject.io/docs/internals/architecture.html)
