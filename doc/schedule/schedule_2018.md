@@ -78,7 +78,7 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [Leaderless Replication]()
+1. [Designing Data-Intensive Applications]() - [Limitations of Quorum Consistency]()
 
 ## Development Schedule
 
