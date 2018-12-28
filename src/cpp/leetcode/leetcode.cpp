@@ -1871,3 +1871,196 @@ class Solution
         }
     }
 };
+/*
+39. Combination Sum (todo)
+Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), 
+find all unique combinations in candidates where the candidate numbers sums to target.
+
+The same repeated number may be chosen from candidates unlimited number of times.
+
+Note:
+
+All numbers (including target) will be positive integers.
+The solution set must not contain duplicate combinations.
+Example 1:
+
+Input: candidates = [2,3,6,7], target = 7,
+A solution set is:
+[
+  [7],
+  [2,2,3]
+]
+Example 2:
+
+Input: candidates = [2,3,5], target = 8,
+A solution set is:
+[
+  [2,2,2,2],
+  [2,3,3],
+  [3,5]
+]
+*/
+
+class Solution
+{
+  public:
+    void combinationSum(vector<vector<int>> &res, vector<int> &c, vector<int> s, int target, int idx)
+    {
+        if (target == 0)
+            res.push_back(s);
+        else if (idx >= c.size() || c[idx] > target)
+            return;
+        else
+        {
+            combinationSum(res, c, s, target, idx + 1);
+            s.push_back(c[idx]);
+            combinationSum(res, c, s, target - c[idx], idx);
+        }
+    }
+    vector<vector<int>> combinationSum(vector<int> &candidates, int target)
+    {
+        vector<vector<int>> res;
+        sort(begin(candidates), end(candidates));
+        combinationSum(res, candidates, vector<int>() = {}, target, 0);
+        return res;
+    }
+};
+/*
+LintCode
+135. Combination Sum
+Description
+Given a set of candidate numbers (C) and a target number (T), 
+find all unique combinations in C where the candidate numbers sums to T.
+
+The same repeated number may be chosen from C unlimited number of times.
+
+All numbers (including target) will be positive integers.
+Elements in a combination (a1, a2, … , ak) must be in non-descending order. (ie, a1 ≤ a2 ≤ … ≤ ak).
+The solution set must not contain duplicate combinations.
+Have you met this question in a real interview?  
+Example
+Given candidate set [2,3,6,7] and target 7, a solution set is:
+
+[7]
+[2, 2, 3]
+*/
+/**
+* This reference program is provided by @jiuzhang.com
+* Copyright is reserved. Please indicate the source for forwarding
+*/
+
+class Solution
+{
+  private:
+    const int index_count;
+    vector<vector<int>> results;
+
+  public:
+    Solution() : index_count(10000){};
+    void backtrace(int target, int sum, vector<int> &candidates, int index[], int n)
+    {
+        if (sum > target)
+        {
+            return;
+        }
+        if (sum == target)
+        {
+            vector<int> result;
+            for (int i = 1; i <= n; ++i)
+            {
+                result.push_back(candidates[index[i]]);
+            }
+            results.push_back(result);
+            return;
+        }
+        for (int i = index[n]; i < candidates.size(); ++i)
+        {
+            index[n + 1] = i;
+            backtrace(target, sum + candidates[i], candidates, index, n + 1);
+        }
+    }
+    /**
+     * @param candidates: A list of integers
+     * @param target:An integer
+     * @return: A list of lists of integers
+     */
+    vector<vector<int>> combinationSum(vector<int> &candidates, int target)
+    {
+        // write your code here
+        sort(candidates.begin(), candidates.end());
+        int m = 0, n = candidates.size();
+        for (int i = 1; i < n; ++i)
+            if (candidates[i] != candidates[m])
+                candidates[++m] = candidates[i];
+        candidates.resize(m + 1);
+
+        int *index = new int[index_count];
+        memset(index, 0, sizeof(int) * index_count);
+
+        results.clear();
+        backtrace(target, 0, candidates, index, 0);
+
+        delete[] index;
+
+        return results;
+    }
+};
+/*
+34. Find First and Last Position of Element in Sorted Array (todo)
+Given an array of integers nums sorted in ascending order, 
+find the starting and ending position of a given target value.
+
+Your algorithm's runtime complexity must be in the order of O(log n).
+
+If the target is not found in the array, return [-1, -1].
+
+Example 1:
+
+Input: nums = [5,7,7,8,8,10], target = 8
+Output: [3,4]
+Example 2:
+
+Input: nums = [5,7,7,8,8,10], target = 6
+Output: [-1,-1]
+*/
+class Solution
+{
+  public:
+    vector<int> searchRange(vector<int> &nums, int target)
+    {
+        int lo = 0;
+        int hi = nums.size();
+        while (lo < hi)
+        {
+            int mid = lo + (hi - lo) / 2;
+            if (nums[mid] < target)
+            {
+                lo = mid + 1;
+            }
+            else
+            {
+                hi = mid;
+            }
+        }
+        if (lo == nums.size() || nums[lo] != target)
+        {
+            return {-1, -1};
+        }
+        int left = lo;
+        hi = nums.size();
+        while (lo < hi)
+        {
+            int mid = lo + (hi - lo) / 2;
+            if (nums[mid] <= target)
+            {
+                lo = mid + 1;
+            }
+            else
+            {
+                hi = mid;
+            }
+        }
+        int right = lo - 1;
+        return {left, right};
+    }
+};
