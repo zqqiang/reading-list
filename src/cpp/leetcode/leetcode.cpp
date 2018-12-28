@@ -1721,5 +1721,153 @@ class Solution
   public:
     vector<int> plusOne(vector<int> &digits)
     {
+        int inc = 1;
+        for (int i = digits.size() - 1; i >= 0; --i)
+        {
+            inc = (digits[i] + inc) / 10;
+            digits[i] = (digits[i] + 1) % 10;
+            if (0 == inc)
+                return digits;
+        }
+        digits.insert(digits.begin(), 1);
+        return digits;
+    }
+};
+/*
+57. Insert Interval
+Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
+
+You may assume that the intervals were initially sorted according to their start times.
+
+Example 1:
+
+Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
+Output: [[1,5],[6,9]]
+Example 2:
+
+Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
+Output: [[1,2],[3,10],[12,16]]
+Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
+*/
+/**
+ * Definition for an interval.
+ * struct Interval {
+ *     int start;
+ *     int end;
+ *     Interval() : start(0), end(0) {}
+ *     Interval(int s, int e) : start(s), end(e) {}
+ * };
+ */
+class Solution
+{
+  public:
+    vector<Interval> insert(vector<Interval> &intervals, Interval newInterval)
+    {
+    }
+};
+/*
+50. Pow(x, n)
+Implement pow(x, n), which calculates x raised to the power n (xn).
+
+Example 1:
+
+Input: 2.00000, 10
+Output: 1024.00000
+Example 2:
+
+Input: 2.10000, 3
+Output: 9.26100
+Example 3:
+
+Input: 2.00000, -2
+Output: 0.25000
+Explanation: 2-2 = 1/22 = 1/4 = 0.25
+Note:
+
+-100.0 < x < 100.0
+n is a 32-bit signed integer, within the range [−231, 231 − 1]
+*/
+class Solution
+{
+  public:
+    double myPow(double value, int pow)
+    {
+        double result = 1;
+        if (pow < 0)
+            value = 1 / value;
+        while (pow != 0)
+        {
+            if (pow % 2)
+                result *= value;
+            value *= value;
+            pow /= 2;
+        }
+        return result;
+    }
+};
+/*
+48. Rotate Image (todo)
+You are given an n x n 2D matrix representing an image.
+
+Rotate the image by 90 degrees (clockwise).
+
+Note:
+
+You have to rotate the image in-place, 
+which means you have to modify the input 2D matrix directly. 
+DO NOT allocate another 2D matrix and do the rotation.
+
+Example 1:
+
+Given input matrix = 
+[
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+],
+
+rotate the input matrix in-place such that it becomes:
+[
+  [7,4,1],
+  [8,5,2],
+  [9,6,3]
+]
+Example 2:
+
+Given input matrix =
+[
+  [ 5, 1, 9,11],
+  [ 2, 4, 8,10],
+  [13, 3, 6, 7],
+  [15,14,12,16]
+], 
+
+rotate the input matrix in-place such that it becomes:
+[
+  [15,13, 2, 5],
+  [14, 3, 4, 1],
+  [12, 6, 8, 9],
+  [16, 7,10,11]
+]
+*/
+class Solution
+{
+  public:
+    void rotate(vector<vector<int>> &matrix)
+    {
+        int n = matrix.size();
+        if (n <= 1)
+            return;
+        for (int i = 0; i < (n + 1) / 2; ++i)
+        {
+            for (int j = 0; j < n / 2; ++j)
+            {
+                int tmp = matrix[i][j];
+                matrix[i][j] = matrix[n - 1 - j][i];
+                matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j];
+                matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1 - i];
+                matrix[j][n - 1 - i] = tmp;
+            }
+        }
     }
 };
