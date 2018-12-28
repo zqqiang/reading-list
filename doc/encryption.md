@@ -18,4 +18,4 @@
 
 ## Vault
 
-1. [Internals Architecture](https://www.vaultproject.io/docs/internals/architecture.html)
+1. [Internals Architecture](https://learn.hashicorp.com/vault/getting-started/dynamic-secrets)
