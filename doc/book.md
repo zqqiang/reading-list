@@ -62,6 +62,7 @@ Some books I have read
 1. Linux 高性能服务器编程，游双，
 1. The Linux Programming Interface, Michael Kerrisk, 2018 - [p1399: The epoll API]()
 1. Python Crash Course, Eric Matthes, 2018
+1. Effective Modern C++, Scott Meyers, 2018
 
 ## System & Design
 

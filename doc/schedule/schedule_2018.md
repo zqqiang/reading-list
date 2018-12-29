@@ -78,7 +78,8 @@
 
 ### 2018-12
 
-1. [Designing Data-Intensive Applications]() - [Limitations of Quorum Consistency]()
+1. [Designing Data-Intensive Applications]() - [Partitioning]()
+1. [Effective Modern C++, Scott Meyers, 2018]() - [Terminology and Conventions]()
 
 ## Development Schedule
 
