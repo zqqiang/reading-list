@@ -79,7 +79,8 @@
 ### 2018-12
 
 1. [Designing Data-Intensive Applications]() - [Partitioning]()
-1. [Effective Modern C++, Scott Meyers, 2018]() - [Terminology and Conventions]()
+1. [Effective Modern C++, Scott Meyers, 2018]() - [Hard]()
+1. [CppCoreGuidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) - [P.8: Don’t leak any resources]()
 
 ## Development Schedule
 

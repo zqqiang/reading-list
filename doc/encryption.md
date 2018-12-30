@@ -18,4 +18,4 @@
 
 ## Vault
 
-1. [Internals Architecture](https://learn.hashicorp.com/vault/getting-started/dynamic-secrets)
+1. [Userpass Auth Method (HTTP API)](https://www.vaultproject.io/api/auth/userpass/index.html)
