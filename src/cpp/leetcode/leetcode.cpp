@@ -2408,3 +2408,141 @@ class MinStack
  * int param_3 = obj.top();
  * int param_4 = obj.getMin();
  */
+/*
+95. Unique Binary Search Trees II (todo)
+Given an integer n, generate all structurally unique BST's (binary search trees) that store values 1 ... n.
+
+Example:
+
+Input: 3
+Output:
+[
+  [1,null,3,2],
+  [3,2,null,1],
+  [3,1,null,null,2],
+  [2,1,3],
+  [1,null,2,null,3]
+]
+Explanation:
+The above output corresponds to the 5 unique BST's shown below:
+
+   1         3     3      2      1
+    \       /     /      / \      \
+     3     2     1      1   3      2
+    /     /       \                 \
+   2     1         2                 3
+*/
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution
+{
+  public:
+    /**
+     * @paramn n: An integer
+     * @return: A list of root
+     */
+    vector<TreeNode *> generate(int beg, int end)
+    {
+        vector<TreeNode *> ret;
+        if (beg > end)
+        {
+            ret.push_back(NULL);
+            return ret;
+        }
+
+        for (int i = beg; i <= end; i++)
+        {
+            vector<TreeNode *> leftTree = generate(beg, i - 1);
+            vector<TreeNode *> rightTree = generate(i + 1, end);
+            for (int j = 0; j < leftTree.size(); j++)
+                for (int k = 0; k < rightTree.size(); k++)
+                {
+                    TreeNode *node = new TreeNode(i + 1);
+                    ret.push_back(node);
+                    node->left = leftTree[j];
+                    node->right = rightTree[k];
+                }
+        }
+
+        return ret;
+    }
+    vector<TreeNode *> generateTrees(int n)
+    {
+        // write your code here
+        return generate(0, n - 1);
+    }
+};
+/*
+20. Valid Parentheses
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']', 
+determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Note that an empty string is also considered valid.
+
+Example 1:
+
+Input: "()"
+Output: true
+Example 2:
+
+Input: "()[]{}"
+Output: true
+Example 3:
+
+Input: "(]"
+Output: false
+Example 4:
+
+Input: "([)]"
+Output: false
+Example 5:
+
+Input: "{[]}"
+Output: true
+*/
+class Solution
+{
+  public:
+    bool isValid(string s)
+    {
+        vector<char> st;
+        for (int i = 0; i < s.length(); i++)
+        {
+            switch (s[i])
+            {
+            case '(':
+                st.push_back(')');
+                break;
+            case '[':
+                st.push_back(']');
+                break;
+            case '{':
+                st.push_back('}');
+                break;
+            case ')':
+            case ']':
+            case '}':
+                if (st.size() == 0 || st[st.size() - 1] != s[i])
+                    return false;
+                st.pop_back();
+                break;
+            default:
+                break;
+            }
+        }
+        if (st.size() != 0)
+            return false;
+        return true;
+    }
+};
