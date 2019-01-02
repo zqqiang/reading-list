@@ -18,4 +18,5 @@
 
 ## Vault
 
-1. [Userpass Auth Method (HTTP API)](https://www.vaultproject.io/api/auth/userpass/index.html)
+1. [Secure Introduction of Vault Clients](https://learn.hashicorp.com/vault/identity-access-management/iam-secure-intro)
+1. [AppRole Pull Authentication](https://learn.hashicorp.com/vault/identity-access-management/iam-authentication)
