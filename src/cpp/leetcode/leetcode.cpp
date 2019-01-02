@@ -2588,3 +2588,36 @@ class Solution
         return ans;
     }
 };
+/*
+Approach 2: Dynamic Programming
+*/
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        int ans = 0;
+        
+        int size = height.size();
+        if (size == 0) {
+            return 0;
+        }
+        
+        vector<int> max_left(size);
+        vector<int> max_right(size);
+        
+        max_left[0] = height[0];
+        for (int l = 1; l < size; l++) {
+            max_left[l] = max(max_left[l - 1], height[l]);
+        }
+        
+        max_right[size - 1] = height[size - 1];
+        for (int r = size - 2; r >= 0; r--) {
+            max_right[r] = max(max_right[r + 1], height[r]);
+        }
+        
+        for (int i = 1; i < size - 1; i++) {
+            ans += min(max_left[i], max_right[i]) - height[i];
+        }
+        
+        return ans;
+    }
+};
