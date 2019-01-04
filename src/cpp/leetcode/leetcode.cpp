@@ -2695,3 +2695,91 @@ public:
 /*
 Approach 3: Morris Traversal (todo)
 */
+
+/*
+398. Random Pick Index
+Given an array of integers with possible duplicates, 
+randomly output the index of a given target number. 
+You can assume that the given target number must exist in the array.
+
+Note:
+The array size can be very large. Solution that uses too much extra space will not pass the judge.
+
+Example:
+
+int[] nums = new int[] {1,2,3,3,3};
+Solution solution = new Solution(nums);
+
+// pick(3) should return either index 2, 3, or 4 randomly. Each index should have equal probability of returning.
+solution.pick(3);
+
+// pick(1) should return 0. Since in the array only nums[0] is equal to 1.
+solution.pick(1);
+*/
+class Solution {
+private:
+    vector<int> _nums;
+
+public:
+    Solution(vector<int> nums) {
+        _nums = nums;
+    }
+    
+    int pick(int target) {
+        int n = 0;
+        int index = 0;
+        for (int i = 0; i < _nums.size(); i++) {
+            if (_nums[i] != target) continue;
+            if (0 == n) {
+                index = i;
+                n++;
+            } else {
+                n++;
+                if (rand()%n == 0) {
+                    index = i;
+                }
+            }
+        }
+        return index;
+    }
+};
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution obj = new Solution(nums);
+ * int param_1 = obj.pick(target);
+ */
+/*
+103. Binary Tree Zigzag Level Order Traversal
+Given a binary tree, return the zigzag level order traversal of its nodes' values. 
+(ie, from left to right, then right to left for the next level and alternate between).
+
+For example:
+Given binary tree [3,9,20,null,null,15,7],
+    3
+   / \
+  9  20
+    /  \
+   15   7
+return its zigzag level order traversal as:
+[
+  [3],
+  [20,9],
+  [15,7]
+]
+*/
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        
+    }
+};
