@@ -2750,7 +2750,7 @@ public:
  * int param_1 = obj.pick(target);
  */
 /*
-103. Binary Tree Zigzag Level Order Traversal
+103. Binary Tree Zigzag Level Order Traversal (todo)
 Given a binary tree, return the zigzag level order traversal of its nodes' values. 
 (ie, from left to right, then right to left for the next level and alternate between).
 
@@ -2780,6 +2780,23 @@ return its zigzag level order traversal as:
 class Solution {
 public:
     vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
-        
+        vector<vector<int>> ret;
+        zigzagHelper(root, 0, ret);
+        return ret;
     }
+    
+    void zigzagHelper(TreeNode* root, int level, vector<vector<int>>& ret)
+    {
+        if(root == NULL) return;
+        
+        if(ret.size() <= level) ret.push_back(vector<int>());
+        
+        zigzagHelper(root->left, level+1, ret);
+        
+        if(level % 2 == 0) ret[level].push_back(root->val);
+        else ret[level].insert(ret[level].begin(), root->val);
+        
+        zigzagHelper(root->right, level+1, ret);        
+    }
+        
 };
