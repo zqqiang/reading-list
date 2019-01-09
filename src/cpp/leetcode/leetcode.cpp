@@ -2800,3 +2800,97 @@ public:
     }
         
 };
+
+/*
+102. Binary Tree Level Order Traversal
+Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+
+For example:
+Given binary tree [3,9,20,null,null,15,7],
+    3
+   / \
+  9  20
+    /  \
+   15   7
+return its level order traversal as:
+[
+  [3],
+  [9,20],
+  [15,7]
+]
+*/
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+private:
+    void helper(TreeNode* node, int level, vector<vector<int>>& ans) {
+        if (NULL == node) {
+            return;
+        }
+        
+        if (ans.size() <= level) {
+            ans.push_back(vector<int>{});
+        }
+        
+        helper(node->left, level + 1, ans);
+        
+        ans[level].push_back(node->val);
+        
+        helper(node->right, level + 1, ans);
+    }
+public:
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        vector<vector<int>> ans;
+        helper(root, 0, ans);
+        return ans;
+    }
+};
+/*
+4ms C++ solution using one queue (todos)
+*/
+class Solution {
+public:
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        vector<vector<int>> result;
+        vector<int> level;
+        TreeNode* temp;
+        int node_num=0;  
+        int leaf_num=1;
+        
+        if(!root) {
+            return result;
+        }
+        
+        queue<TreeNode* > tree_queue;
+        tree_queue.push(root);
+        
+        while(!tree_queue.empty()) {
+            temp=tree_queue.front();
+            level.push_back(temp->val);
+            tree_queue.pop();
+            leaf_num=leaf_num-1;
+            if(temp->left) {
+                tree_queue.push(temp->left);
+                node_num++;
+            }
+            if(temp->right) {
+                tree_queue.push(temp->right);
+                node_num++;
+            }
+            if(leaf_num==0) {
+                result.push_back(level);
+                leaf_num=node_num;
+                node_num=0;
+                level.clear();
+            }
+        }
+        return result;
+    }
+};
