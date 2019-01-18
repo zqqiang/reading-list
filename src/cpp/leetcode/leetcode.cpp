@@ -3023,3 +3023,101 @@ public:
         return res;
     }
 };
+/*
+65. Valid Number
+Validate if a given string can be interpreted as a decimal number.
+
+Some examples:
+"0" => true
+" 0.1 " => true
+"abc" => false
+"1 a" => false
+"2e10" => true
+" -90e3   " => true
+" 1e" => false
+"e3" => false
+" 6e-1" => true
+" 99e2.5 " => false
+"53.5e93" => true
+" --6 " => false
+"-+3" => false
+"95a54e53" => false
+
+Note: It is intended for the problem statement to be ambiguous. 
+You should gather all requirements up front before implementing one. 
+However, here is a list of characters that can be in a valid decimal number:
+
+Numbers 0-9
+Exponent - "e"
+Positive/negative sign - "+"/"-"
+Decimal point - "."
+Of course, the context of these characters also matters in the input.
+*/
+class Solution {
+public:
+    bool isNumber(string s) {
+        
+    }
+};
+/*
+62. Unique Paths
+A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+
+The robot can only move either down or right at any point in time. 
+The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+
+How many possible unique paths are there?
+
+
+Above is a 7 x 3 grid. How many possible unique paths are there?
+
+Note: m and n will be at most 100.
+
+Example 1:
+
+Input: m = 3, n = 2
+Output: 3
+Explanation:
+From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+1. Right -> Right -> Down
+2. Right -> Down -> Right
+3. Down -> Right -> Right
+Example 2:
+
+Input: m = 7, n = 3
+Output: 28
+*/
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        if(m==1 && n==1) return 1;
+        vector<vector<int> > v(m,vector<int>(n,1));
+        v[0][0] = 0;
+        for(int i=1;i<m;i++){
+            for(int j=1;j<n;j++){
+                v[i][j] = v[i-1][j]+v[i][j-1];
+            }
+        }
+        return v[m-1][n-1];
+    }
+};
+/*
+31. Next Permutation
+Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
+
+If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).
+
+The replacement must be in-place and use only constant extra memory.
+
+Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.
+
+1,2,3 → 1,3,2
+3,2,1 → 1,2,3
+1,1,5 → 1,5,1
+*/
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        
+    }
+};
