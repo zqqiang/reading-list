@@ -139,40 +139,46 @@ Output: 7 -> 8 -> 0 -> 7
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-// not working
-// [2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,9]
-// [5,6,4,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,2,4,3,9,9,9,9]
 class Solution {
-private:
-    int listToInt(ListNode* list) {
-        int prev = 0;
-        ListNode* curr = list;
-        while(curr) {
-            prev *= 10;
-            prev += curr->val;
-            curr = curr->next;
-        }
-        return prev;
-    }
-
-    ListNode* intToList(int num) {
-        ListNode* prev = NULL;
-        if(0 == num) {
-            return new ListNode(0);
-        }
-        while(num) {
-            ListNode *node = new ListNode(num%10);
-            node->next = prev;
-            prev = node;
-            num = num / 10;
-        }
-        return prev;
-    }
-
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        int left = listToInt(l1);
-        int right = listToInt(l2);
-        return intToList(left + right);
+        vector<int> left;
+        vector<int> right;
+        while(l1) {
+            left.push_back(l1->val);
+            l1 = l1->next;
+        }
+        while(l2) {
+            right.push_back(l2->val);
+            l2 = l2->next;
+        }
+        int left_size = left.size();
+        int right_size = right.size();
+        int longer = max(left_size, right_size);
+        int sum = 0, carry = 0;
+        ListNode* prev = NULL;
+        for(int i = 0; i < longer; i++) {
+            if(i < left_size && i < right_size) {
+                sum = left.back() + right.back();
+                left.pop_back();
+                right.pop_back();
+            } else if(i < left_size && i >= right_size) {
+                sum = left.back();
+                left.pop_back();
+            } else if(i < right_size && i >= left_size) {
+                sum = right.back();
+                right.pop_back();
+            }
+            ListNode* curr = new ListNode((sum + carry) % 10);
+            curr->next = prev;
+            prev = curr;
+            carry = (sum + carry)/10;
+        }
+        if(carry) {
+            ListNode* curr = new ListNode(carry);
+            curr->next = prev;
+            prev = curr;
+        }
+        return prev;
     }
 };
