@@ -221,6 +221,19 @@ return the root of the binary tree {4,5,2,#,#,3,1}.
  */
 
 class Solution {
+private:
+    TreeNode* helper(TreeNode* node) {
+        if(NULL == node->left) {
+            return node;
+        }
+        TreeNode* newNode = helper(node->left);
+        node->left->right = node;
+        node->left->left = node->right;
+        node->left = NULL;
+        node->right = NULL;
+        return newNode;
+    }
+
 public:
     /**
      * @param root: the root of binary tree
@@ -228,5 +241,9 @@ public:
      */
     TreeNode * upsideDownBinaryTree(TreeNode * root) {
         // write your code here
+        if (NULL == root) {
+            return NULL;
+        }
+        return helper(root);
     }
 };
