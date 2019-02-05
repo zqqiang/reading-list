@@ -313,40 +313,29 @@ You may not alter the values in the list's nodes, only nodes itself may be chang
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-// not working
 class Solution {
 private:
-    ListNode* helper (ListNode* start, ListNode* end) {
-        ListNode* prev = NULL;
-        ListNode* curr = start;
-        while (NULL != curr && curr != end) {
-            ListNode* next = curr->next;
-            curr->next = prev;
-            prev = curr;
-            curr = next;
+    ListNode* helper (ListNode* first, ListNode* last) {
+        ListNode* prev = last;
+        while (first != last) {
+            ListNode* next = first->next;
+            first->next = prev;
+            prev = first;
+            first = next;
         }
-        return curr;
+        return prev;
     }
 public:
     ListNode* reverseKGroup(ListNode* head, int k) {
         ListNode* curr = head;
-        ListNode* ans = NULL;
-        while (1) {
-            ListNode* start = curr;
-            int step = k;
-            while (curr && step) {
-                curr = curr->next;
-                step--;
-            }
-            if (curr) {
-                curr = helper(start, curr);
-                if (NULL == ans) {
-                    ans = curr;
-                }
-            } else {
-                break;
-            }
+        int step = k;
+        while (curr && step) {
+            curr = curr->next;
+            step--;
         }
-        return ans;
+        if (step) return head;
+        ListNode* newStart = helper(head, curr);
+        head->next = reverseKGroup(curr, k);
+        return newStart;
     }
 };
