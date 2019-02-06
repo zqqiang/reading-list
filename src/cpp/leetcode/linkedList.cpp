@@ -1,8 +1,4 @@
 /*
-53. Reverse Words in a String
-*/
-
-/*
 92. Reverse Linked List II
 Reverse a linked list from position m to n. Do it in one-pass.
 
@@ -337,5 +333,45 @@ public:
         ListNode* newStart = helper(head, curr);
         head->next = reverseKGroup(curr, k);
         return newStart;
+    }
+};
+/*
+151. Reverse Words in a String
+Given an input string, reverse the string word by word.
+
+Example:  
+
+Input: "the sky is blue",
+Output: "blue is sky the".
+Note:
+
+A word is defined as a sequence of non-space characters.
+Input string may contain leading or trailing spaces. 
+However, your reversed string should not contain leading or trailing spaces.
+You need to reduce multiple spaces between two words to a single space in the reversed string.
+Follow up: For C programmers, try to solve it in-place in O(1) space.
+*/
+class Solution {
+public:
+    void reverseWords(string &s) {
+        string ans;
+        for (int i = s.length() - 1; i > -1; i--) {
+            while (i > -1 && s[i] == ' ') {
+                i--;
+            }
+            if (i == -1) {
+                break;
+            }
+            if (ans.length() > 0) {
+                ans.push_back(' ');
+            }
+            string words;
+            for (; i > -1 && s[i] != ' '; i--) {
+                words.push_back(s[i]);
+            }
+            reverse(words.begin(), words.end());
+            ans.append(words);
+        }
+        s = ans;
     }
 };
