@@ -211,6 +211,33 @@ If you have figured out the O(n) solution, try coding another solution using the
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        
+        vector<int> dp(nums.size(), 0);
+        dp[0] = nums[0];
+        int max = dp[0];
+        for (int i = 1; i < nums.size(); i++) {
+            dp[i] = nums[i] + (dp[i-1] > 0 ? dp[i-1] : 0);
+            max = std::max(max, dp[i]);
+        }
+        return max;
+    }
+};
+/**
+* This reference program is provided by @jiuzhang.com
+* Copyright is reserved. Please indicate the source for forwarding
+*/
+class Solution {
+public:    
+    /**
+     * @param nums: A list of integers
+     * @return: A integer indicate the sum of max subarray
+     */
+    int maxSubArray(vector<int> nums) {
+        int sum = 0, minSum = 0, maxSum = INT_MIN;
+        for (int i = 0; i < nums.size(); i++) {
+            sum += nums[i];
+            maxSum = max(maxSum, sum - minSum);
+            minSum = min(minSum, sum);
+        }
+        return maxSum;
     }
 };
