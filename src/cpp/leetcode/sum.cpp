@@ -1,12 +1,4 @@
 /*
-<<<<<<< HEAD
-=======
-382. Triangle Count
-58. 4Sum
-56. Two Sum
-*/
-/*
->>>>>>> df035cfe052a5fdd81ddcde0f7ceff656db84b9e
 LintCode
 918. 3Sum Smaller
 Description
@@ -52,7 +44,6 @@ public:
     }
 };
 /*
-<<<<<<< HEAD
 LintCode
 382. Triangle Count (todo: not pass lintcode)
 Description
@@ -148,7 +139,7 @@ public:
             while (i < num.size() - 1 && num[i] == num[i + 1]) i++;
         }
         return result;
-=======
+/*
 16. 3Sum Closest
 Given an array nums of n integers and an integer target, 
 find three integers in nums such that the sum is closest to target. 
@@ -182,6 +173,5 @@ public:
             }
         }
         return ans;
->>>>>>> df035cfe052a5fdd81ddcde0f7ceff656db84b9e
     }
 };
