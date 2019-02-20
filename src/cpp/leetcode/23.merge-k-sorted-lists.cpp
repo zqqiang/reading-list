@@ -36,28 +36,32 @@
  * };
  */
 class Solution {
+private:
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        ListNode res(0);
+        ListNode* temp = &res;
+        while(l1 && l2) {
+            if(l1->val > l2->val) {
+                temp->next = l2;
+                l2 = l2->next;
+            } else {
+                temp->next = l1;
+                l1 = l1->next;
+            }
+            temp = temp->next;
+        }
+        temp->next = (l1 ? l1 : l2);
+        return res.next;
+    }
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        if(0 == lists.size()) return NULL;
-        if(1 == lists.size()) return lists[0];
-        ListNode* ans = lists[0];
-        for(int i = 1; i < lists.size(); i++) {
-            ListNode* curr = lists[i];
-            ListNode* sorted = ans;
-            while(sorted && curr) {
-                if(sorted->val <= curr->val) {
-                    ListNode* next = sorted->next;
-                    sorted->next = curr;
-                    sorted = next;
-                    curr = curr->next;
-                } else {
-                    ListNode* next = curr->next;
-                    curr->next = sorted;
-                    curr = next;
-                    sorted = sorted->next;
-                }
+        int step = 1;
+        while(step < lists.size()) {
+            for(int i = 0; i + step < lists.size(); i += (step*2)) {
+                lists[i] = mergeTwoLists(lists[i], lists[i + step]);
             }
+            step *= 2;
         }
-        return ans;
+        return lists.empty() ? NULL : lists[0];
     }
 };
