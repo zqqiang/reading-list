@@ -59,10 +59,28 @@ public:
     }
 };
 */
-class Solution {
-public:
-    Node* copyRandomList(Node* head) {
-        
+class Solution
+{
+  public:
+    Node *copyRandomList(Node *head)
+    {
+        std::map<Node *, Node *> node_maps;
+
+        Node *node = head;
+        while (node)
+        {
+            node_maps[node] = new Node(node->val, NULL, NULL);
+            node = node->next;
+        }
+
+        node = head;
+        while (node)
+        {
+            node_maps[node]->next = node_maps[node->next];
+            node_maps[node]->random = node_maps[node->random];
+            node = node->next;
+        }
+
+        return node_maps[head];
     }
 };
-
