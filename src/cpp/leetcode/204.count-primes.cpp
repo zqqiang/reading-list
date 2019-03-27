@@ -6,9 +6,9 @@
  * https://leetcode.com/problems/count-primes/description/
  *
  * algorithms
- * Easy (28.47%)
- * Total Accepted:    220.4K
- * Total Submissions: 774.4K
+ * Easy (28.13%)
+ * Total Accepted:    219.6K
+ * Total Submissions: 772.1K
  * Testcase Example:  '10'
  *
  * Count the number of prime numbers less than a non-negative number, n.
@@ -22,12 +22,9 @@
  * 
  * 
  */
-
-class Solution
-{
-  public:
-    int countPrimes(int n)
-    {
+class Solution {
+public:
+    int countPrimes(int n) {
         if (0 == n)
         {
             return 0;
@@ -47,3 +44,4 @@ class Solution
         return count(prime.begin(), prime.end(), true);
     }
 };
+
