@@ -36,18 +36,57 @@
  * 
  * 
  */
+
+// todo: not pass
 class NumArray {
+private:
+    vector<int> tree;
+    int n;
+
 public:
     NumArray(vector<int>& nums) {
-        
+        n = nums.size();
+        tree.resize(2*n, 0);
+        for(int i = n, j = 0; i < 2*n; i++, j++) {
+            tree[i] = nums[j];
+        }
+        for(int i = n - 1; i > 0; i--) {
+            tree[i] = tree[2*i] + tree[2*i + 1];
+        }
     }
     
     void update(int i, int val) {
-        
+        int pos = n + i;
+        tree[pos] = val;
+        while(pos) {
+            int left, right;
+            if(pos%2 == 0) {
+                right = pos + 1;
+            } else {
+                left = pos - 1;
+            }
+            pos = pos/2;
+            tree[pos] = tree[left] + tree[right];            
+        }
     }
     
     int sumRange(int i, int j) {
-        
+        int sum = 0;
+        int left = n + i;
+        int right = n + j;
+        while(left <= right) {
+            if(left%2 == 1) {
+                sum += tree[left];
+                left++;
+            }
+            if(right%2 == 1) {
+                sum += tree[right];
+                right--;
+            }
+            left /= 2;
+            right /= 2;
+        }
+        return sum;
     }
 };
 
@@ -57,4 +96,3 @@ public:
  * obj->update(i,val);
  * int param_2 = obj->sumRange(i,j);
  */
-
