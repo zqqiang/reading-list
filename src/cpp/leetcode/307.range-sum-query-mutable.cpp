@@ -66,7 +66,7 @@ public:
                 left = pos - 1;
             }
             pos = pos/2;
-            tree[pos] = tree[left] + tree[right];            
+            tree[pos] = tree[left] + tree[right];
         }
     }
     
