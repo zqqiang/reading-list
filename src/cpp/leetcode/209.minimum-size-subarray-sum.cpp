@@ -29,10 +29,21 @@
  * which the time complexity is O(n log n). 
  * 
  */
-class Solution {
+class Solution
+{
 public:
-    int minSubArrayLen(int s, vector<int>& nums) {
-        
+    int minSubArrayLen(int s, vector<int> &nums)
+    {
+        int l = 0, r = 0, sums = 0, n = nums.size(), len = INT_MAX;
+        while (r < n)
+        {
+            sums += nums[r++];
+            while (sums >= s)
+            {
+                len = min(len, r - l);
+                sums -= nums[l++];
+            }
+        }
+        return len == INT_MAX ? 0 : len;
     }
 };
-
