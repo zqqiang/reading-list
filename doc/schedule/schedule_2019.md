@@ -20,6 +20,13 @@
 1. [Vault](https://github.com/hashicorp/vault)
 1. [Jumbo-React](http://jumbo-react.g-axon.work)
 
+### 2019-05
+
+1. [Vault](https://github.com/hashicorp/vault)
+1. [Jumbo-React](http://jumbo-react.g-axon.work)
+1. [CoolShell Articles]()
+1. [Algorithms (4th Edition) (Robert Sedgewick and Kevin Wayne)]()
+
 ## Development Schedule
 
 ### 2019-01
@@ -40,3 +47,7 @@
 
 1. [leetcode](https://leetcode.com/problemset/all/)
 1. [go-kms](https://github.com/zqqiang/go-kms.git)
+
+### 2019-05
+
+1. [leetcode](https://leetcode.com/problemset/all/)
