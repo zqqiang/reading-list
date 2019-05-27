@@ -25,7 +25,7 @@
 1. [Vault](https://github.com/hashicorp/vault)
 1. [Jumbo-React](http://jumbo-react.g-axon.work)
 1. [CoolShell Articles]()
-1. [Algorithms (4th Edition) (Robert Sedgewick and Kevin Wayne)]() - [Depth-first search]()
+1. [Algorithms (4th Edition) (Robert Sedgewick and Kevin Wayne)]() - [Breadth-first search/Implementation]()
 
 ### 2019-06
 
