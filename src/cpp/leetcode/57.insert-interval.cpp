@@ -3,28 +3,28 @@
  *
  * [57] Insert Interval
  */
-class Solution {
+class Solution
+{
 public:
-    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
+    vector<vector<int>> insert(vector<vector<int>> &intervals, vector<int> &newInterval)
+    {
         vector<vector<int>> ans;
-        int left = 0;
-        int right = 0;
-
-        for(auto v : intervals) {
-            if(v[1] < newInterval[0]) {
-                ans.push_back(vector<int>(v));
-            } else if (newInterval[1] < v[0]) {
-                if(left != right) {
-                    ans.push_back(vector<int>{left, right});
-                }
-                ans.push_back(vector<int>(v));
-            } else if (v[1] >= newInterval[0]) {
-                left = v[0];
-            } else if (newInterval[1] >= v[0] ) {
-                right = v[1];
-            }
+        int index = 0;
+        while (index < intervals.size() && intervals[index][1] < newInterval[0])
+        {
+            ans.push_back(intervals[index++]);
+        }
+        while (index < intervals.size() && intervals[index][0] <= newInterval[1])
+        {
+            newInterval[0] = min(intervals[index][0], newInterval[0]);
+            newInterval[1] = max(intervals[index][1], newInterval[1]);
+            index++;
+        }
+        ans.push_back(newInterval);
+        while (index < intervals.size())
+        {
+            ans.push_back(intervals[index++]);
         }
         return ans;
     }
 };
-
