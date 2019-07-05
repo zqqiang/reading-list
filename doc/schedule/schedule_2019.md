@@ -31,6 +31,10 @@
 
 1. [Algorithms (4th Edition) (Robert Sedgewick and Kevin Wayne)]() - [Breadth-first search/Implementation]()
 
+### 2019-07
+
+1. [Vault](https://github.com/hashicorp/vault)
+
 ## Development Schedule
 
 ### 2019-01
@@ -57,5 +61,9 @@
 1. [leetcode](https://leetcode.com/problemset/all/)
 
 ### 2019-06
+
+1. [leetcode](https://leetcode.com/problemset/all/)
+
+### 2019-07
 
 1. [leetcode](https://leetcode.com/problemset/all/)
