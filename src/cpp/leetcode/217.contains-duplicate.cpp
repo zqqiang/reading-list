@@ -38,14 +38,6 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        if(0 == nums.size()) return false;
-        vector<int> ans(nums.size(), 32767);
-        for(int i = 0; i < nums.size(); i++) {
-            if(ans[nums[i]%nums.size()] == nums[i]) {
-                return true;
-            }
-            ans[nums[i]%nums.size()] = nums[i];
-        }
-        return false;
+        return nums.size() > set<int>(nums.begin(), nums.end()).size();
     }
 };
