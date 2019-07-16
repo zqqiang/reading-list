@@ -1,11 +1,11 @@
 /*
- * @lc app=leetcode id=33 lang=cpp
+ * @lc app=leetcode id=15 lang=cpp
  *
- * [33] Search in Rotated Sorted Array
+ * [15] 3Sum
  */
 class Solution {
 public:
-    int search(vector<int>& nums, int target) {
+    vector<vector<int>> threeSum(vector<int>& nums) {
         vector<vector<int>> ans;
         sort(nums.begin(), nums.end());
 
