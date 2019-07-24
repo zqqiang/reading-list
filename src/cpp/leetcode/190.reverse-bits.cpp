@@ -59,12 +59,9 @@ class Solution {
 public:
     uint32_t reverseBits(uint32_t n) {
         uint32_t ans = 0;
-        int count = 32;
-        while(count) {
-            ans *= 2;
-            ans += n & 1;
-            n /= 2;
-            count--;
+        for(int i = 0; i < 32; i++, n >>= 1) {
+            ans <<= 1;
+            ans |= (n & 0x01);
         }
         return ans;
     }
