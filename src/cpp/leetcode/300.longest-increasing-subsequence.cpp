@@ -37,12 +37,12 @@ class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
         vector<int> ans;
-        for(auto num : nums) {
-            auto it = std::lower_bound(ans.begin(), ans.end(), num);
-            if (it == ans.end()) {
-                ans.push_back(num);
+        for(auto n : nums) {
+            auto item = lower_bound(ans.begin(), ans.end(), n);
+            if(item == ans.end()) {
+                ans.push_back(n);
             } else {
-                *it = num;
+                *item = n;
             }
         }
         return ans.size();
