@@ -39,6 +39,10 @@
 
 1. [Vault](https://github.com/hashicorp/vault)
 
+### 2019-10
+
+1. [CSS: The Definitive Guide]() - [Chpater 2: Seletor]()
+
 ## Development Schedule
 
 ### 2019-01
