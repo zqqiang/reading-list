@@ -42,6 +42,7 @@
 ### 2019-10
 
 1. [CSS: The Definitive Guide]() - [Chpater 2: Seletor]()
+1. [The Docker and Container Ecosystem]() - [The World is Programmable with Containers]()
 
 ## Development Schedule
 
