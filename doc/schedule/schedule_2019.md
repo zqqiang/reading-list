@@ -48,6 +48,7 @@
 1. [CSS: The Definitive Guide]() - [Chpater 2: Seletor]()
 1. [The Docker and Container Ecosystem]() - [The World is Programmable with Containers]()
 1. [Docker Documentation]() - [Configure networking - networking tutorials - Bridge network tutorial]()
+1. [Advanced Go Programming Book](https://github.com/chai2010/advanced-go-programming-book)
 
 ## Development Schedule
 
