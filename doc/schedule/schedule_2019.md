@@ -43,7 +43,7 @@
 
 1. [CSS: The Definitive Guide]() - [Chpater 2: Seletor]()
 1. [The Docker and Container Ecosystem]() - [The World is Programmable with Containers]()
-1. [Docker Documentation]() - [Best practices for writing Dockerfiles - USING PIPES]()
+1. [Docker Documentation]() - [Configure networking - networking overview]()
 
 ## Development Schedule
 
