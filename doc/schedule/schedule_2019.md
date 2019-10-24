@@ -39,11 +39,15 @@
 
 1. [Vault](https://github.com/hashicorp/vault)
 
+### 2019-09
+
+1. [Busy]()
+
 ### 2019-10
 
 1. [CSS: The Definitive Guide]() - [Chpater 2: Seletor]()
 1. [The Docker and Container Ecosystem]() - [The World is Programmable with Containers]()
-1. [Docker Documentation]() - [Configure networking - networking overview]()
+1. [Docker Documentation]() - [Configure networking - networking tutorials - Bridge network tutorial]()
 
 ## Development Schedule
 
@@ -81,6 +85,10 @@
 ### 2019-08
 
 1. [leetcode](https://leetcode.com/problemset/all/)
+
+### 2019-09
+
+1. [Busy]()
 
 ### 2019-10
 
