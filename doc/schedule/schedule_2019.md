@@ -47,8 +47,10 @@
 
 1. [CSS: The Definitive Guide]() - [Chpater 2: Seletor]()
 1. [The Docker and Container Ecosystem]() - [The World is Programmable with Containers]()
-1. [Docker Documentation]() - [Configure networking - Docker and iptables]()
-1. [Advanced Go Programming Book](https://github.com/chai2010/advanced-go-programming-book) - []()
+1. [Docker Documentation]() - [Run your app in production]()
+1. [Advanced Go Programming Book](https://github.com/chai2010/advanced-go-programming-book) - [1.4]()
+
+### 2019-11
 
 ## Development Schedule
 
@@ -92,5 +94,9 @@
 1. [Busy]()
 
 ### 2019-10
+
+1. [TemplateWeb](https://github.com/zqqiang/TemplateWeb)
+
+### 2019-11
 
 1. [TemplateWeb](https://github.com/zqqiang/TemplateWeb)
