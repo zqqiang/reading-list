@@ -53,7 +53,8 @@
 
 ### 2019-11
 
-1. [Docker Documentation]() - [Run multiple services in a container]()
+1. [Docker Documentation]() - [Container Runtime Matrics]()
+1. [The Go Programming Language]() - [1.2 Command-Line Arguments]()
 
 ## Development Schedule
 
