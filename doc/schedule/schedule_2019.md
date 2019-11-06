@@ -54,7 +54,7 @@
 ### 2019-11
 
 1. [Docker Documentation]() - [Container Runtime Matrics]()
-1. [The Go Programming Language]() - [1.2 Command-Line Arguments]()
+1. [The Go Programming Language]() - [5.6 Anonymous Functions]()
 
 ## Development Schedule
 
