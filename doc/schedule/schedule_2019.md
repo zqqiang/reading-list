@@ -54,7 +54,7 @@
 ### 2019-11
 
 1. [Docker Documentation]() - [Container Runtime Matrics]()
-1. [The Go Programming Language]() - [5.6 Anonymous Functions - findLinks]()
+1. [The Go Programming Language]() - [5.6.1 Caveat: Capturing Iteration Variables]()
 
 ## Development Schedule
 
