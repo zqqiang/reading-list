@@ -54,11 +54,7 @@
 ### 2019-11
 
 1. [Docker Documentation]() - [Container Runtime Matrics]()
-<<<<<<< HEAD
 1. [The Go Programming Language]() - [5.10 Recover]()
-=======
-1. [The Go Programming Language]() - [5.8 Deferred Function Calls]()
->>>>>>> cf9fbbf72959017b5813b15fabdb1d3c3bacef0a
 
 ## Development Schedule
 
