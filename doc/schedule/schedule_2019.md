@@ -54,7 +54,7 @@
 ### 2019-11
 
 1. [Docker Documentation]() - [Container Runtime Matrics]()
-1. [The Go Programming Language]() - [5.10 Recover]()
+1. [The Go Programming Language]() - [6.3 Composing Types by Struct Embedding]()
 
 ## Development Schedule
 
