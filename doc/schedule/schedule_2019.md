@@ -55,6 +55,7 @@
 
 1. [Docker Documentation]() - [Container Runtime Matrics]()
 1. [The Go Programming Language]() - [6.3 Composing Types by Struct Embedding]()
+1. [Continuous Delivery]() = [Introduction]()
 
 ## Development Schedule
 
