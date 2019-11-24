@@ -54,7 +54,7 @@
 ### 2019-11
 
 1. [Docker Documentation]() - [Container Runtime Matrics]()
-1. [The Go Programming Language]() - [7.8 The Error Interface]()
+1. [The Go Programming Language]() - [8 Goroutines and Channels]()
 1. [Continuous Delivery]() = [Chapter2 Configuration Management]()
 
 ## Development Schedule
