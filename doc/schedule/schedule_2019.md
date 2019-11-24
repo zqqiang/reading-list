@@ -54,7 +54,7 @@
 ### 2019-11
 
 1. [Docker Documentation]() - [Container Runtime Matrics]()
-1. [The Go Programming Language]() - [7 Interfaces]()
+1. [The Go Programming Language]() - [7.4 parsing flags with flags.Value]()
 1. [Continuous Delivery]() = [Chapter2 Configuration Management]()
 
 ## Development Schedule
