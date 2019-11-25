@@ -55,7 +55,7 @@
 
 1. [Docker Documentation]() - [Container Runtime Matrics]()
 1. [The Go Programming Language]() - [8 Goroutines and Channels]()
-1. [Continuous Delivery]() = [Chapter2 Configuration Management]()
+1. [Continuous Delivery]() = [Chapter2 Configuration Management: Check in regularly to trunk]()
 
 ## Development Schedule
 
