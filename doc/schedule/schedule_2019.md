@@ -56,7 +56,7 @@
 1. [Docker Documentation]() - [Container Runtime Matrics]()
 1. [The Go Programming Language]() - [8.4.4 Buffered Channels]()
 1. [Continuous Delivery]() = [Chapter2 Configuration Management: Applying Configuration management to infrastructor]()
-1. [The Docker and Container Ecosystem]() - [The World is Programmable with Containers]()
+1. [The Docker and Container Ecosystem]() - [CISCO: NETWORKING THE HYBRID CLOUD]()
 
 ## Development Schedule
 
