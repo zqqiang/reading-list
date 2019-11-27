@@ -54,7 +54,7 @@
 ### 2019-11
 
 1. [Docker Documentation]() - [Container Runtime Matrics]()
-1. [The Go Programming Language]() - [8.4.4 Buffered Channels]()
+1. [The Go Programming Language]() - [8.6 Example: Concurrent Web Crawler]()
 1. [Continuous Delivery]() = [Chapter2 Configuration Management: Tools to Manage Environments]()
 1. [The Docker and Container Ecosystem]() - [How go programming language helps docker and the container ecosystem]()
 
