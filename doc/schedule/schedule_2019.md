@@ -58,6 +58,10 @@
 1. [Continuous Delivery]() = [Chapter 3 Implenmenting Continuous Integration]()
 1. [The Docker and Container Ecosystem]() - [How go programming language helps docker and the container ecosystem]()
 
+### 2019-12
+
+[The Go Programming Language]() - [11 Testing]()
+
 ## Development Schedule
 
 ### 2019-01
@@ -106,3 +110,7 @@
 ### 2019-11
 
 1. [TemplateWeb](https://github.com/zqqiang/TemplateWeb)
+
+### 2019-12
+
+1. []()
