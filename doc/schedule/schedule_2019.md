@@ -60,7 +60,7 @@
 
 ### 2019-12
 
-[The Go Programming Language]() - [11.2.3 White-Box Testing]()
+[The Go Programming Language]() - [12 Reflection]()
 
 ## Development Schedule
 
