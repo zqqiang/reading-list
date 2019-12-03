@@ -60,7 +60,7 @@
 
 ### 2019-12
 
-[The Go Programming Language]() - [12 Reflection]()
+[The Go Programming Language]() - [12.3 Display a Recurisive Vaule Printer]()
 
 ## Development Schedule
 
