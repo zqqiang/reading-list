@@ -62,7 +62,7 @@
 
 1. [The Go Programming Language]() - [Done]()
 1. [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md) - [Channel Size is One or None]()
-1. [Continuous Delivery]() = [Chapter 3 Implenmenting Continuous Integration]()
+1. [Continuous Delivery]() = [Chapter 5 Anatomy of the Deployment Pipeline]()
 
 ## Development Schedule
 
