@@ -60,7 +60,8 @@
 
 ### 2019-12
 
-[The Go Programming Language]() - [12.3 Display a Recurisive Vaule Printer]()
+1. [The Go Programming Language]() - [Done]()
+1. [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md) - [Channel Size is One or None]()
 
 ## Development Schedule
 
