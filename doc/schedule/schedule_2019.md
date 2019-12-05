@@ -61,9 +61,11 @@
 ### 2019-12
 
 1. [The Go Programming Language]() - [Done]()
-1. [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md) - [Prefix Unexported Globals with \_]()
+1. [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md) - [Done]()
+
 1. [Continuous Delivery]() = [Chapter 5 A Basic Development Pipeline]()
 1. [The Docker and Container Ecosystem]() - [How go programming language helps docker and the container ecosystem - Customer Adoption]()
+1. [Self-referential functions and the design of options](https://commandcenter.blogspot.com/2014/01/self-referential-functions-and-design.html)
 
 ## Development Schedule
 
