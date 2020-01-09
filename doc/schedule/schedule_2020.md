@@ -5,7 +5,7 @@
 ### 2020-01
 
 1. [Continuous Delivery]() = []()
-1. [The Docker and Container Ecosystem]() - []()
+1. []() - []()
 
 ## Development Schedule
 
