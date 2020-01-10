@@ -5,7 +5,7 @@
 ### 2020-01
 
 1. [Continuous Delivery]() = []()
-1. []() - []()
+1. [Designing Distributed System]() - []()
 
 ## Development Schedule
 
