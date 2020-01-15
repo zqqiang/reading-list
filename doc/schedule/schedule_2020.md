@@ -4,8 +4,9 @@
 
 ### 2020-01
 
-1. [Continuous Delivery]() = []()
+1. [Continuous Delivery]() = [The Commit Stage]()
 1. [Designing Distributed System]() - []()
+1. [Go by Example]() - [Arrays]()
 
 ## Development Schedule
 
