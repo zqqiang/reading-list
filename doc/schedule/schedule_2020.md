@@ -20,7 +20,7 @@
 
 ### 2020-04
 
-1. []() - []()
+1. [Kubernetes in Action]() - [3.2.2]()
 
 ## Development Schedule
 
