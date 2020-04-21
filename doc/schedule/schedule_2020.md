@@ -20,7 +20,7 @@
 
 ### 2020-04
 
-1. [Kubernetes in Action]() - [3.2.2]()
+1. [Kubernetes in Action]() - [done]()
 
 ## Development Schedule
 
@@ -30,5 +30,7 @@
 1. [Cracking the Coding Interview]()
 
 #### 2020-02
+
 #### 2020-03
+
 #### 2020-04
