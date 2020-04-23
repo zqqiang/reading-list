@@ -21,7 +21,7 @@
 ### 2020-04
 
 1. [Kubernetes in Action]() - [done]()
-1. [GoKit](https://gokit.io/) - [faq]()
+1. [GoKit](https://gokit.io/) - [example: Service discovery and load balancing]()
 
 ## Development Schedule
 
