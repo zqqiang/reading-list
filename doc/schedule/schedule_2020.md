@@ -22,7 +22,7 @@
 
 1. [Kubernetes in Action]() - [done]()
 1. [GoKit](https://gokit.io/) - [example: Service discovery and load balancing]()
-1. [MySQL crash course]() - [Chapter2 Introducing MySQL]()
+1. [MySQL crash course]() - [Chapter3 Working with MySQL]()
 
 ## Development Schedule
 
