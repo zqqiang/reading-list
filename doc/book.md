@@ -25,6 +25,7 @@ Some books I have read
 ## Coding
 
 ### 入门篇（entry level）
+
 1. C 程序设计语言 : 第 2 版·新版， Brian W. Kernighan、Dennis M. Ritchie，2009
 1. Java 编程思想 （第 4 版），Bruce Eckel，2010
 1. Python 编程：从入门到实践 : 从入门到实践，埃里克·马瑟斯，2010
@@ -41,24 +42,26 @@ Some books I have read
 1. Effective Modern C++, Scott Meyers, 2018
 
 ### 算法篇（algorithm）
+
 1. 算法导论（原书第 2 版），Thomas H.Cormen、Charles E.Leiserson、Ronald L.Rivest、Clifford Stein，2008
 1. 数据结构与算法分析 : C 语言描述，维斯 / 冯舜玺，2007
 
-
 ### 修养篇（self-cultivation）
-1. 代码大全（第 2 版），史蒂夫·迈克康奈尔, 2010
-1. 集体智慧编程，TOBY SEGARAN，2009
-1. 编程珠玑 : 第 2 版，Jon Bentley，2010
+
+1. 代码大全（第 2 版），Code Complete，史蒂夫·迈克康奈尔, 2010
+1. 集体智慧编程，Programming Collective Intelligence，TOBY SEGARAN，2009
+1. 编程珠玑 : 第 2 版，Programming Pearls Second Edition，Jon Bentley，2010
 1. 程序员的自我修养 : 链接、装载与库，俞甲子、石凡、潘爱民，2011
-1. 程序员修炼之道 : 从小工到专家，Andrew Hunt、David Thomas，2012
-1. 设计模式 : 可复用面向对象软件的基础，Erich Gamma、Richard Helm、Ralph Johnson、John Vlissides，2013
+1. 程序员修炼之道 : 从小工到专家，The Pragmatic Programmer，Andrew Hunt、David Thomas，2012
+1. 设计模式 : 可复用面向对象软件的基础，Design Patterns: Elements of Reusable Object-Oriented Software， Erich Gamma、Richard Helm、Ralph Johnson、John Vlissides，2013
 1. 编程之美 : 微软技术面试心得，《编程之美》小组，2009
-1. Effective java 中文版（第 2 版），Joshua Bloch，2009
-1. 代码整洁之道，]Robert C. Martin，2012
+1. Effective java（第 2 版），Joshua Bloch，2009
+1. 代码整洁之道，Clean Code，Robert C. Martin，2012
 1. Head First 设计模式（中文版），弗里曼，2010
-1. 程序员的思维修炼 : 开发认知潜能，Andy Hunt，2009
+1. 程序员的思维修炼 : 开发认知潜能，Pragmatic Thinking and Learning - Refactor Your Wetware，Andy Hunt，2009
 
 ### 系统篇（system）
+
 1. 计算机程序的构造和解释 : 原书第 2 版，Harold Abelson、Gerald Jay Sussman、Julie Sussman，2007
 1. 深入理解计算机系统，Randal E.Bryant、David O'Hallaron，2010
 1. UNIX 环境高级编程 : 第 2 版，W.Richard Stevens、Stephen A.Rago，2012
@@ -68,6 +71,7 @@ Some books I have read
 1. Linux 高性能服务器编程，游双，
 
 ### 专家篇（advanced）
+
 1. 重构 : 改善既有代码的设计，Martin Fowler，2013
 1. Python 源码剖析 : 深度探索动态语言核心技术，陈儒，2013
 1. C 专家编程，Peter Van Der Linden，2012
