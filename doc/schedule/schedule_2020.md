@@ -22,6 +22,10 @@
 
 1. [Kubernetes in Action]() - [done]()
 1. [MySQL crash course]() - [Chapter3 Working with MySQL]()
+1. [GoKit](https://gokit.io/) - []()
+
+### 2020-05
+
 1. [GoKit](https://gokit.io/) - [distributed monolith antipattern]()
 
 ## Development Schedule
@@ -37,4 +41,8 @@
 
 #### 2020-04
 
-1. [Leetcode Top Interview Questions]() - [454. 4Sum II]()
+1. [Leetcode Top Interview Questions]() - []()
+
+#### 2020-05
+
+1. [Leetcode Top Interview Questions]() - [395. Longest Substring with At Least K Repeating Characters]()
