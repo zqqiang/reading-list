@@ -6,6 +6,8 @@
 
 Not couple your systems with binary dependencies
 
+# part 1
+
 ### shared libraries and network clients
 
 Shared libraries are often called “the platform”. They’re often called “the core” or “platform core”  
@@ -31,6 +33,29 @@ Contracts and protocols
 In particular, just like our programming languages have interfaces and APIs  
 Services should hide all their implementation details and expose data contracts and network protocols
 
-### todos
+## part 2
 
-You do need to address standardization for this to work
+### protocols and contracts
+
+The key is that the existence of the protocols and the contracts allow new stacks to be built
+
+### Swagger
+
+It is actually evolving into the OpenAPI initiative
+It is actually very powerful and comes with a lot of tools for creating documentation and  
+browsing it and playing with the APIs, and generating clients in lots of different languages
+
+### Quark
+
+Quark by DataWire, who’s hosting us today, is doing some really interesting work in this one
+
+### beyond request/response
+
+And so something that I’m exploring a lot is being able to move beyond just a request/response get,  
+and being able to represent in our definitions single responses, multi-responses, a finite number of Ns,  
+so if it’s always a page of 10, or infinite response streams for push subscriptions.
+
+### architecture for the whole system
+
+I’m not okay with it taking these systems and saying,  
+“My entire company’s entire architecture is going to basically adopt one of these huge frameworks.”
