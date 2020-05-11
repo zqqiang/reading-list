@@ -45,4 +45,4 @@
 
 #### 2020-05
 
-1. [Leetcode Top Interview Questions]() - [380. Insert Delete GetRandom O(1)]()
+1. [Leetcode Top Interview Questions]() - [350. Intersection of Two Arrays II]()
