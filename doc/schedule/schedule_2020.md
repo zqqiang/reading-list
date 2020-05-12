@@ -26,7 +26,7 @@
 
 ### 2020-05
 
-1. [GoKit](https://gokit.io/) - [distributed monolith antipattern]()
+1. [GoKit](https://gokit.io/) - [https://docs.pact.io/]()
 
 ## Development Schedule
 
@@ -45,4 +45,4 @@
 
 #### 2020-05
 
-1. [Leetcode Top Interview Questions]() - [350. Intersection of Two Arrays II]()
+1. [Leetcode Top Interview Questions]() - [341. Flatten Nested List Iterator]()
