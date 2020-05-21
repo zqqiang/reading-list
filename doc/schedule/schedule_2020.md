@@ -27,6 +27,7 @@
 ### 2020-05
 
 1. [GoKit](https://gokit.io/) - [https://docs.pact.io/]()
+1. [Principles]() - [Your Two Yous and Your Machine]()
 
 ## Development Schedule
 
