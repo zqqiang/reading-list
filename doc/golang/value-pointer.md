@@ -62,4 +62,16 @@ Reference types represent the slice, map, interface, function and channel types 
 These types should be using value semantics  
 because they have been designed to stay on the stack and minimize heap pressure.
 
-Todo: not clear try again
+### List 11
+
+When a function shares a value with you, you should assume that  
+you are not allowed to make a copy of the value pointed to by the pointer.  
+If you do, results will be undefined.
+
+## Conclusion
+
+The consistent use of value/pointer semantics is something I look for in code reviews.  
+It helps you keep code consistent and predictable over time.  
+It also allows everyone to maintain a clear and consistent mental model of the code.  
+As the code base and the team gets larger, consistent use of value/pointer semantics  
+becomes even more important.
