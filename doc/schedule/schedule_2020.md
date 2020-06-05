@@ -31,8 +31,7 @@
 
 ### 2020-06
 
-1. [GoKit](https://gokit.io/) - []()
-
+1. [GoKit](https://gokit.io/) - [profilesvc](https://github.com/go-kit/kit/blob/master/examples/profilesvc)
 
 ## Development Schedule
 
