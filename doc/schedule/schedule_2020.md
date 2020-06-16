@@ -31,7 +31,7 @@
 
 ### 2020-06
 
-1. [GoKit](https://gokit.io/) - [profilesvc](https://github.com/go-kit/kit/blob/master/examples/profilesvc)
+1. [GoKit](https://gokit.io/) - [done]()
 1. [Vue RealWorld App](https://github.com/gothinkster/vue-realworld-example-app)
 
 ## Development Schedule
